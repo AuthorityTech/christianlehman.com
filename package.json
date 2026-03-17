@@ -2,7 +2,7 @@
   "name": "christianlehman-com",
   "version": "1.0.0",
   "private": true,
-  "scripts": {,
+  "scripts": {
     "prebuild": "node scripts/generate-og-images.mjs",
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
