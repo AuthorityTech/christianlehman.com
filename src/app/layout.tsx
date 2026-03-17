@@ -96,7 +96,7 @@ const schema = {
       "@id": SITE_URL + "/#website",
       url: SITE_URL,
       name: "Christian Lehman",
-      description: "Personal site and writing of Christian Lehman — Co-Founder of AuthorityTech.",
+      description: "Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category.",
       author: { "@type": "Person", "@id": SITE_URL + "/#person" },
       potentialAction: [{ "@type": "ReadAction", target: SITE_URL + "/blog" }],
     },
