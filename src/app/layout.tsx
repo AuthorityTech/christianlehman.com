@@ -4,61 +4,54 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const OG_IMAGE = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp";
+const SITE_URL = "https://christianlehman.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://christianlehman.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
     template: "%s — Christian Lehman",
   },
   description:
-    "Christian Lehman is Co-Founder of AuthorityTech, the world's first AI-native earned media agency. Expert in revenue operations, B2B go-to-market strategy, and making brands visible to AI.",
+    "Christian Lehman is Co-Founder of AuthorityTech — the world's first Machine Relations agency. Machine Relations is the discipline of making brands visible to AI engines. Revenue operator, B2B growth strategist.",
   keywords: [
     "Machine Relations",
     "AuthorityTech",
     "Christian Lehman",
+    "AI visibility",
     "B2B growth",
     "revenue operations",
     "earned media",
-    "AI visibility",
     "Generative Engine Optimization",
     "GEO",
     "AEO",
-    "Answer Engine Optimization",
-    "AI-native PR",
     "AI citation optimization",
     "LLM visibility",
+    "invisible shortlist",
+    "AI shortlist",
   ],
-  authors: [{ name: "Christian Lehman", url: "https://christianlehman.com" }],
+  authors: [{ name: "Christian Lehman", url: SITE_URL }],
   creator: "Christian Lehman",
   publisher: "Christian Lehman",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://christianlehman.com",
+    url: SITE_URL,
     siteName: "Christian Lehman",
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
     description:
-      "Co-Founder of AuthorityTech, the world's first AI-native earned media agency. Expert in revenue operations, B2B go-to-market strategy, and making brands visible to AI.",
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: "Christian Lehman — Co-Founder of AuthorityTech",
-      },
-    ],
+      "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Tracks which brands are winning and losing the AI shortlist battle across every major B2B vertical.",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@christianlehman",
-    creator: "@christianlehman",
+    site: "@ChristianLehman",
+    creator: "@ChristianLehman",
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
-    description:
-      "Co-Founder of AuthorityTech, the world's first AI-native earned media agency. Revenue operator, B2B growth strategist.",
+    description: "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency.",
     images: [OG_IMAGE],
   },
-  alternates: { canonical: "https://christianlehman.com" },
+  alternates: { canonical: SITE_URL },
   robots: {
     index: true,
     follow: true,
@@ -72,43 +65,48 @@ const schema = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://christianlehman.com/#person",
+      "@id": SITE_URL + "/#person",
       name: "Christian Lehman",
       givenName: "Christian",
       familyName: "Lehman",
       jobTitle: "Co-Founder, AuthorityTech",
       description:
-        "Co-Founder of AuthorityTech, the world's first AI-native earned media agency. Expert in revenue operations, B2B go-to-market strategy, and making brands visible to AI. Practitioner of Machine Relations — the discipline of making brands visible to the AI engines your buyers use to make decisions.",
-      url: "https://christianlehman.com",
+        "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Machine Relations is the discipline of making brands visible to the AI engines your buyers use to make decisions. Christian tracks which companies are on the AI shortlist for every major B2B buying query — and who\'s missing.",
+      url: SITE_URL,
       image: OG_IMAGE,
-      mainEntityOfPage: { "@type": "WebPage", "@id": "https://christianlehman.com" },
-      worksFor: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
+      worksFor: { "@type": "Organization", "@id": "https://authoritytech.io/#organization", name: "AuthorityTech", url: "https://authoritytech.io" },
       sameAs: [
         "https://authoritytech.io",
         "https://machinerelations.ai",
+        "https://www.linkedin.com/in/christianhlehman",
+        "https://x.com/ChristianLehman",
+      ],
+      knowsAbout: [
+        "Machine Relations",
+        "AI Visibility",
+        "Generative Engine Optimization",
+        "B2B Revenue Operations",
+        "Earned Media",
+        "AI Shortlist Optimization",
       ],
     },
     {
       "@type": "WebSite",
-      "@id": "https://christianlehman.com/#website",
-      url: "https://christianlehman.com",
+      "@id": SITE_URL + "/#website",
+      url: SITE_URL,
       name: "Christian Lehman",
       description: "Personal site and writing of Christian Lehman — Co-Founder of AuthorityTech.",
-      author: { "@type": "Person", "@id": "https://christianlehman.com/#person" },
-      potentialAction: [
-        {
-          "@type": "ReadAction",
-          target: "https://christianlehman.com/blog",
-        },
-      ],
+      author: { "@type": "Person", "@id": SITE_URL + "/#person" },
+      potentialAction: [{ "@type": "ReadAction", target: SITE_URL + "/blog" }],
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://christianlehman.com/#profile-page",
-      url: "https://christianlehman.com",
-      name: "Christian Lehman Profile",
-      isPartOf: { "@id": "https://christianlehman.com/#website" },
-      mainEntity: { "@id": "https://christianlehman.com/#person" },
+      "@id": SITE_URL + "/#profile-page",
+      url: SITE_URL,
+      name: "Christian Lehman — Co-Founder, AuthorityTech",
+      isPartOf: { "@id": SITE_URL + "/#website" },
+      mainEntity: { "@id": SITE_URL + "/#person" },
     },
   ],
 };
@@ -119,7 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <link rel="icon" href={OG_IMAGE} />
-        <link rel="alternate" type="application/rss+xml" title="Christian Lehman RSS Feed" href="https://christianlehman.com/feed.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Christian Lehman" href={SITE_URL + "/feed.xml"} />
         <meta name="theme-color" content="#fafafa" />
       </head>
       <body>
