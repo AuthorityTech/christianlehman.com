@@ -7,7 +7,7 @@ export default function Nav() {
           className="text-[15px] font-bold tracking-[0.12em] text-[#1a1a1a] hover:text-link transition-colors uppercase"
           aria-label="Christian Lehman"
         >
-          JP
+          CL
         </a>
         <div className="flex items-center gap-6 text-[13px] text-[#6b6b6b]">
           <a href="/blog" className="hover:text-[#1a1a1a] transition-colors">Writing</a>
