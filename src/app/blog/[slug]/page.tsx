@@ -1,6 +1,5 @@
 import { getAllPosts, getPost } from "@/lib/posts";
 import { normalizeMarkdown, normalizeProseHtml } from "@/lib/normalizeMarkdown";
-import { CANONICAL_ESSAY_SLUG } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
@@ -16,8 +15,6 @@ export async function generateStaticParams() {
 }
 
 const DEFAULT_AVATAR = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp";
-
-
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -40,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      creator: "@jaxonparrott",
+      creator: "@christianlehman",
       title: post.title + " — Christian Lehman",
       description: post.description,
       images: image ? [image] : undefined,
@@ -63,100 +60,41 @@ export default async function PostPage({ params }: Props) {
   const html = normalizeProseHtml(processed.toString());
 
   const image = post.featured_image;
-
   const pageUrl = "https://christianlehman.com/blog/" + slug;
-  const articleId = pageUrl + "#article";
-  const webPageId = pageUrl + "#webpage";
-  const breadcrumbId = pageUrl + "#breadcrumb";
-  const isCanonicalEssay = slug === CANONICAL_ESSAY_SLUG;
-  const faqNode = isCanonicalEssay
-    ? {
-        "@type": "FAQPage",
-        url: pageUrl + "#faq",
-        mainEntity: .map((item) => ({
-          "@type": "Question",
-          name: item.q,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.a,
-          },
-        })),
-      }
-    : null;
 
-  const stackImageNode = isCanonicalEssay
-    ? {
-        "@type": "ImageObject",
-        "@id": pageUrl + "#stack-image",
-        creator: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
-        sourceOrganization: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
-      }
-    : null;
   const postSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebPage",
-        "@id": webPageId,
-        url: pageUrl,
-        name: post.title,
-        isPartOf: { "@id": "https://christianlehman.com/#website" },
-        breadcrumb: { "@id": breadcrumbId },
-        primaryImageOfPage: stackImageNode ? { "@id": stackImageNode["@id"] } : undefined,
-      },
-      {
         "@type": "BlogPosting",
-        "@id": articleId,
+        "@id": pageUrl + "#article",
         headline: post.title,
         description: post.description,
         datePublished: post.date,
         dateModified: post.lastModified || post.date,
         url: pageUrl,
         image,
-        thumbnailUrl: image,
         author: {
           "@type": "Person",
           "@id": "https://christianlehman.com/#person",
           name: "Christian Lehman",
           url: "https://christianlehman.com",
-          jobTitle: "CEO & Founder, AuthorityTech",
-          sameAs: ["https://authoritytech.io", "https://machinerelations.ai", "https://x.com/jaxonparrott"],
+          jobTitle: "Co-Founder, AuthorityTech",
+          sameAs: ["https://authoritytech.io", "https://machinerelations.ai"],
         },
         publisher: { "@type": "Person", "@id": "https://christianlehman.com/#person" },
-        mainEntityOfPage: { "@id": webPageId },
         keywords: post.tags?.join(", ") ?? "",
         isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
-        about: [
-          { "@type": "Organization", name: "AuthorityTech", url: "https://authoritytech.io" },
-        ],
-        associatedMedia: stackImageNode ? [{ "@id": stackImageNode["@id"] }] : undefined,
       },
       {
         "@type": "BreadcrumbList",
-        "@id": breadcrumbId,
+        "@id": pageUrl + "#breadcrumb",
         itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://christianlehman.com",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Writing",
-            item: "https://christianlehman.com/blog",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: post.title,
-            item: pageUrl,
-          },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://christianlehman.com" },
+          { "@type": "ListItem", position: 2, name: "Writing", item: "https://christianlehman.com/blog" },
+          { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
         ],
       },
-      ...(stackImageNode ? [stackImageNode] : []),
-      ...(faqNode ? [faqNode] : []),
     ],
   };
 
@@ -171,7 +109,6 @@ export default async function PostPage({ params }: Props) {
       <header className="mb-10">
         <h1 className="text-[26px] font-semibold text-[#1a1a1a] leading-tight tracking-tight mb-5">{post.title}</h1>
 
-        {/* Author byline */}
         <div className="flex items-center gap-3 mb-4">
           <img
             src={DEFAULT_AVATAR}
@@ -204,9 +141,8 @@ export default async function PostPage({ params }: Props) {
         </div>
       </header>
 
-      {/* Hero image — only render if generated (not the fallback avatar) */}
       {post.featured_image && (
-        <div className="mb-12 -mx-0">
+        <div className="mb-12">
           <img
             src={post.featured_image}
             alt={post.title}
@@ -228,24 +164,12 @@ export default async function PostPage({ params }: Props) {
       <section className="mb-10">
         <h2 className="text-[11px] font-medium text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">About Christian Lehman</h2>
         <p className="text-[13px] text-[#6b6b6b] leading-relaxed mb-2">
-          Christian Lehman is founder of{" "}
+          Christian Lehman is Co-Founder of{" "}
           <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
-          {" "}and creator of Machine Relations — the discipline of using high-authority earned media to influence AI training data and LLM citations.
-          He built the 5-layer{" "}
-          <a href="https://machinerelations.ai/stack" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">Machine Relations stack</a>
-          {" "}to move brands from un-indexed to definitive AI answers.
-        </p>
-        <p className="text-[12px] text-[#6b6b6b] leading-relaxed">
-          Read his{" "}
-          <a href="https://www.entrepreneur.com/author/jaxon-parrott" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">Entrepreneur profile</a>,
-          {" "}and follow on{" "}
-          <a href="https://www.linkedin.com/in/jaxon-parrott-b91838128/" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">LinkedIn</a>
-          {" "}and{" "}
-          <a href="https://x.com/jaxonparrott" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">X</a>.
+          {" "}— the world's first AI-native earned media agency. He tracks which companies are winning and losing the AI shortlist battle across every major B2B vertical, and writes about what the data actually shows.
         </p>
       </section>
 
-      {/* Footer byline */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
@@ -264,7 +188,6 @@ export default async function PostPage({ params }: Props) {
             </div>
           </div>
         </div>
-        <a href="https://x.com/jaxonparrott" target="_blank" rel="noopener" className="text-[11px] text-link uppercase tracking-wide hover:text-[#1a1a1a] transition-colors">Follow on X →</a>
       </div>
     </div>
   );
