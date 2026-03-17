@@ -15,24 +15,8 @@ export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-const DEFAULT_AVATAR = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Jaxon%20V2.png";
-const MACHINE_RELATIONS_TERM_ID = "https://jaxonparrott.com/#machine-relations-term";
-const CANONICAL_FAQ_ID = "https://jaxonparrott.com/blog/why-i-coined-machine-relations#faq";
+const DEFAULT_AVATAR = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp";
 
-const CANONICAL_FAQ_ITEMS = [
-  {
-    q: "What is Machine Relations?",
-    a: "Machine Relations is the discipline of making a brand parseable, retrievable, and citable by AI systems at the moment buyer intent forms.",
-  },
-  {
-    q: "How is Machine Relations different from SEO and traditional PR?",
-    a: "SEO optimizes pages for ranking and PR optimizes stories for human editors. Machine Relations aligns entities, citations, and definitions so AI systems can return accurate recommendations and references.",
-  },
-  {
-    q: "Why does owning a category definition matter?",
-    a: "A clear category definition creates a stable knowledge anchor that AI systems can repeatedly resolve to your brand, increasing citation consistency over time.",
-  },
-];
 
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -43,21 +27,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: "https://jaxonparrott.com/blog/" + slug },
+    alternates: { canonical: "https://christianlehman.com/blog/" + slug },
     openGraph: {
-      title: post.title + " — Jaxon Parrott",
+      title: post.title + " — Christian Lehman",
       description: post.description,
       type: "article",
-      url: "https://jaxonparrott.com/blog/" + slug,
+      url: "https://christianlehman.com/blog/" + slug,
       publishedTime: post.date,
       modifiedTime: post.lastModified || post.date,
-      authors: ["Jaxon Parrott"],
+      authors: ["Christian Lehman"],
       images: image ? [{ url: image, width: 1200, height: 630, alt: post.title }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       creator: "@jaxonparrott",
-      title: post.title + " — Jaxon Parrott",
+      title: post.title + " — Christian Lehman",
       description: post.description,
       images: image ? [image] : undefined,
     },
@@ -80,7 +64,7 @@ export default async function PostPage({ params }: Props) {
 
   const image = post.featured_image;
 
-  const pageUrl = "https://jaxonparrott.com/blog/" + slug;
+  const pageUrl = "https://christianlehman.com/blog/" + slug;
   const articleId = pageUrl + "#article";
   const webPageId = pageUrl + "#webpage";
   const breadcrumbId = pageUrl + "#breadcrumb";
@@ -88,9 +72,8 @@ export default async function PostPage({ params }: Props) {
   const faqNode = isCanonicalEssay
     ? {
         "@type": "FAQPage",
-        "@id": CANONICAL_FAQ_ID,
         url: pageUrl + "#faq",
-        mainEntity: CANONICAL_FAQ_ITEMS.map((item) => ({
+        mainEntity: .map((item) => ({
           "@type": "Question",
           name: item.q,
           acceptedAnswer: {
@@ -117,11 +100,9 @@ export default async function PostPage({ params }: Props) {
         "@id": webPageId,
         url: pageUrl,
         name: post.title,
-        isPartOf: { "@id": "https://jaxonparrott.com/#website" },
-        about: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
+        isPartOf: { "@id": "https://christianlehman.com/#website" },
         breadcrumb: { "@id": breadcrumbId },
         primaryImageOfPage: stackImageNode ? { "@id": stackImageNode["@id"] } : undefined,
-        mainEntity: isCanonicalEssay ? [{ "@id": articleId }, { "@id": CANONICAL_FAQ_ID }] : { "@id": articleId },
       },
       {
         "@type": "BlogPosting",
@@ -135,21 +116,19 @@ export default async function PostPage({ params }: Props) {
         thumbnailUrl: image,
         author: {
           "@type": "Person",
-          "@id": "https://jaxonparrott.com/#person",
-          name: "Jaxon Parrott",
-          url: "https://jaxonparrott.com",
+          "@id": "https://christianlehman.com/#person",
+          name: "Christian Lehman",
+          url: "https://christianlehman.com",
           jobTitle: "CEO & Founder, AuthorityTech",
           sameAs: ["https://authoritytech.io", "https://machinerelations.ai", "https://x.com/jaxonparrott"],
         },
-        publisher: { "@type": "Person", "@id": "https://jaxonparrott.com/#person" },
+        publisher: { "@type": "Person", "@id": "https://christianlehman.com/#person" },
         mainEntityOfPage: { "@id": webPageId },
         keywords: post.tags?.join(", ") ?? "",
-        isPartOf: { "@type": "Blog", "@id": "https://jaxonparrott.com/blog#blog" },
+        isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
         about: [
-          { "@id": MACHINE_RELATIONS_TERM_ID },
           { "@type": "Organization", name: "AuthorityTech", url: "https://authoritytech.io" },
         ],
-        mentions: isCanonicalEssay ? [{ "@id": MACHINE_RELATIONS_TERM_ID }] : undefined,
         associatedMedia: stackImageNode ? [{ "@id": stackImageNode["@id"] }] : undefined,
       },
       {
@@ -160,13 +139,13 @@ export default async function PostPage({ params }: Props) {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://jaxonparrott.com",
+            item: "https://christianlehman.com",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Writing",
-            item: "https://jaxonparrott.com/blog",
+            item: "https://christianlehman.com/blog",
           },
           {
             "@type": "ListItem",
@@ -196,13 +175,13 @@ export default async function PostPage({ params }: Props) {
         <div className="flex items-center gap-3 mb-4">
           <img
             src={DEFAULT_AVATAR}
-            alt="Jaxon Parrott"
+            alt="Christian Lehman"
             width={28}
             height={28}
             className="rounded-full object-cover ring-1 ring-[#e5e5e5]"
           />
           <div className="text-[12px] text-[#6b6b6b] leading-snug">
-            <span className="text-[#1a1a1a]">Jaxon Parrott</span>
+            <span className="text-[#1a1a1a]">Christian Lehman</span>
             {" "}·{" "}
             <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
             {" "}·{" "}
@@ -247,9 +226,9 @@ export default async function PostPage({ params }: Props) {
       <hr className="border-[#e5e5e5] mt-16 mb-10" />
 
       <section className="mb-10">
-        <h2 className="text-[11px] font-medium text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">About Jaxon Parrott</h2>
+        <h2 className="text-[11px] font-medium text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">About Christian Lehman</h2>
         <p className="text-[13px] text-[#6b6b6b] leading-relaxed mb-2">
-          Jaxon Parrott is founder of{" "}
+          Christian Lehman is founder of{" "}
           <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
           {" "}and creator of Machine Relations — the discipline of using high-authority earned media to influence AI training data and LLM citations.
           He built the 5-layer{" "}
@@ -271,13 +250,13 @@ export default async function PostPage({ params }: Props) {
         <div className="flex items-center gap-3">
           <img
             src={DEFAULT_AVATAR}
-            alt="Jaxon Parrott"
+            alt="Christian Lehman"
             width={32}
             height={32}
             className="rounded-full object-cover ring-1 ring-[#e5e5e5]"
           />
           <div>
-            <p className="text-[12px] text-[#1a1a1a] leading-snug">Jaxon Parrott</p>
+            <p className="text-[12px] text-[#1a1a1a] leading-snug">Christian Lehman</p>
             <div className="flex gap-3 text-[11px] text-[#6b6b6b] mt-0.5">
               <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
               <span>·</span>
