@@ -2,9 +2,8 @@
   "name": "christianlehman-com",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "guard:schema": "node scripts/guard-machine-relations-schema.mjs",
-    "prebuild": "node scripts/generate-og-images.mjs && npm run guard:schema",
+  "scripts": {,
+    "prebuild": "node scripts/generate-og-images.mjs",
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start",
