@@ -1,6 +1,6 @@
 import { getAllPosts, getPost } from "@/lib/posts";
 import { normalizeMarkdown, normalizeProseHtml } from "@/lib/normalizeMarkdown";
-import { CANONICAL_ESSAY_SLUG, MACHINE_RELATIONS_STACK } from "@/lib/seo";
+import { CANONICAL_ESSAY_SLUG } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
@@ -105,14 +105,8 @@ export default async function PostPage({ params }: Props) {
     ? {
         "@type": "ImageObject",
         "@id": pageUrl + "#stack-image",
-        url: MACHINE_RELATIONS_STACK.localImageUrl,
-        contentUrl: MACHINE_RELATIONS_STACK.localImageUrl,
-        caption: MACHINE_RELATIONS_STACK.imageCaption,
-        description: MACHINE_RELATIONS_STACK.imageCaption,
         creator: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
         sourceOrganization: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
-        license: MACHINE_RELATIONS_STACK.sourceUrl,
-        acquireLicensePage: MACHINE_RELATIONS_STACK.sourceUrl,
       }
     : null;
   const postSchema = {
@@ -156,7 +150,6 @@ export default async function PostPage({ params }: Props) {
           { "@type": "Organization", name: "AuthorityTech", url: "https://authoritytech.io" },
         ],
         mentions: isCanonicalEssay ? [{ "@id": MACHINE_RELATIONS_TERM_ID }] : undefined,
-        citation: isCanonicalEssay ? [MACHINE_RELATIONS_STACK.sourceUrl] : undefined,
         associatedMedia: stackImageNode ? [{ "@id": stackImageNode["@id"] }] : undefined,
       },
       {
