@@ -12,8 +12,8 @@ export default function Nav() {
         <div className="flex items-center gap-6 text-[13px] text-[#6b6b6b]">
           <a href="/blog" className="hover:text-[#1a1a1a] transition-colors">Writing</a>
           <a href="https://authoritytech.io" target="_blank" rel="noopener" className="hover:text-link transition-colors">AuthorityTech</a>
-          <a href="https://www.linkedin.com/in/jaxon-parrott-b91838128/" target="_blank" rel="noopener" className="hover:text-[#1a1a1a] transition-colors">LinkedIn</a>
-          <a href="https://x.com/jaxonparrott" target="_blank" rel="noopener" className="hover:text-[#1a1a1a] transition-colors">X</a>
+          <a href="https://www.linkedin.com/in/christianhlehman" target="_blank" rel="noopener" className="hover:text-[#1a1a1a] transition-colors">LinkedIn</a>
+          <a href="https://x.com/ChristianLehman" target="_blank" rel="noopener" className="hover:text-[#1a1a1a] transition-colors">X</a>
         </div>
       </div>
     </nav>
