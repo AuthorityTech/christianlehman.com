@@ -1,5 +1,5 @@
 ---
-title: "Top PR Agencies for B2B SaaS": Who's on the AI Shortlist Right Now
+title: Top PR Agencies for B2B SaaS — Who's on the AI Shortlist Right Now
 date: "2026-03-18"
 description: "AI engines consistently name SHIFT, Walker Sands, and Corporate Ink for B2B SaaS PR — but Bospar, PRovoke's #1 U.S. tech agency, doesn't appear anywhere."
 tags: ["ai-visibility", "shortlist", "pr-agencies", "b2b-saas"]
