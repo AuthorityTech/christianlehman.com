@@ -2,6 +2,7 @@ import { getAllPosts, getPost } from "@/lib/posts";
 import { normalizeMarkdown, normalizeProseHtml } from "@/lib/normalizeMarkdown";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -56,7 +57,10 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   const normalizedContent = normalizeMarkdown(post.content);
-  const processed = await remark().use(remarkHtml, { sanitize: false }).process(normalizedContent);
+  const processed = await remark()
+    .use(remarkGfm)
+    .use(remarkHtml, { sanitize: false })
+    .process(normalizedContent);
   const html = normalizeProseHtml(processed.toString());
 
   const image = post.featured_image;
