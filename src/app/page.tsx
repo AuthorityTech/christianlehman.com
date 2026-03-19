@@ -1,6 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { PROFILE_IMAGE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://christianlehman.com" },
@@ -23,7 +24,7 @@ export default function HomePage() {
         {/* Identity */}
         <div className="flex items-start gap-5 mb-8">
           <img
-            src="https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp"
+            src={PROFILE_IMAGE_URL}
             alt="Christian Lehman"
             width={56}
             height={56}
