@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { PROFILE_IMAGE_URL, SITE_URL } from "@/lib/site";
 
-const OG_IMAGE = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp";
-const SITE_URL = "https://christianlehman.com";
+const OG_IMAGE = PROFILE_IMAGE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
     description: "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency.",
     images: [OG_IMAGE],
+  },
+  icons: {
+    icon: [PROFILE_IMAGE_URL],
+    shortcut: [PROFILE_IMAGE_URL],
+    apple: [PROFILE_IMAGE_URL],
   },
   alternates: { canonical: SITE_URL },
   robots: {
@@ -116,7 +121,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-        <link rel="icon" href={OG_IMAGE} />
         <link rel="alternate" type="application/rss+xml" title="Christian Lehman" href={SITE_URL + "/feed.xml"} />
         <meta name="theme-color" content="#fafafa" />
       </head>

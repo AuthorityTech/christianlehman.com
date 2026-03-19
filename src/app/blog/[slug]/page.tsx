@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PROFILE_IMAGE_URL } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -15,7 +16,7 @@ export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-const DEFAULT_AVATAR = "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp";
+const DEFAULT_AVATAR = PROFILE_IMAGE_URL;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
