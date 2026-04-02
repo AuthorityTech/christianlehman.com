@@ -5,23 +5,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        link: "#4a6b82",
+        link: "var(--interactive)",
+        nothing: {
+          page: "var(--page-bg)",
+          surface: "var(--surface)",
+          raised: "var(--surface-raised)",
+          border: "var(--border)",
+          borderHi: "var(--border-visible)",
+          display: "var(--text-display)",
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          disabled: "var(--text-disabled)",
+          accent: "var(--accent)",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-space-grotesk)", "DM Sans", "system-ui", "sans-serif"],
+        mono: ["var(--font-space-mono)", "JetBrains Mono", "ui-monospace", "monospace"],
+        display: ["var(--font-doto)", "var(--font-space-mono)", "ui-monospace", "monospace"],
+      },
+      transitionTimingFunction: {
+        nothing: "cubic-bezier(0.25, 0.1, 0.25, 1)",
       },
       typography: {
-        rams: {
+        nothing: {
           css: {
-            "--tw-prose-body": "#1a1a1a",
-            "--tw-prose-headings": "#1a1a1a",
-            "--tw-prose-links": "#4a6b82",
-            "--tw-prose-bold": "#1a1a1a",
-            "--tw-prose-counters": "#6b6b6b",
-            "--tw-prose-bullets": "#8a8a8a",
-            "--tw-prose-hr": "#e5e5e5",
-            "--tw-prose-quotes": "#6b6b6b",
-            "--tw-prose-quote-borders": "#e5e5e5",
-            "--tw-prose-code": "#1a1a1a",
-            "--tw-prose-pre-code": "#1a1a1a",
-            "--tw-prose-pre-bg": "#f0f0f0",
+            "--tw-prose-body": "var(--text-primary)",
+            "--tw-prose-headings": "var(--text-display)",
+            "--tw-prose-links": "var(--interactive)",
+            "--tw-prose-bold": "var(--text-primary)",
+            "--tw-prose-counters": "var(--text-secondary)",
+            "--tw-prose-bullets": "var(--text-disabled)",
+            "--tw-prose-hr": "var(--border)",
+            "--tw-prose-quotes": "var(--text-secondary)",
+            "--tw-prose-quote-borders": "var(--border-visible)",
+            "--tw-prose-code": "var(--text-primary)",
+            "--tw-prose-pre-code": "var(--text-primary)",
+            "--tw-prose-pre-bg": "var(--surface-raised)",
           },
         },
       },

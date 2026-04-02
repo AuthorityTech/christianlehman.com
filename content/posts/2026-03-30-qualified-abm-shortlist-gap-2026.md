@@ -1,10 +1,16 @@
 ---
-title: "Qualified Has $163M and Zero ABM Shortlist Appearances. Here's Why."
-date: "2026-03-30"
-description: "When buyers search for ABM platforms, Qualified never appears. Not because the product is weak — because every citation record uses the wrong category label."
-tags: ["ai-visibility", "shortlist", "martech"]
-primaryQuery: "best account-based marketing platforms for B2B"
-canonicalUrl: "https://christianlehman.com/blog/qualified-abm-shortlist-gap-2026"
+title: Qualified Has $163M and Zero ABM Shortlist Appearances. Here's Why.
+date: '2026-03-30'
+description: >-
+  When buyers search for ABM platforms, Qualified never appears. Not because the
+  product is weak — because every citation record uses the wrong category label.
+tags:
+  - ai-visibility
+  - shortlist
+  - martech
+primaryQuery: best account-based marketing platforms for B2B
+canonicalUrl: 'https://christianlehman.com/blog/qualified-abm-shortlist-gap-2026'
+featured_image: 'https://christianlehman.com/images/qualified-abm-shortlist-gap-2026.png'
 ---
 
 # Qualified Has $163M and Zero ABM Shortlist Appearances. Here's Why.

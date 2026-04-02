@@ -1,10 +1,17 @@
 ---
-title: "Endpoint Security: Who's on the AI Shortlist (And Who's Missing)"
-date: "2026-03-20"
-slug: "endpoint-security-ai-shortlist-2026"
-description: "Palo Alto Networks Cortex XDR is a Gartner Magic Quadrant Leader. But when a VP of Security asks Perplexity for the best endpoint security software, it's invisible."
-tags: ["ai-visibility", "shortlist", "cybersecurity"]
-author: "christian-lehman"
+title: 'Endpoint Security: Who''s on the AI Shortlist (And Who''s Missing)'
+date: '2026-03-20'
+slug: endpoint-security-ai-shortlist-2026
+description: >-
+  Palo Alto Networks Cortex XDR is a Gartner Magic Quadrant Leader. But when a
+  VP of Security asks Perplexity for the best endpoint security software, it's
+  invisible.
+tags:
+  - ai-visibility
+  - shortlist
+  - cybersecurity
+author: christian-lehman
+featured_image: 'https://christianlehman.com/images/endpoint-security-ai-shortlist-2026.png'
 ---
 
 ## The Invisible Shortlist: Endpoint Security

@@ -1,10 +1,17 @@
 ---
-title: "Fortinet Doesn't Exist on the Endpoint Security Shortlist — Here's Why"
-date: "2026-03-26"
-description: "Gartner Visionary, 96% recommend, 100% MITRE score. But zero AI engine appearances for 'best endpoint security for enterprise.' What publication tier gap keeps Fortinet off the shortlist?"
-tags: ["ai-visibility", "shortlist", "cybersecurity"]
-primaryQuery: "best endpoint security software for enterprise 2026"
-canonicalUrl: "https://christianlehman.com/blog/fortinet-endpoint-security-shortlist"
+title: Fortinet Doesn't Exist on the Endpoint Security Shortlist — Here's Why
+date: '2026-03-26'
+description: >-
+  Gartner Visionary, 96% recommend, 100% MITRE score. But zero AI engine
+  appearances for 'best endpoint security for enterprise.' What publication tier
+  gap keeps Fortinet off the shortlist?
+tags:
+  - ai-visibility
+  - shortlist
+  - cybersecurity
+primaryQuery: best endpoint security software for enterprise 2026
+canonicalUrl: 'https://christianlehman.com/blog/fortinet-endpoint-security-shortlist'
+featured_image: 'https://christianlehman.com/images/fortinet-endpoint-security-shortlist.png'
 ---
 
 When a CISO types "best endpoint security software for enterprise 2026" into ChatGPT or Perplexity, they get a shortlist. The same names appear across every engine: **CrowdStrike Falcon**, **SentinelOne Singularity**, **Microsoft Defender**, **Sophos Intercept X**.

@@ -1,10 +1,17 @@
 ---
-title: "Adyen Doesn't Exist on AI Shortlists. Here's Why."
-date: "2026-03-27"
-description: "Adyen processes €1.4T annually for Uber and Spotify. But type 'best payment processing software' into Perplexity, and they're invisible. Here's the publication tier gap keeping them off the shortlist."
-tags: ["ai-visibility", "shortlist", "fintech"]
-primaryQuery: "best payment processing software for businesses 2026"
-canonicalUrl: "https://christianlehman.com/blog/adyen-payment-processing-shortlist"
+title: Adyen Doesn't Exist on AI Shortlists. Here's Why.
+date: '2026-03-27'
+description: >-
+  Adyen processes €1.4T annually for Uber and Spotify. But type 'best payment
+  processing software' into Perplexity, and they're invisible. Here's the
+  publication tier gap keeping them off the shortlist.
+tags:
+  - ai-visibility
+  - shortlist
+  - fintech
+primaryQuery: best payment processing software for businesses 2026
+canonicalUrl: 'https://christianlehman.com/blog/adyen-payment-processing-shortlist'
+featured_image: 'https://christianlehman.com/images/adyen-payment-processing-shortlist.png'
 ---
 
 Type "best payment processing software for businesses 2026" into Perplexity, ChatGPT, Gemini, or Claude. You'll get a shortlist: Square, Stripe, PayPal, Helcim, Shopify Payments.

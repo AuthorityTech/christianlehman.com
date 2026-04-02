@@ -1,10 +1,20 @@
 ---
-title: '"Best AI Tools for Enterprise Automation 2026": Who''s on the AI Shortlist (And Who''s Missing)'
-date: "2026-03-23"
-description: "LLMs consistently surface the same 12 platforms when buyers search enterprise automation. Camunda — trusted by 700+ enterprises — isn't one of them."
-tags: ["ai-visibility", "shortlist", "enterprise-ai"]
-primaryQuery: "best AI tools for enterprise automation 2026"
-canonicalUrl: "https://christianlehman.com/blog/best-ai-tools-enterprise-automation-2026-shortlist"
+title: >-
+  "Best AI Tools for Enterprise Automation 2026": Who's on the AI Shortlist (And
+  Who's Missing)
+date: '2026-03-23'
+description: >-
+  LLMs consistently surface the same 12 platforms when buyers search enterprise
+  automation. Camunda — trusted by 700+ enterprises — isn't one of them.
+tags:
+  - ai-visibility
+  - shortlist
+  - enterprise-ai
+primaryQuery: best AI tools for enterprise automation 2026
+canonicalUrl: >-
+  https://christianlehman.com/blog/best-ai-tools-enterprise-automation-2026-shortlist
+featured_image: >-
+  https://christianlehman.com/images/best-ai-tools-enterprise-automation-2026-shortlist.png
 ---
 
 # "Best AI Tools for Enterprise Automation 2026": Who's on the AI Shortlist (And Who's Missing)

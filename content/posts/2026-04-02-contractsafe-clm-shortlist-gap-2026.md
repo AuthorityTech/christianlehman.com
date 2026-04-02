@@ -1,11 +1,18 @@
 ---
-title: "ContractSafe Doesn't Exist on AI Shortlists. Here's Why."
-date: "2026-04-02"
-description: "When buyers ask AI engines for the best contract management software, ContractSafe never shows up. Christian Lehman maps who wins and why."
-tags: ["ai-visibility", "shortlist", "legal_compliance", "contract-management"]
-primaryQuery: "best contract management software for enterprises"
-canonicalUrl: "https://christianlehman.com/blog/contractsafe-clm-shortlist-gap-2026"
-author: "Christian Lehman"
+title: ContractSafe Doesn't Exist on AI Shortlists. Here's Why.
+date: '2026-04-02'
+description: >-
+  When buyers ask AI engines for the best contract management software,
+  ContractSafe never shows up. Christian Lehman maps who wins and why.
+tags:
+  - ai-visibility
+  - shortlist
+  - legal_compliance
+  - contract-management
+primaryQuery: best contract management software for enterprises
+canonicalUrl: 'https://christianlehman.com/blog/contractsafe-clm-shortlist-gap-2026'
+author: Christian Lehman
+featured_image: 'https://christianlehman.com/images/contractsafe-clm-shortlist-gap-2026.png'
 ---
 
 When a procurement lead or VP of Legal types "best contract management software for enterprises" into an AI engine, they get a shortlist. Four or five names. Sometimes six. Those are the only vendors that exist as far as that buyer is concerned.

@@ -1,10 +1,17 @@
 ---
-title: "MEDENT Doesn't Exist on AI Shortlists. Here's Why."
-date: "2026-03-31"
-description: "MEDENT won G2's Easiest To Use EHR badge in Spring 2026. But when hospital buyers search 'best EHR software' in AI engines, MEDENT is invisible. The gap: earned authority at Tier 1 publications."
-tags: ["ai-visibility", "shortlist", "healthtech"]
-primaryQuery: "best EHR software for hospitals 2026"
-canonicalUrl: "https://christianlehman.com/blog/medent-ehr-shortlist-gap"
+title: MEDENT Doesn't Exist on AI Shortlists. Here's Why.
+date: '2026-03-31'
+description: >-
+  MEDENT won G2's Easiest To Use EHR badge in Spring 2026. But when hospital
+  buyers search 'best EHR software' in AI engines, MEDENT is invisible. The gap:
+  earned authority at Tier 1 publications.
+tags:
+  - ai-visibility
+  - shortlist
+  - healthtech
+primaryQuery: best EHR software for hospitals 2026
+canonicalUrl: 'https://christianlehman.com/blog/medent-ehr-shortlist-gap'
+featured_image: 'https://christianlehman.com/images/medent-ehr-shortlist-gap.png'
 ---
 
 When a hospital administrator types "best EHR software for hospitals 2026" into ChatGPT, Perplexity, or Gemini, they get the same four names: Epic, Cerner/Oracle Health, eClinicalWorks, and athenaOne.

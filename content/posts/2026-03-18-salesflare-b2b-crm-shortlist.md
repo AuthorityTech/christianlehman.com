@@ -1,10 +1,18 @@
 ---
-title: "\"Best CRM Software for B2B Sales Teams\": Who's on the AI Shortlist (And Who Should Be)"
-date: "2026-03-18"
-description: "Salesflare ranks #1 on G2 for B2B CRM with a 9.8/10 rating. But search 'best CRM for B2B sales teams' and it doesn't appear. Here's why."
-tags: ["ai-visibility", "shortlist", "saas"]
-primaryQuery: "best CRM software for B2B sales teams"
-canonicalUrl: "https://christianlehman.com/blog/salesflare-b2b-crm-shortlist"
+title: >-
+  "Best CRM Software for B2B Sales Teams": Who's on the AI Shortlist (And Who
+  Should Be)
+date: '2026-03-18'
+description: >-
+  Salesflare ranks #1 on G2 for B2B CRM with a 9.8/10 rating. But search 'best
+  CRM for B2B sales teams' and it doesn't appear. Here's why.
+tags:
+  - ai-visibility
+  - shortlist
+  - saas
+primaryQuery: best CRM software for B2B sales teams
+canonicalUrl: 'https://christianlehman.com/blog/salesflare-b2b-crm-shortlist'
+featured_image: 'https://christianlehman.com/images/salesflare-b2b-crm-shortlist.png'
 ---
 
 When a B2B sales leader types "best CRM software for B2B sales teams" into Perplexity, ChatGPT, or Google, they're asking a buying question. They want vendor shortlists, not theory. They want names, comparisons, pricing — who should we evaluate this quarter?

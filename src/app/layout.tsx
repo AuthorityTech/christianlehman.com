@@ -1,8 +1,28 @@
 import type { Metadata } from "next";
+import { Doto, Space_Grotesk, Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { PROFILE_IMAGE_URL, SITE_URL } from "@/lib/site";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "700"],
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+  weight: ["400", "700"],
+});
+
+const doto = Doto({
+  subsets: ["latin"],
+  variable: "--font-doto",
+  weight: ["400", "700"],
+});
 
 const OG_IMAGE = PROFILE_IMAGE_URL;
 
@@ -118,13 +138,25 @@ const schema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${spaceMono.variable} ${doto.variable}`}
+      suppressHydrationWarning
+    >
       <head>
+        <Script
+          id="cl-theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("cl-theme");var r=document.documentElement;r.classList.remove("light","dark");if(t==="light")r.classList.add("light");else if(t==="dark")r.classList.add("dark")}catch(e){}})();`,
+          }}
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <link rel="alternate" type="application/rss+xml" title="Christian Lehman" href={SITE_URL + "/feed.xml"} />
-        <meta name="theme-color" content="#fafafa" />
+        <meta name="theme-color" content="#F5F5F5" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
       </head>
-      <body>
+      <body className="min-h-screen bg-transparent font-sans text-nothing-primary antialiased">
         <Nav />
         <main>{children}</main>
         <Footer />

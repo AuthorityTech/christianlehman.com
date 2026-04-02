@@ -1,10 +1,19 @@
 ---
-title: "\"Best CRM Software for B2B Sales Teams\": Who's on the AI Shortlist (And Who Should Be)"
-date: "2026-03-25"
-description: "When buyers search for B2B CRM software, AI engines return HubSpot, Salesforce, and Pipedrive. Close CRM is nowhere. Here's what's missing from their citation footprint."
-tags: ["ai-visibility", "shortlist", "saas"]
-primaryQuery: "best CRM software for B2B sales teams"
-canonicalUrl: "https://christianlehman.com/blog/best-crm-b2b-sales-teams-shortlist"
+title: >-
+  "Best CRM Software for B2B Sales Teams": Who's on the AI Shortlist (And Who
+  Should Be)
+date: '2026-03-25'
+description: >-
+  When buyers search for B2B CRM software, AI engines return HubSpot,
+  Salesforce, and Pipedrive. Close CRM is nowhere. Here's what's missing from
+  their citation footprint.
+tags:
+  - ai-visibility
+  - shortlist
+  - saas
+primaryQuery: best CRM software for B2B sales teams
+canonicalUrl: 'https://christianlehman.com/blog/best-crm-b2b-sales-teams-shortlist'
+featured_image: 'https://christianlehman.com/images/best-crm-b2b-sales-teams-shortlist.png'
 ---
 
 Type "best CRM software for B2B sales teams" into ChatGPT, Perplexity, or Gemini, and you'll get the same five names on repeat: HubSpot, Salesforce, Pipedrive, Zoho, Freshworks.

@@ -16,79 +16,112 @@ export default function HomePage() {
   const posts = getAllPosts().slice(0, 5);
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-16">
-
+    <div className="mx-auto max-w-2xl px-6 py-16 md:py-20">
       {/* Hero */}
-      <section className="mb-16">
-
-        {/* Identity */}
-        <div className="flex items-start gap-5 mb-8">
+      <section className="mb-20">
+        <div className="mb-10 flex items-start gap-5">
           <img
             src={PROFILE_IMAGE_URL}
             alt="Christian Lehman"
             width={56}
             height={56}
-            className="rounded-full object-cover flex-shrink-0 mt-0.5 ring-1 ring-[#e5e5e5]"
+            className="mt-0.5 flex-shrink-0 rounded-full border border-nothing-border object-cover"
           />
           <div>
-            <h1 className="text-[22px] font-semibold text-[#1a1a1a] tracking-tight leading-tight mb-1">
+            <h1 className="font-display text-[2.25rem] font-normal leading-[1.1] tracking-[-0.02em] text-nothing-display">
               Christian Lehman
             </h1>
-            <p className="text-[13px] text-[#6b6b6b] leading-snug">
+            <p className="mt-2 font-mono text-[11px] uppercase leading-snug tracking-[0.08em] text-nothing-secondary">
               Co-Founder,{" "}
-              <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">
+              <a
+                href="https://authoritytech.io"
+                target="_blank"
+                rel="noopener"
+                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+              >
                 AuthorityTech
               </a>
-              {" "}·{" "}
-              <a href="https://machinerelations.ai" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">
+              {" "}
+              ·{" "}
+              <a
+                href="https://machinerelations.ai"
+                target="_blank"
+                rel="noopener"
+                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+              >
                 Machine Relations
               </a>
             </p>
           </div>
         </div>
 
-        {/* Bio */}
-        <p className="text-[15px] text-[#6b6b6b] leading-[1.75] max-w-xl">
+        <p className="max-w-xl text-[15px] font-light leading-[1.65] text-nothing-secondary">
           I help companies become visible to AI. Co-Founded{" "}
-          <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors border-b border-[#e5e5e5] hover:border-link">
+          <a
+            href="https://authoritytech.io"
+            target="_blank"
+            rel="noopener"
+            className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+          >
             AuthorityTech
-          </a>
-          {" "}— the world's first AI-native earned media agency.
-          Revenue operator, B2B growth strategist, and practitioner of{" "}
-          <a href="https://machinerelations.ai" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors border-b border-[#e5e5e5] hover:border-link">
+          </a>{" "}
+          — the world&apos;s first AI-native earned media agency. Revenue operator, B2B growth strategist, and practitioner of{" "}
+          <a
+            href="https://machinerelations.ai"
+            target="_blank"
+            rel="noopener"
+            className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+          >
             Machine Relations
           </a>
           : the discipline of making brands visible to the AI engines your buyers use to make decisions.
         </p>
 
-        {/* Links */}
-        <div className="flex flex-wrap gap-5 mt-8 text-[12px] uppercase tracking-widest text-[#8a8a8a]">
-          <a href="https://authoritytech.io" target="_blank" rel="noopener" className="hover:text-link transition-colors">AuthorityTech →</a>
-          <a href="https://machinerelations.ai" target="_blank" rel="noopener" className="hover:text-link transition-colors">MachineRelations.ai →</a>
+        <div className="mt-10 flex flex-wrap gap-6 font-mono text-[11px] uppercase tracking-[0.1em] text-nothing-disabled">
+          <a
+            href="https://authoritytech.io"
+            target="_blank"
+            rel="noopener"
+            className="transition-colors duration-200 ease-nothing hover:text-link"
+          >
+            AuthorityTech →
+          </a>
+          <a
+            href="https://machinerelations.ai"
+            target="_blank"
+            rel="noopener"
+            className="transition-colors duration-200 ease-nothing hover:text-link"
+          >
+            MachineRelations.ai →
+          </a>
         </div>
       </section>
 
-      {/* Divider */}
-      <hr className="border-[#e5e5e5] mb-14" />
+      <hr className="mb-16 border-nothing-border" />
 
       {/* Writing */}
       {posts.length > 0 && (
         <section>
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-[11px] font-medium text-[#6b6b6b] uppercase tracking-[0.15em]">Writing</h2>
-            <Link href="/blog" className="text-[11px] text-link hover:text-[#1a1a1a] transition-colors uppercase tracking-[0.1em]">All →</Link>
+          <div className="mb-10 flex items-center justify-between">
+            <h2 className="font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Writing</h2>
+            <Link
+              href="/blog"
+              className="font-mono text-[11px] uppercase tracking-[0.08em] text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+            >
+              All →
+            </Link>
           </div>
-          <div className="space-y-9">
+          <div className="space-y-10">
             {posts.map((post) => (
               <article key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="group block">
-                  <h3 className="text-[15px] font-medium text-[#1a1a1a] group-hover:text-link transition-colors leading-snug mb-1.5">
+                  <h3 className="mb-1.5 text-[15px] font-normal leading-snug text-nothing-primary transition-colors duration-200 ease-nothing group-hover:text-link">
                     {post.title}
                   </h3>
                   {post.description && (
-                    <p className="text-[13px] text-[#6b6b6b] leading-relaxed mb-2">{post.description}</p>
+                    <p className="mb-2 text-[14px] leading-relaxed text-nothing-secondary">{post.description}</p>
                   )}
-                  <time className="text-[11px] text-[#8a8a8a] uppercase tracking-wide">{formatDate(post.date)}</time>
+                  <time className="font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">{formatDate(post.date)}</time>
                 </Link>
               </article>
             ))}
@@ -98,7 +131,7 @@ export default function HomePage() {
 
       {posts.length === 0 && (
         <section>
-          <p className="text-[#6b6b6b] text-[14px]">Writing coming soon.</p>
+          <p className="text-[14px] text-nothing-secondary">Writing coming soon.</p>
         </section>
       )}
     </div>

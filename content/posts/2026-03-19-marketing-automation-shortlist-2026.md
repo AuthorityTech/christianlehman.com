@@ -1,10 +1,19 @@
 ---
-title: "Marketing Automation for Enterprise: Who's on the AI Shortlist (And Who Should Be)"
-date: "2026-03-19"
-description: "AI engines recommend Marketo, Eloqua, and Salesforce for enterprise marketing automation. Iterable — a G2 leader — doesn't exist on the shortlist. Here's why."
-tags: ["ai-visibility", "shortlist", "martech"]
-primaryQuery: "top marketing automation platforms for enterprise 2026"
-canonicalUrl: "https://christianlehman.com/blog/marketing-automation-shortlist-2026"
+title: >-
+  Marketing Automation for Enterprise: Who's on the AI Shortlist (And Who Should
+  Be)
+date: '2026-03-19'
+description: >-
+  AI engines recommend Marketo, Eloqua, and Salesforce for enterprise marketing
+  automation. Iterable — a G2 leader — doesn't exist on the shortlist. Here's
+  why.
+tags:
+  - ai-visibility
+  - shortlist
+  - martech
+primaryQuery: top marketing automation platforms for enterprise 2026
+canonicalUrl: 'https://christianlehman.com/blog/marketing-automation-shortlist-2026'
+featured_image: 'https://christianlehman.com/images/marketing-automation-shortlist-2026.png'
 ---
 
 When an enterprise CMO asks an AI engine "what are the top marketing automation platforms for enterprise" — they get a shortlist. That shortlist determines pipeline. Most vendors showing up don't know they're on it. Most vendors missing don't know they're not.

@@ -1,11 +1,18 @@
 ---
-title: "Paylocity Has 35,000 Clients. It Doesn't Exist on AI Shortlists."
-date: "2026-04-01"
-slug: "paylocity-hris-shortlist-gap-2026"
-description: "Paylocity is publicly traded with 35,000 clients and top G2 ratings. When buyers search 'best HRIS for growing companies' in AI engines, Paylocity doesn't appear."
-tags: ["ai-visibility", "shortlist", "hr-tech"]
-primaryQuery: "best HRIS software for growing companies"
-canonicalUrl: "https://christianlehman.com/blog/paylocity-hris-shortlist-gap-2026"
+title: 'Paylocity Has 35,000 Clients. It Doesn''t Exist on AI Shortlists.'
+date: '2026-04-01'
+slug: paylocity-hris-shortlist-gap-2026
+description: >-
+  Paylocity is publicly traded with 35,000 clients and top G2 ratings. When
+  buyers search 'best HRIS for growing companies' in AI engines, Paylocity
+  doesn't appear.
+tags:
+  - ai-visibility
+  - shortlist
+  - hr-tech
+primaryQuery: best HRIS software for growing companies
+canonicalUrl: 'https://christianlehman.com/blog/paylocity-hris-shortlist-gap-2026'
+featured_image: 'https://christianlehman.com/images/paylocity-hris-shortlist-gap-2026.png'
 ---
 
 When a VP of HR at a 500-person company types "best HRIS software for growing companies" into ChatGPT or Perplexity, they get a shortlist. Workday. Rippling. BambooHR. ADP Workforce Now. HiBob.

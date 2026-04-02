@@ -1,10 +1,19 @@
 ---
-title: "The Invisible Shortlist: How AI Engines Build B2B Buying Decisions Before You Know They Exist"
-date: "2026-03-17"
-description: "Every B2B buyer query runs through an invisible shortlist before a human ever clicks a search result. Here's who's on it — and who's missing."
-tags: ["ai-visibility", "shortlist", "machine-relations"]
-primaryQuery: "top PR agencies for B2B SaaS companies 2026"
-canonicalUrl: "https://christianlehman.com/blog/invisible-shortlist-b2b-buying-decisions"
+title: >-
+  The Invisible Shortlist: How AI Engines Build B2B Buying Decisions Before You
+  Know They Exist
+date: '2026-03-17'
+description: >-
+  Every B2B buyer query runs through an invisible shortlist before a human ever
+  clicks a search result. Here's who's on it — and who's missing.
+tags:
+  - ai-visibility
+  - shortlist
+  - machine-relations
+primaryQuery: top PR agencies for B2B SaaS companies 2026
+canonicalUrl: 'https://christianlehman.com/blog/invisible-shortlist-b2b-buying-decisions'
+featured_image: >-
+  https://christianlehman.com/images/invisible-shortlist-b2b-buying-decisions.png
 ---
 
 When a B2B buyer types "top PR agencies for B2B SaaS companies" into ChatGPT, they don't get a search results page. They get a shortlist. Named companies, ranked by the AI's internal trust hierarchy, surfaced before the buyer ever thinks to Google anything.

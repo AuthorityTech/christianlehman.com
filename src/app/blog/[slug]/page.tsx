@@ -104,41 +104,69 @@ export default async function PostPage({ params }: Props) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-16">
+    <div className="mx-auto max-w-2xl px-6 py-16 md:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(postSchema) }} />
 
       <nav className="mb-12">
-        <Link href="/blog" className="text-[12px] text-link hover:text-[#1a1a1a] transition-colors uppercase tracking-[0.1em]">← Writing</Link>
+        <Link
+          href="/blog"
+          className="font-mono text-[11px] uppercase tracking-[0.08em] text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+        >
+          ← Writing
+        </Link>
       </nav>
 
       <header className="mb-10">
-        <h1 className="text-[26px] font-semibold text-[#1a1a1a] leading-tight tracking-tight mb-5">{post.title}</h1>
+        <h1 className="mb-5 font-display text-[1.65rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display md:text-[2rem]">
+          {post.title}
+        </h1>
 
-        <div className="flex items-center gap-3 mb-4">
+        <div className="mb-4 flex items-center gap-3">
           <img
             src={DEFAULT_AVATAR}
             alt="Christian Lehman"
             width={28}
             height={28}
-            className="rounded-full object-cover ring-1 ring-[#e5e5e5]"
+            className="rounded-full border border-nothing-border object-cover"
           />
-          <div className="text-[12px] text-[#6b6b6b] leading-snug">
-            <span className="text-[#1a1a1a]">Christian Lehman</span>
-            {" "}·{" "}
-            <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
-            {" "}·{" "}
-            <a href="https://machinerelations.ai" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">Machine Relations</a>
+          <div className="text-[12px] leading-snug text-nothing-secondary">
+            <span className="text-nothing-primary">Christian Lehman</span>
+            {" "}
+            ·{" "}
+            <a
+              href="https://authoritytech.io"
+              target="_blank"
+              rel="noopener"
+              className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+            >
+              AuthorityTech
+            </a>
+            {" "}
+            ·{" "}
+            <a
+              href="https://machinerelations.ai"
+              target="_blank"
+              rel="noopener"
+              className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+            >
+              Machine Relations
+            </a>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <time className="text-[11px] text-[#8a8a8a] uppercase tracking-wide">{formatDate(post.date)}</time>
+          <time className="font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">{formatDate(post.date)}</time>
           {post.tags && post.tags.length > 0 && (
             <>
-              <span className="text-[#e5e5e5]">·</span>
+              <span className="text-nothing-border">·</span>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="text-[10px] text-[#a89868] border border-[#e5e5e5] bg-[#fafafa] rounded px-2 py-0.5 uppercase tracking-wide">{tag}</span>
+                  <span
+                    key={tag}
+                    className="border border-nothing-borderHi bg-nothing-surface px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.08em] text-nothing-secondary"
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
             </>
@@ -147,31 +175,39 @@ export default async function PostPage({ params }: Props) {
       </header>
 
       {post.featured_image && (
-        <div className="mb-12">
+        <div className="-mx-0 mb-12">
           <img
             src={post.featured_image}
             alt={post.title}
             width={1200}
             height={630}
-            className="w-full rounded-sm"
+            className="w-full rounded-[4px] border border-nothing-border"
             style={{ aspectRatio: "1200/630", objectFit: "cover" }}
           />
         </div>
       )}
 
       <div
-        className="prose prose-rams max-w-none prose-p:text-[#1a1a1a] prose-p:leading-[1.8] prose-headings:text-[#1a1a1a] prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-link prose-a:underline hover:prose-a:text-[#1a1a1a] prose-strong:text-[#1a1a1a] prose-li:text-[#6b6b6b] prose-blockquote:text-[#6b6b6b] prose-blockquote:border-[#e5e5e5] prose-code:text-[#1a1a1a] prose-pre:bg-[#f0f0f0] prose-pre:border prose-pre:border-[#e5e5e5] prose-hr:border-[#e5e5e5] prose-h2:mt-10 prose-h2:mb-4 prose-p:mb-5"
+        className="prose prose-nothing max-w-none prose-p:mb-5 prose-p:leading-[1.75] prose-p:text-nothing-primary prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-nothing-display prose-a:text-link prose-a:no-underline prose-strong:text-nothing-primary prose-li:text-nothing-secondary prose-blockquote:border-nothing-border prose-blockquote:text-nothing-secondary prose-code:text-nothing-primary prose-pre:rounded prose-pre:border prose-pre:border-nothing-border prose-pre:bg-nothing-raised prose-hr:border-nothing-border prose-h2:mb-4 prose-h2:mt-10 hover:prose-a:text-nothing-primary"
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      <hr className="border-[#e5e5e5] mt-16 mb-10" />
+      <hr className="mb-10 mt-16 border-nothing-border" />
 
       <section className="mb-10">
-        <h2 className="text-[11px] font-medium text-[#6b6b6b] uppercase tracking-[0.15em] mb-3">About Christian Lehman</h2>
-        <p className="text-[13px] text-[#6b6b6b] leading-relaxed mb-2">
+        <h2 className="mb-3 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">About Christian Lehman</h2>
+        <p className="mb-2 text-[13px] leading-relaxed text-nothing-secondary">
           Christian Lehman is Co-Founder of{" "}
-          <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
-          {" "}— the world's first AI-native earned media agency. He tracks which companies are winning and losing the AI shortlist battle across every major B2B vertical, and writes about what the data actually shows.
+          <a
+            href="https://authoritytech.io"
+            target="_blank"
+            rel="noopener"
+            className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+          >
+            AuthorityTech
+          </a>{" "}
+          — the world&apos;s first AI-native earned media agency. He tracks which companies are winning and losing the AI shortlist battle across every
+          major B2B vertical, and writes about what the data actually shows.
         </p>
       </section>
 
@@ -182,14 +218,28 @@ export default async function PostPage({ params }: Props) {
             alt="Christian Lehman"
             width={32}
             height={32}
-            className="rounded-full object-cover ring-1 ring-[#e5e5e5]"
+            className="rounded-full border border-nothing-border object-cover"
           />
           <div>
-            <p className="text-[12px] text-[#1a1a1a] leading-snug">Christian Lehman</p>
-            <div className="flex gap-3 text-[11px] text-[#6b6b6b] mt-0.5">
-              <a href="https://authoritytech.io" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">AuthorityTech</a>
+            <p className="text-[12px] leading-snug text-nothing-primary">Christian Lehman</p>
+            <div className="mt-0.5 flex gap-3 text-[11px] text-nothing-secondary">
+              <a
+                href="https://authoritytech.io"
+                target="_blank"
+                rel="noopener"
+                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+              >
+                AuthorityTech
+              </a>
               <span>·</span>
-              <a href="https://machinerelations.ai" target="_blank" rel="noopener" className="text-link hover:text-[#1a1a1a] transition-colors">Machine Relations</a>
+              <a
+                href="https://machinerelations.ai"
+                target="_blank"
+                rel="noopener"
+                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
+              >
+                Machine Relations
+              </a>
             </div>
           </div>
         </div>
