@@ -6,11 +6,13 @@ const BASE = "https://christianlehman.com";
 
 export const metadata: Metadata = {
   title: "Writing",
-  description: "Essays, FounderOS, and published work by Christian Lehman — founder of AuthorityTech and creator of Machine Relations.",
+  description:
+    "Christian Lehman writes for CMOs and growth leaders on what is working in PR, AI search, and winning visibility in the AI era — AuthorityTech, Machine Relations.",
   alternates: { canonical: "https://christianlehman.com/blog" },
   openGraph: {
     title: "Writing — Christian Lehman",
-    description: "Essays, FounderOS, and published work by Christian Lehman.",
+    description:
+      "For CMOs and growth leaders: what is working in PR, AI search, and winning the AI era.",
     url: "https://christianlehman.com/blog",
   },
 };
@@ -43,7 +45,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
         "@id": `${BASE}/blog#blog`,
         name: "FounderOS — Christian Lehman",
         description:
-          "Essays, FounderOS, and published work by Christian Lehman — founder of AuthorityTech, creator of Machine Relations.",
+          "Writing for CMOs and growth leaders on PR, AI search, and winning visibility in the AI era — by Christian Lehman, AuthorityTech and Machine Relations.",
         url: `${BASE}/blog`,
         author: { "@type": "Person", "@id": `${BASE}/#person` },
       },
@@ -142,7 +144,7 @@ export default function BlogPage() {
       <header className="mb-16">
         <h1 className="font-display mb-3 text-[2rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display">Writing</h1>
         <p className="max-w-xl text-[14px] font-light leading-relaxed text-nothing-secondary">
-          Ideas on building, identity, and the mechanisms most founders miss.
+          I write for CMOs and growth leaders on what is actually working in PR, AI search, and winning visibility in the AI era — not theory, but what the data and the field are showing.
         </p>
       </header>
 
@@ -172,7 +174,7 @@ export default function BlogPage() {
 
       {founderos.length > 0 && (
         <section className="mb-16">
-          <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">FounderOS</h2>
+          <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Briefs</h2>
           <PostList posts={founderos} />
         </section>
       )}
@@ -217,12 +219,12 @@ export default function BlogPage() {
             </a>
           </div>
           <div>
-            <a href="https://www.entrepreneur.com/author/jaxon-parrott" target="_blank" rel="noopener" className="group block">
+            <a href="https://medium.com/@christian-lehman" target="_blank" rel="noopener" className="group block">
               <h3 className="mb-1 text-[15px] font-normal leading-snug text-link transition-colors duration-200 ease-nothing group-hover:text-nothing-primary">
-                Entrepreneur Magazine →
+                Medium →
               </h3>
               <p className="text-[14px] leading-relaxed text-nothing-secondary">
-                Contributing author. AI search, the future of PR, and what brands need to do differently right now.
+                Longer essays on Machine Relations, AI visibility, and what the data shows about the AI shortlist.
               </p>
             </a>
           </div>

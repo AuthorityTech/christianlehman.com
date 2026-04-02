@@ -52,8 +52,8 @@ export function buildRssXml(): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>FounderOS — Christian Lehman</title>
-    <description>Essays and FounderOS writing by Christian Lehman on Machine Relations, AI visibility, and category creation.</description>
+    <title>Writing — Christian Lehman</title>
+    <description>For CMOs and growth leaders: PR, AI search, and winning visibility in the AI era — Christian Lehman, AuthorityTech and Machine Relations.</description>
     <link>${BASE}/blog</link>
     <language>en-us</language>
     <managingEditor>contact@christianlehman.com (Christian Lehman)</managingEditor>
