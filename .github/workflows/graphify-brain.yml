@@ -1,4 +1,4 @@
-name: Brain Sync — AST Graph
+name: Brain Sync
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Install graphifyy
         run: pip install graphifyy
 
-      - name: Run AST extraction pipeline
+      - name: Run graphify pipeline
         run: |
           python3 -c "
           import json
@@ -33,10 +33,11 @@ jobs:
           from graphify.extract import collect_files, extract
           from graphify.build import build
           from graphify.cluster import cluster, score_all
+          from graphify.analyze import god_nodes, surprising_connections
           from graphify.export import to_json
           from graphify.report import generate
+          from graphify.wiki import to_wiki
 
-          # Step 1: Detect files
           root = Path('.')
           detection = detect(root)
           print(f'Detected: {detection[\"total_files\"]} files')
@@ -46,7 +47,7 @@ jobs:
               print('No code files found — skipping.')
               raise SystemExit(0)
 
-          # Step 2: AST extraction (code only, no LLM)
+          # AST extraction
           code_files = []
           for f in code_files_raw:
               p = Path(f)
@@ -55,35 +56,39 @@ jobs:
           ast_result = extract(code_files)
           print(f'AST: {len(ast_result[\"nodes\"])} nodes, {len(ast_result[\"edges\"])} edges')
 
-          # Step 3: Build graph
+          # Build + cluster
           G = build([ast_result])
-          print(f'Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges')
-
-          # Step 4: Cluster
           communities = cluster(G)
           cohesion = score_all(G, communities)
-          community_labels = {cid: f'Community {cid}' for cid in communities}
-          print(f'Communities: {len(communities)}')
+          labels = {cid: f'Community {cid}' for cid in communities}
+          print(f'Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges, {len(communities)} communities')
 
-          # Step 5: Export graph.json
+          # Analyze
+          gods = god_nodes(G)
+          surprises = surprising_connections(G, communities)
+
+          # Export graph.json
           out = Path('graphify-out')
           out.mkdir(exist_ok=True)
           to_json(G, communities, str(out / 'graph.json'))
 
-          # Step 6: Generate report
-          god_nodes = [{'label': n, 'edges': G.degree(n)} for n in sorted(G.nodes(), key=lambda x: G.degree(x), reverse=True)[:10]]
+          # Generate report
           report_md = generate(
-              G=G,
-              communities=communities,
-              cohesion_scores=cohesion,
-              community_labels=community_labels,
-              god_node_list=god_nodes,
-              surprise_list=[],
-              detection_result=detection,
+              G=G, communities=communities, cohesion_scores=cohesion,
+              community_labels=labels, god_node_list=gods,
+              surprise_list=surprises, detection_result=detection,
               token_cost={'input_tokens': 0, 'output_tokens': 0},
               root=str(root),
           )
           (out / 'GRAPH_REPORT.md').write_text(report_md)
+
+          # Generate wiki
+          wiki_count = to_wiki(
+              G, communities, str(out / 'wiki'),
+              community_labels=labels, cohesion=cohesion,
+              god_nodes_data=gods,
+          )
+          print(f'Wiki: {wiki_count} articles')
           print('Pipeline complete.')
           "
 
@@ -94,27 +99,23 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Clone brain repo
           git clone --depth=1 "https://x-access-token:${BRAIN_PAT}@github.com/AuthorityTech/brain.git" /tmp/brain
-
-          # Ensure lane directory exists
           mkdir -p "/tmp/brain/${LANE}"
 
-          # Copy AST outputs (graph + report only — wiki rebuilds weekly)
-          cp -f graphify-out/graph.json "/tmp/brain/${LANE}/graph.json" 2>/dev/null || true
-          cp -f graphify-out/GRAPH_REPORT.md "/tmp/brain/${LANE}/GRAPH_REPORT.md" 2>/dev/null || true
+          # Sync all outputs: graph, report, and wiki
+          cp -f graphify-out/graph.json "/tmp/brain/${LANE}/graph.json"
+          cp -f graphify-out/GRAPH_REPORT.md "/tmp/brain/${LANE}/GRAPH_REPORT.md"
+          rm -rf "/tmp/brain/${LANE}/wiki"
+          cp -r graphify-out/wiki "/tmp/brain/${LANE}/wiki"
 
-          # Check for actual changes
           cd /tmp/brain
-          git diff --quiet && echo "No changes to brain — skipping." && exit 0
+          git add "${LANE}/"
+          git diff --cached --quiet && echo "No changes to brain — skipping." && exit 0
 
-          # Configure git and push with retry
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "${LANE}/graph.json" "${LANE}/GRAPH_REPORT.md"
-          git commit -m "sync(${LANE}): AST graph update from ${GITHUB_REPOSITORY}@${GITHUB_SHA::7}"
+          git commit -m "sync(${LANE}): graph + wiki update from ${GITHUB_REPOSITORY}@${GITHUB_SHA::7}"
 
-          # Retry push up to 3 times (handles concurrent lane pushes)
           for attempt in 1 2 3; do
             if git push; then
               echo "Brain updated successfully (attempt ${attempt})."
