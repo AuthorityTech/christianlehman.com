@@ -103,43 +103,10 @@ jobs:
           git clone --depth=1 "https://x-access-token:${BRAIN_PAT}@github.com/AuthorityTech/brain.git" /tmp/brain
           mkdir -p "/tmp/brain/${LANE}"
 
-          # Merge AST output with existing semantic nodes (if any)
-          # The server runs semantic extraction periodically. The Action only does AST.
-          # Preserve semantic nodes/edges so they don't get wiped on every push.
-          python3 -c "
-          import json
-          from pathlib import Path
-
-          ast_graph = json.loads(Path('graphify-out/graph.json').read_text())
-          brain_graph_path = Path('/tmp/brain/${LANE}/graph.json')
-
-          if brain_graph_path.exists():
-              brain_graph = json.loads(brain_graph_path.read_text())
-              ast_ids = {n['id'] for n in ast_graph.get('nodes', [])}
-
-              # Preserve semantic nodes from brain that aren't in the AST output
-              semantic_types = {'document','concept','glossary','strategy','metric','entity','framework'}
-              preserved_nodes = [n for n in brain_graph.get('nodes', [])
-                                 if n['id'] not in ast_ids
-                                 and n.get('file_type','') in semantic_types]
-
-              # Preserve edges where both endpoints exist in the merged set
-              if preserved_nodes:
-                  ast_graph['nodes'].extend(preserved_nodes)
-                  merged_ids = {n['id'] for n in ast_graph['nodes']}
-                  semantic_edges = [e for e in brain_graph.get('links', [])
-                                   if e.get('source','') not in ast_ids
-                                   or e.get('target','') not in ast_ids]
-                  valid_edges = [e for e in semantic_edges
-                                if e.get('source','') in merged_ids
-                                and e.get('target','') in merged_ids]
-                  ast_graph.setdefault('links', []).extend(valid_edges)
-                  print(f'Preserved {len(preserved_nodes)} semantic nodes, {len(valid_edges)} semantic edges')
-
-          Path('graphify-out/graph.json').write_text(json.dumps(ast_graph, indent=2))
-          "
-
-          cp -f graphify-out/graph.json "/tmp/brain/${LANE}/graph.json"
+          # Write AST layer ONLY — never touch graph-semantic.json
+          # The server owns semantic extraction. Actions own AST.
+          # The unified rebuild script merges both into graph.json.
+          cp -f graphify-out/graph.json "/tmp/brain/${LANE}/graph-ast.json"
           cp -f graphify-out/GRAPH_REPORT.md "/tmp/brain/${LANE}/GRAPH_REPORT.md"
           rm -rf "/tmp/brain/${LANE}/wiki"
           cp -r graphify-out/wiki "/tmp/brain/${LANE}/wiki"
