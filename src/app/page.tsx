@@ -65,7 +65,7 @@ export default function HomePage() {
           >
             AuthorityTech
           </a>{" "}
-          — the world&apos;s first AI-native earned media agency. Revenue operator, B2B growth strategist, and practitioner of{" "}
+          — the world&apos;s first AI-native Machine Relations agency. Revenue operator, B2B growth strategist, and practitioner of{" "}
           <a
             href="https://machinerelations.ai"
             target="_blank"

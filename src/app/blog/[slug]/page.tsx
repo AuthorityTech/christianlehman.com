@@ -206,7 +206,7 @@ export default async function PostPage({ params }: Props) {
           >
             AuthorityTech
           </a>{" "}
-          — the world&apos;s first AI-native earned media agency. He tracks which companies are winning and losing the AI shortlist battle across every
+          — the world&apos;s first AI-native Machine Relations agency. He tracks which companies are winning and losing the AI shortlist battle across every
           major B2B vertical, and writes about what the data actually shows.
         </p>
       </section>
