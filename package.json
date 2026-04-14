@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/generate-og-images.mjs",
+    "ontology:guard": "node scripts/guard-ontology-schema.mjs",
+    "prebuild": "npm run ontology:guard && node scripts/generate-og-images.mjs",
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start",
