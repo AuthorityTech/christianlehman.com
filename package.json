@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "ontology:guard": "node scripts/guard-ontology-schema.mjs",
-    "prebuild": "npm run ontology:guard && node scripts/generate-og-images.mjs",
+    "ontology:graph": "node scripts/validate-ontology-graph.mjs",
+    "prebuild": "npm run ontology:guard && npm run ontology:graph && node scripts/generate-og-images.mjs",
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start",
