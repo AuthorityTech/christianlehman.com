@@ -17,6 +17,7 @@ export function generateStaticParams() {
 }
 
 const DEFAULT_AVATAR = PROFILE_IMAGE_URL;
+const MACHINE_RELATIONS_TERM_ID = "https://machinerelations.ai/#term";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -66,13 +67,26 @@ export default async function PostPage({ params }: Props) {
 
   const image = post.featured_image;
   const pageUrl = "https://christianlehman.com/blog/" + slug;
+  const webPageId = pageUrl + "#webpage";
+  const articleId = pageUrl + "#article";
+  const breadcrumbId = pageUrl + "#breadcrumb";
 
   const postSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": webPageId,
+        url: pageUrl,
+        name: post.title,
+        isPartOf: { "@id": "https://christianlehman.com/#website" },
+        about: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
+        breadcrumb: { "@id": breadcrumbId },
+        mainEntity: { "@id": articleId },
+      },
+      {
         "@type": "BlogPosting",
-        "@id": pageUrl + "#article",
+        "@id": articleId,
         headline: post.title,
         description: post.description,
         datePublished: post.date,
@@ -85,19 +99,47 @@ export default async function PostPage({ params }: Props) {
           name: "Christian Lehman",
           url: "https://christianlehman.com",
           jobTitle: "Co-Founder, AuthorityTech",
-          sameAs: ["https://authoritytech.io", "https://machinerelations.ai"],
         },
         publisher: { "@type": "Person", "@id": "https://christianlehman.com/#person" },
+        mainEntityOfPage: { "@id": webPageId },
         keywords: post.tags?.join(", ") ?? "",
         isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
+        about: [{ "@id": MACHINE_RELATIONS_TERM_ID }, { "@id": "https://authoritytech.io/#organization" }],
       },
       {
         "@type": "BreadcrumbList",
-        "@id": pageUrl + "#breadcrumb",
+        "@id": breadcrumbId,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://christianlehman.com" },
-          { "@type": "ListItem", position: 2, name: "Writing", item: "https://christianlehman.com/blog" },
-          { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: {
+              "@type": "WebPage",
+              "@id": "https://christianlehman.com",
+              name: "Home",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Writing",
+            item: {
+              "@type": "WebPage",
+              "@id": "https://christianlehman.com/blog",
+              name: "Writing",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: {
+              "@type": "WebPage",
+              "@id": pageUrl,
+              name: post.title,
+            },
+          },
         ],
       },
     ],

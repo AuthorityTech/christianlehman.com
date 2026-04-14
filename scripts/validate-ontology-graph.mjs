@@ -7,6 +7,8 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const layout = fs.readFileSync(path.join(ROOT, "src", "app", "layout.tsx"), "utf8");
+const blogIndex = fs.readFileSync(path.join(ROOT, "src", "app", "blog", "page.tsx"), "utf8");
+const blogPost = fs.readFileSync(path.join(ROOT, "src", "app", "blog", "[slug]", "page.tsx"), "utf8");
 const llms = fs.readFileSync(path.join(ROOT, "src", "app", "llms.txt", "route.ts"), "utf8");
 const robots = fs.readFileSync(path.join(ROOT, "src", "app", "robots.ts"), "utf8");
 
@@ -51,7 +53,9 @@ const byId = new Map(
 
 const personId = "https://christianlehman.com/#person";
 const person = byId.get(personId);
+const website = byId.get("https://christianlehman.com/#website");
 if (!person) fail("Missing Christian canonical Person node");
+if (!website) fail("Missing Christian website node");
 if (person.worksFor?.["@id"] !== "https://authoritytech.io/#organization") {
   fail("Christian Person.worksFor must reference canonical AuthorityTech @id");
 }
@@ -63,6 +67,25 @@ if (!knowsAbout.some((entry) => entry?.["@id"] === "https://machinerelations.ai/
 
 if (!String(person.description || "").toLowerCase().includes("architect")) {
   fail("Christian Person description must preserve architect framing");
+}
+if (website.creator?.["@id"] !== personId) {
+  fail("WebSite.creator must reference canonical Christian person @id");
+}
+if (website.about?.["@id"] !== "https://machinerelations.ai/#term") {
+  fail("WebSite.about must reference canonical Machine Relations @id");
+}
+if (/author:/.test(JSON.stringify(website))) {
+  fail("WebSite must not use author; use creator");
+}
+
+if (!/"@type":\s*"WebPage"[\s\S]{0,220}?"@id":\s*`\$\{BASE\}\/blog`/s.test(blogIndex)) {
+  fail("Blog index breadcrumb items must be WebPage objects");
+}
+if (!/"@type":\s*"WebPage"[\s\S]{0,220}?"@id":\s*pageUrl/s.test(blogPost)) {
+  fail("Blog post breadcrumb items must be WebPage objects");
+}
+if (/sameAs:\s*\[[^\]]*authoritytech\.io[^\]]*\]/s.test(blogPost) || /sameAs:\s*\[[^\]]*machinerelations\.ai[^\]]*\]/s.test(blogPost)) {
+  fail("Blog post author.sameAs must only contain personal profile URLs");
 }
 
 const graphText = JSON.stringify(graph);

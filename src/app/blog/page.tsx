@@ -74,13 +74,21 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: `${BASE}`,
+            item: {
+              "@type": "WebPage",
+              "@id": `${BASE}`,
+              name: "Home",
+            },
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Writing",
-            item: `${BASE}/blog`,
+            item: {
+              "@type": "WebPage",
+              "@id": `${BASE}/blog`,
+              name: "Writing",
+            },
           },
         ],
       },
