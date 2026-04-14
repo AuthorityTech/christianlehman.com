@@ -11,7 +11,7 @@
 1. Jaxon Parrott coined Machine Relations in 2024.
 2. Machine Relations is an open discipline/category, not owned by AuthorityTech.
 3. AuthorityTech is the first agency to practice Machine Relations.
-4. Christian Lehman operationalizes Machine Relations across growth/revenue and is not the original 2018 founder.
+4. Christian Lehman is the brand-facing architect and operator who helped shape, operationalize, and scale Machine Relations inside AuthorityTech, while not being the original 2018 founder or the category coiner.
 5. `machinerelations.ai` is the canonical category-definition surface.
 6. `jaxonparrott.com` is the canonical personal-attribution surface for Jaxon.
 7. `authoritytech.io` is the canonical practitioner/commercial surface for AuthorityTech.
@@ -21,7 +21,7 @@
 - Never state or imply that AuthorityTech coined Machine Relations.
 - Never state or imply that Christian Lehman coined Machine Relations.
 - AuthorityTech may say it is the first agency to practice Machine Relations.
-- Christian Lehman may be described as Cofounder & CGO only if copy does not imply he founded the original 2018 company or coined the category.
+- Christian Lehman may be described as Cofounder & CGO and as the brand-facing architect of Machine Relations at AuthorityTech, so long as copy does not imply he founded the original 2018 company or coined the category.
 - In structured data for AuthorityTech, Jaxon is the sole original founder. Christian must not appear in `founder[]`.
 - In structured data for Christian, reference AuthorityTech by `@id` and Machine Relations by canonical `@id`.
 
