@@ -25,6 +25,7 @@ const doto = Doto({
 });
 
 const OG_IMAGE = PROFILE_IMAGE_URL;
+const MACHINE_RELATIONS_TERM_ID = "https://machinerelations.ai/#term";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -100,15 +101,14 @@ const schema = {
       url: SITE_URL,
       image: OG_IMAGE,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
-      worksFor: { "@type": "Organization", "@id": "https://authoritytech.io/#organization", name: "AuthorityTech", url: "https://authoritytech.io" },
+      worksFor: { "@id": "https://authoritytech.io/#organization" },
       sameAs: [
-        "https://authoritytech.io",
-        "https://machinerelations.ai",
+        SITE_URL,
         "https://www.linkedin.com/in/christianhlehman",
         "https://x.com/ChristianLehman",
       ],
       knowsAbout: [
-        "Machine Relations",
+        { "@id": MACHINE_RELATIONS_TERM_ID },
         "AI Visibility",
         "Generative Engine Optimization",
         "B2B Revenue Operations",
