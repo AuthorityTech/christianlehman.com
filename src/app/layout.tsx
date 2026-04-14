@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s — Christian Lehman",
   },
   description:
-    "Christian Lehman is Co-Founder of AuthorityTech — the world's first Machine Relations agency. Machine Relations is the discipline of making brands visible to AI engines. Revenue operator, B2B growth strategist.",
+    "Christian Lehman is Co-Founder of AuthorityTech — the world's first Machine Relations agency. Machine Relations is the discipline of making brands visible to AI engines. Brand-facing architect and operator of Machine Relations, B2B growth strategist.",
   keywords: [
     "Machine Relations",
     "AuthorityTech",
@@ -97,7 +97,7 @@ const schema = {
       familyName: "Lehman",
       jobTitle: "Co-Founder, AuthorityTech",
       description:
-        "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Machine Relations is the discipline of making brands visible to the AI engines your buyers use to make decisions. Christian tracks which companies are on the AI shortlist for every major B2B buying query — and who\'s missing.",
+        "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Machine Relations is the discipline of making brands visible to the AI engines your buyers use to make decisions. Christian is the brand-facing architect and operator of Machine Relations at AuthorityTech. He tracks which companies are on the AI shortlist for every major B2B buying query — and who\'s missing.",
       url: SITE_URL,
       image: OG_IMAGE,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
@@ -121,7 +121,7 @@ const schema = {
       "@id": SITE_URL + "/#website",
       url: SITE_URL,
       name: "Christian Lehman",
-      description: "Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category.",
+      description: "Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Cofounder & CGO and brand-facing architect who operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category.",
       author: { "@type": "Person", "@id": SITE_URL + "/#person" },
       potentialAction: [{ "@type": "ReadAction", target: SITE_URL + "/blog" }],
     },
