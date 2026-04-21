@@ -106,6 +106,9 @@ A 2025 TechCrunch report noted ChatGPT referrals to news sites are growing, even
 - [AP on prompt tracking as a product feature](https://apnews.com/press-release/business-wire/ahrefs-launches-custom-ai-prompt-tracking-for-brand-visibility-918a83eec09d43ab8bd7556897823487)
 - [The Verge on Perplexity’s monetization changes](https://www.theverge.com/ai-artificial-intelligence/880562/perplexity-ditches-ai-ads)
 
+
+The field is crowded now. See [1ClickReport](https://www.1clickreport.com/blog/track-ai-traffic-ga4-chatgpt-perplexity-claude), [Discovered Labs](https://discoveredlabs.com/blog/how-to-track-chatgpt-perplexity-and-ai-overviews-traffic-in-ga4-without-guessing), [Topify](https://topify.ai/blog/track-grow-ai-search-traffic), and [Zenith](https://www.tryzenith.ai/blog/tracking-ai-search-traffic-server-logs) for the same basic diagnosis: GA4 misses a lot of AI traffic unless you intervene.
+
 ## FAQ
 
 **How do I know a session came from ChatGPT or Perplexity?**  
