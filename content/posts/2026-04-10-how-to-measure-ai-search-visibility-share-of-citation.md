@@ -109,19 +109,6 @@ For small query sets, the manual method is still the cleanest way to establish a
 
 That is where [Machine Relations](https://machinerelations.ai/glossary/machine-relations), [generative engine optimization](https://machinerelations.ai/glossary/generative-engine-optimization), and [earned authority](https://machinerelations.ai/glossary/earned-authority) connect. Measurement comes first, but the metric only moves when the source environment changes.
 
-## Run the baseline audit
-
-If you do not know your current Share of Citation, that is the first job. I would start with a 25-query, four-engine manual audit. One afternoon of work gets you a real baseline.
-
-From there, sort the query set into three groups:
-- **zero-citation**: no brand is consistently cited
-- **competitive**: your brand and a few competitors split slots inconsistently
-- **owned**: your brand consistently holds the first citation slot
-
-Zero-citation queries are the fastest wins. Get your brand into the earned-media sources AI engines already cite for those queries and you move from zero to cited before any competitor has truly locked the slot.
-
-AuthorityTech's [AI Visibility Audit](https://app.authoritytech.io/visibility-audit) runs this analysis automatically across a wider tracked query set and benchmarks the citation footprint against category competitors.
-
 ## FAQ
 
 **Q: What's the difference between Share of Citation and AI share of voice?**
