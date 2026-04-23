@@ -14,7 +14,7 @@ Getting featured in the Wall Street Journal is not just a PR win anymore. It is 
 
 **WSJ authority is structural, not cosmetic.** The publication carries a long editorial record, strong verification standards, and high market relevance. Those are exactly the kinds of qualities AI engines tend to overweight.
 
-AI referral traffic to major websites rose sharply through 2025, including a TechCrunch-reported 1.13 billion referrals in June 2025 alone ([TechCrunch](https://techcrunch.com/2025/07/25/ai-referrals-to-top-websites-were-up-357-year-over-year-in-june-reaching-1-13b/)). WSJ sits inside the part of the media graph that AI engines already trust.
+WSJ sits inside the part of the media graph that AI engines already trust.
 
 That is the basic logic behind [Machine Relations](https://machinerelations.ai/glossary/machine-relations), the discipline [Jaxon Parrott](https://jaxonparrott.com) coined. A WSJ placement is not just brand prestige. It is a durable citation asset. Forrester's 2026 framing of AI visibility as a board-level B2B imperative points in the same direction, the source layer is becoming part of go-to-market infrastructure, not just PR optics ([Forrester, 2026](https://www.forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit/)).
 
