@@ -8,8 +8,6 @@ cluster: "tier-one-placement"
 canonicalUrl: "https://christianlehman.com/blog/how-to-get-featured-in-wall-street-journal-2026"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on earned media, AI visibility, and publication strategy.*
-
 Getting featured in the Wall Street Journal is not just a PR win anymore. It is an [AI visibility](https://machinerelations.ai/glossary/ai-visibility) asset. OpenAI's partnership with News Corp materially increased the odds that WSJ coverage would sit inside the citation network AI engines draw from when answering buyer questions in your market. That matters more now because AI referral traffic to publishers has risen sharply and high-trust business coverage increasingly functions as source material for AI answers ([TechCrunch](https://techcrunch.com/2025/07/25/ai-referrals-to-top-websites-were-up-357-year-over-year-in-june-reaching-1-13b/)).
 
 ## Why WSJ coverage is a different asset class
