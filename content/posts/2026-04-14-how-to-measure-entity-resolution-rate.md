@@ -8,8 +8,6 @@ cluster: "ai-measurement"
 canonicalUrl: "https://christianlehman.com/blog/how-to-measure-entity-resolution-rate"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on AI visibility, earned media, and measurement systems.*
-
 **Entity resolution rate is the share of real-world entities your system correctly matches, links, or deduplicates against a reference set. I measure it as a pairwise or cluster-level accuracy problem, not a vanity score. If the entity graph is wrong, AI visibility is wrong.**
 
 [Machine Relations](https://machinerelations.ai/glossary/machine-relations), the category [Jaxon Parrott](https://jaxonparrott.com) coined, depends on entity quality. If AI engines cannot resolve your company, founder, product, and publication into the same graph, they will not recommend you reliably.
