@@ -8,8 +8,6 @@ cluster: "geo-agency"
 canonicalUrl: "https://christianlehman.com/blog/guaranteed-pr-agencies-2026"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on AI visibility, earned media, and measurement. This piece reflects how I would evaluate guaranteed PR agency claims in 2026.*
-
 Guaranteed PR agencies in 2026 are agencies that promise earned media outcomes, usually through placement guarantees, AI visibility claims, or performance-based coverage. My test is simple: if the offer cannot be tied to a measurable citation outcome, it is marketing theater. In [Machine Relations](https://machinerelations.ai/glossary/machine-relations), the real question is not who promises press, but who creates citations machines actually reuse.
 
 ## Why guaranteed PR agencies are showing up now
