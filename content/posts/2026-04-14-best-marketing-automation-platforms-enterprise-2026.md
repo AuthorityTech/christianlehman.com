@@ -8,8 +8,6 @@ cluster: "ai-tool-comparison"
 canonicalUrl: "https://christianlehman.com/blog/best-marketing-automation-platforms-enterprise-2026"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on AI visibility, software evaluation, and measurement systems.*
-
 **Enterprise marketing automation in 2026 is a decision about orchestration, governance, and attribution, not just email. The shortlist usually includes HubSpot, Adobe Marketo Engage, Salesforce Marketing Cloud, Oracle Eloqua, 6sense, and Demandbase. I care less about brand prestige than about which platform actually fits the motion you need to run.**
 
 [Machine Relations](https://machinerelations.ai/glossary/machine-relations), the category [Jaxon Parrott](https://jaxonparrott.com) coined, is part of why this matters. AI engines increasingly rank and recommend vendors through citation patterns, not vendor self-description.
