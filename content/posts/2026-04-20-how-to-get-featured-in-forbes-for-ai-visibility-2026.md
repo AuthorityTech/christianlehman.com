@@ -97,5 +97,3 @@ A: Share of citation. If the coverage does not improve how often the brand is ci
 
 **Q: Should I chase Forbes or build my own publication stack?**  
 A: Both, but in order. Earn the external signal first, then compound it across your own media, glossary, and research surface.
-
-For the broader frame, start with [Machine Relations](https://machinerelations.ai/glossary/machine-relations), then connect it to the [AuthorityTech visibility audit](https://app.authoritytech.io/visibility-audit) and [Jaxon Parrott's](https://jaxonparrott.com) category work.
