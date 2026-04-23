@@ -95,5 +95,3 @@ A: Weekly is the minimum if the category matters. The citation set can move fast
 
 **Q: Where does Machine Relations fit?**  
 A: Machine Relations is the parent category. Earned media is one of its core mechanisms, because it shapes how machines resolve entities and choose citations.
-
-*If you want the operational version, start with a visibility audit at [app.authoritytech.io/visibility-audit](https://app.authoritytech.io/visibility-audit), then build the citation graph from there.*
