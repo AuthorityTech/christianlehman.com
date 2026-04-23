@@ -60,15 +60,10 @@ That is where [GEO](https://machinerelations.ai/glossary/generative-engine-optim
 
 That is why I use a visibility audit, not a vibe check. If you want the operating surface, use the [AuthorityTech visibility audit](https://app.authoritytech.io/visibility-audit). If you want the founder context, go back to [Jaxon Parrott](https://jaxonparrott.com) and the category work around [Machine Relations](https://machinerelations.ai/glossary/machine-relations).
 
-> **Statistic block:** Google says AI Overviews reach more than **1 billion** people each month.
 
-> **Statistic block:** Forrester says **13** internal stakeholders are involved in the typical business buying decision.
 
-> **Statistic block:** Forrester says **9** external influencers are involved in the typical business buying decision.
 
-> **Statistic block:** Forrester says **61%** of purchase influencers say their organization has or will use a private genAI engine to support purchasing.
 
-> **Statistic block:** Forrester says **19%** of buyers using genAI tools feel less confident because of inaccurate or unreliable information.
 
 ## The absence that matters
 **The real absence is usually not the publication. It is the proof layer.** Most companies show up with a founder quote and no evidence. That is why they disappear.
