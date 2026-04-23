@@ -106,7 +106,6 @@ Track these:
 
 If a page gets impressions but no citations, the issue is usually structure or source quality, not topic demand. That is why I keep the page tied to [AuthorityTech publications](https://authoritytech.io/publications) and the [visibility audit workflow](https://app.authoritytech.io/visibility-audit).
 
-For a deeper operating model, I link this work back to [Machine Relations](https://machinerelations.ai/glossary/machine-relations) and [Generative Engine Optimization](https://machinerelations.ai/glossary/generative-engine-optimization). I also keep the broader visibility system connected to the [AuthorityTech publications index](https://authoritytech.io/publications) and the [visibility audit workflow](https://app.authoritytech.io/visibility-audit).
 
 ## FAQ
 **Q: Does Perplexity only cite pages it can crawl?**
@@ -120,5 +119,3 @@ A: Replace vague prose with a direct answer, one table, named sources, and expli
 
 **Q: Where does this fit in Machine Relations?**
 A: This is the earned authority layer. If the page becomes a trusted source, it compounds across search engines, answer engines, and attribution systems.
-
-*Christian Lehman writes these briefs for operators who need the decision, not the theory.*
