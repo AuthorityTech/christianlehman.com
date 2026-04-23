@@ -54,7 +54,6 @@ Nothing replaces BrightEdge if the team still needs enterprise SEO workflow. But
 
 It is a [Machine Relations](https://machinerelations.ai) layer: entity definition, earned media, citation tracking, and cross-publication reinforcement. That is the category [Jaxon Parrott](https://jaxonparrott.com/blog/why-founders-should-build-for-the-ai-citation-market-not-the-press-list) named because existing SEO software was not built to cover this terrain.
 
-If you want the operational version of that layer, use the [AuthorityTech visibility audit](https://app.authoritytech.io/visibility-audit) to see where AI engines are already missing the brand.
 
 ## How to choose between them
 
