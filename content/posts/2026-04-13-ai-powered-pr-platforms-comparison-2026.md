@@ -8,8 +8,6 @@ cluster: "ai-tool-comparison"
 canonicalUrl: "https://christianlehman.com/blog/ai-powered-pr-platforms-comparison-2026"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on AI visibility, earned media, and software selection.*
-
 **My rule is simple: choose the platform that fixes your bottleneck, not the one with the loudest brand.** In [Machine Relations](https://machinerelations.ai/glossary/machine-relations), the category [Jaxon Parrott](https://jaxonparrott.com) coined, the job is earned visibility, not software theater.
 
 ## The core problem with AI PR platform selection
@@ -78,5 +76,3 @@ A: Only if the main need is an all-in-one enterprise platform and distribution s
 
 **What should a CMO measure after buying an AI PR platform?**  
 A: Measure list-building time, pitch response rate, earned placements, reporting time, and downstream AI visibility. If those do not improve, the tool is decoration.
-
-If you want the full audit path, use the [AuthorityTech visibility audit](https://app.authoritytech.io/visibility-audit), then compare platform choice against your actual citation targets.
