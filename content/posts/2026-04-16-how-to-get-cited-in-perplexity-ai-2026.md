@@ -3,7 +3,7 @@ title: "How to Get Cited in Perplexity AI: A 2026 Tactical Guide"
 date: "2026-04-16"
 description: "Use the page structure, source mix, and citation signals that make Perplexity more likely to cite your content."
 tags: ["ai-visibility", "tactical-brief", "perplexity", "citations"]
-primaryQuery: "how to get cited in Perplexity AI 2026"
+primaryQuery: "how to get cited in Perplexity AI as a CMO"
 cluster: "ai-attribution"
 queryClass: "measurement"
 discoverySource: "gap-analysis"
