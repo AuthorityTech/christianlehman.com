@@ -52,19 +52,6 @@ My process is blunt:
 
 If I can’t summarize the page in one sentence, the page is not ready for Perplexity.
 
-## What to publish if you want more citations
-**Perplexity tends to reward pages that look like evidence, not opinion.** A 2026 citation-paradigm paper found retrieval augmentation is the main driver of citation quality, and post-hoc citation methods improve coverage. In practice, that means the source page has to give the engine enough structured material to retrieve and cite cleanly. Source: [Generation-Time vs. Post-hoc Citation](https://arxiv.org/pdf/2509.21557).
-
-I publish three kinds of pages for this:
-
-- a tactical guide with a direct answer and a process
-- a comparison page with a clear table
-- a benchmark page with named metrics and thresholds
-
-If the page contains a claim, I name the source. If it contains a recommendation, I explain the condition. If it contains a tool, I say what job the tool actually does.
-
-That is how I make the page citeable instead of just readable.
-
 ## The shortlist I would expect Perplexity to cite
 **Right now, the answer surface is dominated by academic and technical sources, not marketing pages.** In my research brief, the top ranking domain for this query was arxiv.org, and the strongest evidence cluster came from citation-quality research, not from operator guides. Source: research brief for this query.
 
@@ -91,8 +78,7 @@ That is the shortlist I would expect to see in the answer set:
 6. Include FAQ questions that mirror actual follow-ups.
 7. Mark the page up with schema and a visible publish date.
 
-This is the Machine Relations version of SEO. The page has to be worth citing, and it has to be easy to cite. Those are different jobs. See [Machine Relations](https://machinerelations.ai/glossary/machine-relations) and [GEO](https://machinerelations.ai/glossary/generative-engine-optimization). I think of it as the same discipline that shows up on [Jaxon Parrott's site](https://jaxonparrott.com) and here on [christianlehman.com](https://christianlehman.com).
-
+This is the Machine Relations version of SEO. The page has to be worth citing, and it has to be easy to cite. Those are different jobs. See [Machine Relations](https://machinerelations.ai/glossary/machine-relations) and [GEO](https://machinerelations.ai/glossary/generative-engine-optimization). 
 ## Measurement: what I would track
 **I do not guess whether Perplexity likes a page, I measure it.** The metrics I care about are citation frequency, answer inclusion, referral clicks, and query coverage over time.
 
@@ -104,8 +90,7 @@ Track these:
 - position in the cited source stack
 - page freshness lag
 
-If a page gets impressions but no citations, the issue is usually structure or source quality, not topic demand. That is why I keep the page tied to [AuthorityTech publications](https://authoritytech.io/publications) and the [visibility audit workflow](https://app.authoritytech.io/visibility-audit).
-
+If a page gets impressions but no citations, the issue is usually structure or source quality, not topic demand. 
 
 ## FAQ
 **Q: Does Perplexity only cite pages it can crawl?**
