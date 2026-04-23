@@ -8,8 +8,6 @@ cluster: "ai-measurement"
 canonicalUrl: "https://christianlehman.com/blog/how-to-measure-ai-search-visibility-share-of-citation"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on AI visibility, measurement, and earned-media systems.*
-
 To measure [AI visibility](https://machinerelations.ai/glossary/ai-visibility), track [Share of Citation](https://machinerelations.ai/glossary/share-of-citation), the percentage of citation slots your brand earns across a defined query set on ChatGPT, Perplexity, Gemini, and Claude. This is more precise than AI share of voice, which counts mentions. Citations are decisions AI engines make to attribute your brand as a source. Mentions are noise.
 
 ## Why brand share of voice fails as an AI visibility metric
