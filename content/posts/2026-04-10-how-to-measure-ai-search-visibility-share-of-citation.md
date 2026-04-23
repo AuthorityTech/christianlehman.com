@@ -77,14 +77,6 @@ Month one is baseline. Do not optimize off a single snapshot. Run the same 25 qu
 
 According to [Forrester's 2026 B2B Summit analysis](https://www.forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit/), AI answer engines have materially changed how B2B buyers research and compare vendors. Share of Citation is the scoreboard for that competition.
 
-## What to benchmark against
-
-**The most useful benchmark is competitive, not abstract.** Compare your Share of Citation to whoever is earning the slots you are not.
-
-At AuthorityTech, we track high-intent queries weekly across four AI engines and compare citation-slot competition at the category level. In practice, the brands that dominate citation slots tend to be the ones with strong editorial coverage, older domain authority, and cleaner answer-first content structures.
-
-If Conductor appears in 8 out of 10 responses to a target query and you appear in zero, the optimization target is already obvious. If you have already mapped your traffic baseline, as covered in my guide to [AI search traffic attribution](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide), Share of Citation gives you the upstream metric that predicts where that traffic should move next.
-
 ## Tools that support Share of Citation tracking
 
 **There is no single tool that tracks Share of Citation exactly as defined here.** Most platforms measure a version of AI share of voice instead, so I use them as data sources rather than as the final metric.
@@ -98,16 +90,6 @@ If Conductor appears in 8 out of 10 responses to a target query and you appear i
 | Manual monitoring | Full control over query set and citation-slot counting | Baseline establishment and query-specific analysis |
 
 For small query sets, the manual method is still the cleanest way to establish a trustworthy baseline.
-
-## The inputs that drive Share of Citation
-
-**Three inputs drive most Share of Citation gains: earned media, extractable structure, and freshness.**
-
-- **Earned media placements** create third-party authority in publications AI engines trust.
-- **Structured, answer-first content** gives the engines something clean to extract and cite.
-- **Freshness** signals continued relevance in a fast-moving category.
-
-That is where [Machine Relations](https://machinerelations.ai/glossary/machine-relations), [generative engine optimization](https://machinerelations.ai/glossary/generative-engine-optimization), and [earned authority](https://machinerelations.ai/glossary/earned-authority) connect. Measurement comes first, but the metric only moves when the source environment changes.
 
 ## FAQ
 
