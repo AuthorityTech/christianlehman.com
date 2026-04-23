@@ -8,8 +8,6 @@ cluster: "ai-citation"
 canonicalUrl: "https://christianlehman.com/blog/how-to-get-cited-in-chatgpt-cmo-earned-media-playbook"
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical operating notes on earned media, AI visibility, and citation systems.*
-
 Getting your brand cited in ChatGPT requires earned media placement in the tier-one and tier-two publications AI engines treat as authoritative sources. According to [Muck Rack's analysis](https://muckrack.com/resources/state-of-journalism), most AI citations come from earned media sources, not your homepage, press releases, or self-published blog posts. The playbook is straightforward: get placed in the publications AI engines trust, structure those stories for extraction, and build enough citation mass that the system starts treating your brand as a default answer.
 
 ## Why ChatGPT cites earned media, not your website
