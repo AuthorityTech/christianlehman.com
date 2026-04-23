@@ -60,30 +60,12 @@ That is where [GEO](https://machinerelations.ai/glossary/generative-engine-optim
 
 That is why I use a visibility audit, not a vibe check. If you want the operating surface, use the [AuthorityTech visibility audit](https://app.authoritytech.io/visibility-audit). If you want the founder context, go back to [Jaxon Parrott](https://jaxonparrott.com) and the category work around [Machine Relations](https://machinerelations.ai/glossary/machine-relations).
 
-
-
-
-
-
 ## The absence that matters
 **The real absence is usually not the publication. It is the proof layer.** Most companies show up with a founder quote and no evidence. That is why they disappear.
 
 In AI search, the shortlist tends to favor names that are easy to verify and already embedded in trusted ecosystems. Forbes, analyst coverage, and answer engines all reward the same thing: specificity.
 
 The absence I care about is simple. Either the brand has no public proof, or the proof exists but is scattered across weak sources. In both cases, I build one claim and one proof stack.
-
-## The CMO version of the play
-If I were running this for a brand, I would do it this way:
-
-1. Write the claim in one sentence.
-2. Pull the data into a source anyone can check.
-3. Place the proof on pages the market can verify quickly.
-4. Pitch the Forbes angle with the evidence attached.
-5. Reuse the same proof in owned content and media follow-up.
-
-That is the Machine Relations move. Earn the citation, then compound it.
-
-A few source pages are worth keeping open while you do this work: [Google AI Overviews help](https://support.google.com/websearch/answer/14901683), [Forrester AI visibility summit note](https://www.forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit/), [Forrester AI Access](https://www.forrester.com/research/ai-access/), [Forrester AI page](https://www.forrester.com/ai/), [Forrester B2B buyers](https://www.forrester.com/blogs/b2b%5Fbuyers%5Fmake%5Fzero%5Fclick%5Fbuying%5Fnumber%5Fone/), and [Forrester predictions 2026](https://www.forrester.com/blogs/predictions-2026-trust-gets-tested-for-b2b-marketing-sales-and-product-leaders/).
 
 ## FAQ
 **Q: How do I get featured in Forbes for AI visibility?**  
