@@ -2,7 +2,7 @@
 title: "Alternative to BrightEdge for AI Search Visibility: What Actually Replaces It in 2026"
 date: "2026-04-15"
 description: "BrightEdge remains a strong enterprise SEO platform, but it does not replace a Machine Relations stack for AI citation tracking, earned media intelligence, and entity-level visibility."
-primaryQuery: "alternative to BrightEdge"
+primaryQuery: "BrightEdge alternative for CMOs measuring AI search visibility"
 cluster: "brightedge-alternative"
 tags: [machine-relations, ai-search, brightedge, comparison, visibility]
 
