@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       "https://christianlehman.com/sitemap.xml",
+      "https://christianlehman.com/pages/sitemap.xml",
       "https://christianlehman.com/blog/sitemap.xml",
     ],
   };
