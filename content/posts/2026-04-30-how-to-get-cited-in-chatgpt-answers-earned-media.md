@@ -7,6 +7,7 @@ primaryQuery: "how to get cited in ChatGPT answers earned media"
 researchBriefPath: "editorial/data/research-briefs/2026/04/30/christian/how-to-get-cited-in-chatgpt-answers-earned-media.json"
 researchQualityScore: 9
 author: "Christian Lehman"
+tags: ["ai-visibility","tactical-brief","chatgpt","earned-media"]
 visual_concept: bridge
 featured_image: "https://christianlehman.com/og/christian/how-to-get-cited-in-chatgpt-answers-earned-media?concept=bridge"
 featured_image_alt: "How to Get Cited in ChatGPT Answers: The CMO Earned Media Playbook"
