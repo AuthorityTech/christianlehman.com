@@ -12,6 +12,7 @@ live_url: ""
 primaryQuery: "guaranteed PR agencies"
 type: "blog"
 author: "Christian Lehman"
+tags: ["ai-visibility","tactical-brief","pr-agencies","earned-media"]
 visual_concept: bridge
 featured_image: "https://christianlehman.com/og/christian/guaranteed-pr-agencies-2026?concept=bridge"
 featured_image_alt: "Guaranteed PR Agencies in 2026: What Buyers Should Ask Before They Sign"
