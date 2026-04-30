@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blog/how-to-get-cited-in-chatgpt-cmo-earned-media-playbook",
+      "destination": "/blog/how-to-get-cited-in-chatgpt-answers-earned-media",
+      "permanent": true
+    },
+    {
       "source": "/blog/how-brands-get-cited-in-chatgpt",
       "destination": "/blog/how-to-get-cited-in-chatgpt-answers-earned-media",
       "permanent": true
