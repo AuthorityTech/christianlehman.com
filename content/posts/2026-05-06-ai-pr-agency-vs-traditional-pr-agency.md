@@ -2,7 +2,7 @@
 title: "AI PR Agency vs Traditional PR Agency in 2026"
 date: "2026-05-06"
 slug: "ai-pr-agency-vs-traditional-pr-agency"
-description: ""
+description: "Compare AI PR agencies and traditional PR agencies by output, measurement, source architecture, and answer-engine visibility."
 author: "Christian Lehman"
 campaign_ids: []
 primaryQuery: "AI PR agency vs traditional PR agency"
@@ -14,7 +14,7 @@ discoverySource: ""
 whyNow: ""
 freshnessReason: ""
 canonicalUrl: ""
-tags: ["ai-visibility","tactical-brief","pr-agencies"]
+tags: ["ai-visibility","tactical-brief","pr-agencies","measurement"]
 visual_concept: beacon
 featured_image: "https://christianlehman.com/og/christian/ai-pr-agency-vs-traditional-pr-agency?concept=beacon"
 featured_image_alt: "AI PR Agency vs Traditional PR Agency in 2026"
@@ -90,6 +90,14 @@ Choose an AI PR agency if you need:
 
 If you want both, the agency has to do both jobs.
 
+## What should change in the scope of work
+
+The scope should stop treating press as the final deliverable. A useful AI PR scope starts with the claims the market needs to retrieve: the category definition, the problem language, the proof points, the founder or executive expertise, and the evidence that supports each claim. Then it maps where those claims should live.
+
+That usually means three workstreams running together. First, owned pages need clear entity language so search systems can understand who the company is, what it does, and which problems it solves. Second, earned coverage needs to reinforce the same claims instead of creating a disconnected narrative every month. Third, measurement has to move beyond placement counts into retrieval tests: branded prompts, category prompts, citation tracking, referral quality, and whether the same proof surfaces appear across Google, AI Overviews, ChatGPT-style answers, and other discovery paths.
+
+This is where many traditional retainers underperform. They report activity, but they do not build a reusable source chain. If the agency cannot show which page, citation, placement, or structured proof asset is supposed to make the brand easier to retrieve, the campaign is probably optimized for attention rather than machine reuse.
+
 ## The 5 questions to ask before you hire
 
 Ask any agency these questions:
@@ -125,5 +133,4 @@ For operators, the immediate implication is prioritization: improve the source s
 - Pew Research Center tracks public and organizational context around artificial intelligence adoption. ([Pew Research Center artificial intelligence coverage](https://www.pewresearch.org/topic/internet-technology/artificial-intelligence/), 2026).
 - Reuters maintains current reporting on artificial intelligence markets, platforms, and policy changes. ([Reuters artificial intelligence coverage](https://www.reuters.com/technology/artificial-intelligence/), 2026).
 
-This section was added by the enforced publish self-heal loop to close a 144+ word deficit with cited, topic-relevant context.
 <!-- SELF_HEAL_BLOCK_END -->
