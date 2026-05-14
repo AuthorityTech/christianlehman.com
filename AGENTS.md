@@ -2,7 +2,7 @@
 
 ## Cursor Cloud specific instructions
 
-This is a statically exported Next.js 15 personal blog (FounderOS). No database required. External integrations: Google Search Console (GSC) and Vercel.
+This is a Next.js 15 personal blog deployed on Vercel with ISR hybrid. No database required. External integrations: Google Search Console (GSC) and Vercel.
 
 ### Services
 
@@ -14,7 +14,7 @@ This is a statically exported Next.js 15 personal blog (FounderOS). No database 
 
 - **Lint**: `npx eslint .` — ESLint 9 flat config in `eslint.config.mjs`. Note: `npm run lint` (`next lint`) is deprecated in Next.js 16; use `npx eslint .` directly.
 - **Type check**: `npx tsc --noEmit`
-- **Build**: `npm run build` — static export to `out/`.
+- **Build**: `npm run build` — ISR hybrid build (dynamic routes render on demand).
 - **Dev**: `npm run dev` — dev server on port 3000.
 
 ### Auth & Secrets
