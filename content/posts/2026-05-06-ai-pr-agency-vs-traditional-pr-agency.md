@@ -1,23 +1,35 @@
 ---
-title: "AI PR Agency vs Traditional PR Agency in 2026"
-date: "2026-05-06"
-slug: "ai-pr-agency-vs-traditional-pr-agency"
-description: "Compare AI PR agencies and traditional PR agencies by output, measurement, source architecture, and answer-engine visibility."
-author: "Christian Lehman"
-campaign_ids: ["pr-has-to-work-for-machines-202605"]
-primaryQuery: "AI PR agency vs traditional PR agency"
-researchBriefPath: "editorial/data/research-briefs/2026/05/06/christian-blog/ai-pr-agency-vs-traditional-pr-agency.json"
+title: AI PR Agency vs Traditional PR Agency in 2026
+date: '2026-05-06'
+slug: ai-pr-agency-vs-traditional-pr-agency
+description: >-
+  Compare AI PR agencies and traditional PR agencies by output, measurement,
+  source architecture, and answer-engine visibility.
+author: Christian Lehman
+campaign_ids:
+  - pr-has-to-work-for-machines-202605
+primaryQuery: AI PR agency vs traditional PR agency
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/06/christian-blog/ai-pr-agency-vs-traditional-pr-agency.json
 researchQualityScore: 5.1
-cluster: "ai-pr-agencies"
-queryClass: "comparison"
-discoverySource: "editorial-campaign"
-whyNow: "Buyers are comparing traditional PR retainers against AI-visibility programs as search and answer engines start mediating brand discovery."
-freshnessReason: "2026 AI search behavior makes the agency comparison depend on citation readiness, source architecture, and measurable retrieval proof."
-canonicalUrl: "https://christianlehman.com/blog/ai-pr-agency-vs-traditional-pr-agency"
-tags: ["ai-visibility","tactical-brief","pr-agencies","measurement"]
+cluster: ai-pr-agencies
+queryClass: comparison
+discoverySource: editorial-campaign
+whyNow: >-
+  Buyers are comparing traditional PR retainers against AI-visibility programs
+  as search and answer engines start mediating brand discovery.
+freshnessReason: >-
+  2026 AI search behavior makes the agency comparison depend on citation
+  readiness, source architecture, and measurable retrieval proof.
+canonicalUrl: 'https://christianlehman.com/blog/ai-pr-agency-vs-traditional-pr-agency'
+tags:
+  - ai-visibility
+  - tactical-brief
+  - pr-agencies
+  - measurement
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/ai-pr-agency-vs-traditional-pr-agency?concept=beacon"
-featured_image_alt: "AI PR Agency vs Traditional PR Agency in 2026"
+featured_image: 'https://christianlehman.com/images/ai-pr-agency-vs-traditional-pr-agency.png'
+featured_image_alt: AI PR Agency vs Traditional PR Agency in 2026
 ---
 
 Traditional PR still has a place.

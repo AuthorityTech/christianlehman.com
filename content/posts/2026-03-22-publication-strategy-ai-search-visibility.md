@@ -1,13 +1,20 @@
 ---
-title: "Publication Strategy for AI Search Visibility: How to Choose the Right Targets"
-date: "2026-03-22"
-slug: "publication-strategy-ai-search-visibility"
-description: "Most brands pick publications by prestige and domain authority. Neither predicts AI citation rates. This is the practitioner's framework for building a publication strategy that actually generates AI search visibility."
-author: "Christian Lehman"
-tags: ["ai-visibility","tactical-brief","earned-media"]
+title: 'Publication Strategy for AI Search Visibility: How to Choose the Right Targets'
+date: '2026-03-22'
+slug: publication-strategy-ai-search-visibility
+description: >-
+  Most brands pick publications by prestige and domain authority. Neither
+  predicts AI citation rates. This is the practitioner's framework for building
+  a publication strategy that actually generates AI search visibility.
+author: Christian Lehman
+tags:
+  - ai-visibility
+  - tactical-brief
+  - earned-media
 visual_concept: bridge
-featured_image: "https://christianlehman.com/og/christian/publication-strategy-ai-search-visibility?concept=bridge"
-featured_image_alt: "Publication Strategy for AI Search Visibility: How to Choose the Right Targets"
+featured_image: >-
+  https://christianlehman.com/images/publication-strategy-ai-search-visibility.png
+featured_image_alt: 'Publication Strategy for AI Search Visibility: How to Choose the Right Targets'
 ---
 <p>Christian Lehman here. I run the execution layer at AuthorityTech — the part of the editorial operation that turns Machine Relations strategy into placements that actually show up in AI answers.</p>
 

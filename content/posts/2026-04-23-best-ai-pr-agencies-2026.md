@@ -1,17 +1,29 @@
 ---
-title: "Best AI PR Agencies in 2026 Are the Ones That Change the Shortlist"
-date: "2026-04-23"
-description: "Use this scorecard to pick an AI PR agency that changes citations, not just coverage."
-tags: ["ai-visibility", "tactical-brief", "ai-pr", "earned-media"]
-primaryQuery: "best AI PR agencies 2026"
-cluster: "geo-agency"
-queryClass: "comparison"
-discoverySource: "live-search"
-whyNow: "Buyers are using AI search earlier, and agencies are now being judged on citation outcomes."
-freshnessReason: "Forrester and recent AP-indexed agency announcements make the shortlist problem newly visible and measurable."
-researchBriefPath: "/home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-23-best-ai-pr-agencies-2026.json"
+title: Best AI PR Agencies in 2026 Are the Ones That Change the Shortlist
+date: '2026-04-23'
+description: >-
+  Use this scorecard to pick an AI PR agency that changes citations, not just
+  coverage.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - ai-pr
+  - earned-media
+primaryQuery: best AI PR agencies 2026
+cluster: geo-agency
+queryClass: comparison
+discoverySource: live-search
+whyNow: >-
+  Buyers are using AI search earlier, and agencies are now being judged on
+  citation outcomes.
+freshnessReason: >-
+  Forrester and recent AP-indexed agency announcements make the shortlist
+  problem newly visible and measurable.
+researchBriefPath: >-
+  /home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-23-best-ai-pr-agencies-2026.json
 researchQualityScore: 8.5
-canonicalUrl: "https://christianlehman.com/blog/best-ai-pr-agencies-2026"
+canonicalUrl: 'https://christianlehman.com/blog/best-ai-pr-agencies-2026'
+featured_image: 'https://christianlehman.com/images/best-ai-pr-agencies-2026.png'
 ---
 
 The best AI PR agency in 2026 is not the one with the prettiest deck. It is the one that changes which sources AI engines cite when buyers ask about your category. If an agency cannot move citations, source mix, and shortlist inclusion, it is just expensive PR with new vocabulary.

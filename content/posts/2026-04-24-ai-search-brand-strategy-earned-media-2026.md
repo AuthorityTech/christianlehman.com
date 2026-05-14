@@ -1,14 +1,21 @@
 ---
-title: "AI Search Brand Strategy Is Just Earned Media with Better Math"
-date: "2026-04-24"
-slug: "ai-search-brand-strategy-earned-media-2026"
-description: "Build a brand strategy AI engines can actually cite: earned media, original proof, and a measurement model that rewards visibility."
-primaryQuery: "AI search brand strategy earned media 2026"
-author: "Christian Lehman"
-tags: ["ai-visibility","tactical-brief","measurement","citations"]
+title: AI Search Brand Strategy Is Just Earned Media with Better Math
+date: '2026-04-24'
+slug: ai-search-brand-strategy-earned-media-2026
+description: >-
+  Build a brand strategy AI engines can actually cite: earned media, original
+  proof, and a measurement model that rewards visibility.
+primaryQuery: AI search brand strategy earned media 2026
+author: Christian Lehman
+tags:
+  - ai-visibility
+  - tactical-brief
+  - measurement
+  - citations
 visual_concept: bridge
-featured_image: "https://christianlehman.com/og/christian/ai-search-brand-strategy-earned-media-2026?concept=bridge"
-featured_image_alt: "AI Search Brand Strategy Is Just Earned Media with Better Math"
+featured_image: >-
+  https://christianlehman.com/images/ai-search-brand-strategy-earned-media-2026.png
+featured_image_alt: AI Search Brand Strategy Is Just Earned Media with Better Math
 ---
 AI search brand strategy is how you get your company named, cited, and trusted inside ChatGPT, Perplexity, Gemini, and AI Overviews. This is not a content volume game. Build earned media, original proof, and entity clarity. That is what machines can actually reuse.
 

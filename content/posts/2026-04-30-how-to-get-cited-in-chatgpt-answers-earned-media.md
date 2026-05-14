@@ -1,16 +1,25 @@
 ---
-title: "How to Get Cited in ChatGPT Answers: The CMO Earned Media Playbook"
-date: "2026-04-30"
-slug: "how-to-get-cited-in-chatgpt-answers-earned-media"
-description: "ChatGPT answer citations are an earned media distribution problem. This playbook shows CMOs what to change this week, what to measure, and what to stop believing."
-primaryQuery: "how to get cited in ChatGPT answers earned media"
-researchBriefPath: "editorial/data/research-briefs/2026/04/30/christian/how-to-get-cited-in-chatgpt-answers-earned-media.json"
+title: 'How to Get Cited in ChatGPT Answers: The CMO Earned Media Playbook'
+date: '2026-04-30'
+slug: how-to-get-cited-in-chatgpt-answers-earned-media
+description: >-
+  ChatGPT answer citations are an earned media distribution problem. This
+  playbook shows CMOs what to change this week, what to measure, and what to
+  stop believing.
+primaryQuery: how to get cited in ChatGPT answers earned media
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/04/30/christian/how-to-get-cited-in-chatgpt-answers-earned-media.json
 researchQualityScore: 9
-author: "Christian Lehman"
-tags: ["ai-visibility","tactical-brief","chatgpt","earned-media"]
+author: Christian Lehman
+tags:
+  - ai-visibility
+  - tactical-brief
+  - chatgpt
+  - earned-media
 visual_concept: bridge
-featured_image: "https://christianlehman.com/og/christian/how-to-get-cited-in-chatgpt-answers-earned-media?concept=bridge"
-featured_image_alt: "How to Get Cited in ChatGPT Answers: The CMO Earned Media Playbook"
+featured_image: >-
+  https://christianlehman.com/images/how-to-get-cited-in-chatgpt-answers-earned-media.png
+featured_image_alt: 'How to Get Cited in ChatGPT Answers: The CMO Earned Media Playbook'
 ---
 
 ChatGPT citations are an earned media distribution problem before they are a content production problem. Recent GEO research separates citation selection from citation absorption, which means the win is not just getting your page listed as a source. The win is getting your claim pulled into the answer itself. For most B2B brands, that starts with third-party authority, structured evidence, and pages that answer one question cleanly. [Source](https://arxiv.org/abs/2604.25707)

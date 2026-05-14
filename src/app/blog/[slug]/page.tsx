@@ -8,12 +8,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
 
+export const dynamicParams = true;
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
+  return [];
 }
 
 const DEFAULT_AVATAR = PROFILE_IMAGE_URL;

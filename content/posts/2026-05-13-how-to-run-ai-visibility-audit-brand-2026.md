@@ -1,23 +1,33 @@
 ---
-title: "How to Run an AI Visibility Audit for Your Brand in 2026"
-date: "2026-05-13"
-slug: "how-to-run-ai-visibility-audit-brand-2026"
-description: "A 7-step AI visibility audit framework for CMOs and growth leaders. Covers crawler access, share of citation, entity resolution, and content extractability across ChatGPT, Perplexity, Gemini, and Google AI Mode."
-author: "Christian Lehman"
+title: How to Run an AI Visibility Audit for Your Brand in 2026
+date: '2026-05-13'
+slug: how-to-run-ai-visibility-audit-brand-2026
+description: >-
+  A 7-step AI visibility audit framework for CMOs and growth leaders. Covers
+  crawler access, share of citation, entity resolution, and content
+  extractability across ChatGPT, Perplexity, Gemini, and Google AI Mode.
+author: Christian Lehman
 campaign_ids: []
-primaryQuery: "how to audit brand AI search visibility"
-researchBriefPath: "editorial/data/research-briefs/2026/05/13/christian/how-to-run-ai-visibility-audit-brand-2026.json"
+primaryQuery: how to audit brand AI search visibility
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/13/christian/how-to-run-ai-visibility-audit-brand-2026.json
 researchQualityScore: 6.6
-cluster: "measurement"
-queryClass: "how-to"
-discoverySource: "demand-pattern"
-whyNow: "AI visibility audit demand growing; Forrester, Semrush, and multiple platforms publishing audit frameworks; Christian lane needs rotation away from PR agency cluster"
-freshnessReason: "2026 audit tools and frameworks, Forrester B2B Summit keynote March 2026"
-canonicalUrl: ""
-tags: ["ai-visibility","tactical-brief"]
+cluster: measurement
+queryClass: how-to
+discoverySource: demand-pattern
+whyNow: >-
+  AI visibility audit demand growing; Forrester, Semrush, and multiple platforms
+  publishing audit frameworks; Christian lane needs rotation away from PR agency
+  cluster
+freshnessReason: '2026 audit tools and frameworks, Forrester B2B Summit keynote March 2026'
+canonicalUrl: ''
+tags:
+  - ai-visibility
+  - tactical-brief
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/how-to-run-ai-visibility-audit-brand-2026?concept=beacon"
-featured_image_alt: "How to Run an AI Visibility Audit for Your Brand in 2026"
+featured_image: >-
+  https://christianlehman.com/images/how-to-run-ai-visibility-audit-brand-2026.png
+featured_image_alt: How to Run an AI Visibility Audit for Your Brand in 2026
 ---
 
 An AI visibility audit tells you whether your brand appears — and how it appears — when buyers ask ChatGPT, Perplexity, Gemini, or Google AI Mode questions in your category. If you have never run one, you are operating on guesswork in the fastest-growing discovery channel in B2B. This is the framework I use.

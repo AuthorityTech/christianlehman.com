@@ -1,23 +1,29 @@
 ---
-title: "GEO vs AEO vs SEO: the Machine Relations difference in 2026"
-date: "2026-05-04"
-slug: "geo-vs-aeo-vs-seo-machine-relations-difference-2026"
-description: "A tactical breakdown of what GEO, AEO, and SEO actually optimize, and what Machine Relations adds on top."
-author: "Christian Lehman"
+title: 'GEO vs AEO vs SEO: the Machine Relations difference in 2026'
+date: '2026-05-04'
+slug: geo-vs-aeo-vs-seo-machine-relations-difference-2026
+description: >-
+  A tactical breakdown of what GEO, AEO, and SEO actually optimize, and what
+  Machine Relations adds on top.
+author: Christian Lehman
 campaign_ids: []
-primaryQuery: "GEO vs AEO vs SEO machine relations difference 2026"
-researchBriefPath: "editorial/data/research-briefs/2026/05/04/christian/geo-vs-aeo-vs-seo-machine-relations-difference-2026.json"
+primaryQuery: GEO vs AEO vs SEO machine relations difference 2026
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/04/christian/geo-vs-aeo-vs-seo-machine-relations-difference-2026.json
 researchQualityScore: 8.1
-cluster: ""
-queryClass: ""
-discoverySource: ""
-whyNow: ""
-freshnessReason: ""
-canonicalUrl: ""
-tags: ["ai-visibility","tactical-brief"]
+cluster: ''
+queryClass: ''
+discoverySource: ''
+whyNow: ''
+freshnessReason: ''
+canonicalUrl: ''
+tags:
+  - ai-visibility
+  - tactical-brief
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/geo-vs-aeo-vs-seo-machine-relations-difference-2026?concept=beacon"
-featured_image_alt: "GEO vs AEO vs SEO: the Machine Relations difference in 2026"
+featured_image: >-
+  https://christianlehman.com/images/geo-vs-aeo-vs-seo-machine-relations-difference-2026.png
+featured_image_alt: 'GEO vs AEO vs SEO: the Machine Relations difference in 2026'
 ---
 
 If you care about pipeline, not vocabulary, the clean answer is this: SEO, AEO, and GEO are different optimization surfaces. SEO is about ranking pages. AEO is about winning the direct answer surface. GEO is about getting cited inside AI-generated answers. Machine Relations is the operating layer that makes all three work together instead of treating them like separate marketing hobbies.

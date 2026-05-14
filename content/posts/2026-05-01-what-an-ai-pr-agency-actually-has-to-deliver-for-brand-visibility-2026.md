@@ -1,14 +1,21 @@
 ---
-title: "What an AI PR Agency Actually Has to Deliver for Brand Visibility in 2026"
-date: "2026-05-01"
-slug: "what-an-ai-pr-agency-actually-has-to-deliver-for-brand-visibility-2026"
-description: "An AI PR agency only works if it earns third-party authority, makes it machine-readable, and measures whether AI systems actually cite the brand."
-primaryQuery: "AI PR agency earned media brand visibility"
-author: "Christian Lehman"
-tags: ["ai-visibility","tactical-brief","pr-agencies","citations"]
+title: What an AI PR Agency Actually Has to Deliver for Brand Visibility in 2026
+date: '2026-05-01'
+slug: what-an-ai-pr-agency-actually-has-to-deliver-for-brand-visibility-2026
+description: >-
+  An AI PR agency only works if it earns third-party authority, makes it
+  machine-readable, and measures whether AI systems actually cite the brand.
+primaryQuery: AI PR agency earned media brand visibility
+author: Christian Lehman
+tags:
+  - ai-visibility
+  - tactical-brief
+  - pr-agencies
+  - citations
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/what-an-ai-pr-agency-actually-has-to-deliver-for-brand-visibility-2026?concept=beacon"
-featured_image_alt: "What an AI PR Agency Actually Has to Deliver for Brand Visibility in 2026"
+featured_image: >-
+  https://christianlehman.com/images/what-an-ai-pr-agency-actually-has-to-deliver-for-brand-visibility-2026.png
+featured_image_alt: What an AI PR Agency Actually Has to Deliver for Brand Visibility in 2026
 ---
 An AI PR agency is not a press-release shop with AI sprinkled on top. It is an earned-media system that gets a brand cited, trusted, and repeated inside AI answers. If it cannot secure third-party coverage, turn that coverage into machine-readable proof, and measure whether the brand is actually showing up in AI systems, it is not doing the job.
 

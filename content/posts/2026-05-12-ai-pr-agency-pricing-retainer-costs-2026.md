@@ -1,23 +1,36 @@
 ---
-title: "AI PR Agency Pricing: What Retainers Actually Cost in 2026"
-date: "2026-05-12"
-slug: "ai-pr-agency-pricing-retainer-costs-2026"
-description: "PR agency retainers range from $3,000 to $100,000+ per month in 2026. Here is what each tier actually delivers, why 39% of CMOs are cutting agency budgets, and when performance-based PR makes more sense than a retainer."
-author: "Christian Lehman"
+title: 'AI PR Agency Pricing: What Retainers Actually Cost in 2026'
+date: '2026-05-12'
+slug: ai-pr-agency-pricing-retainer-costs-2026
+description: >-
+  PR agency retainers range from $3,000 to $100,000+ per month in 2026. Here is
+  what each tier actually delivers, why 39% of CMOs are cutting agency budgets,
+  and when performance-based PR makes more sense than a retainer.
+author: Christian Lehman
 campaign_ids: []
-primaryQuery: "ai-enabled public relations agency pricing retainer costs"
-researchBriefPath: "editorial/data/research-briefs/2026/05/12/christian/ai-pr-agency-pricing-retainer-costs-2026.json"
+primaryQuery: ai-enabled public relations agency pricing retainer costs
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/12/christian/ai-pr-agency-pricing-retainer-costs-2026.json
 researchQualityScore: 4.3
-tags: ["ai-visibility","tactical-brief","pr-agencies"]
-cluster: "pr-pricing"
-queryClass: "commercial-intent"
-discoverySource: "gap-analysis"
-whyNow: "CMO budgets flatlined at 7.7% of revenue (Gartner 2025); 39% of CMOs cutting agency spend; demand for AI-aware PR rising while traditional retainer model under pressure"
-freshnessReason: "2026 pricing data from Publicity for Good, Gartner CMO Spend Survey, Forrester B2B agency research"
-canonicalUrl: ""
+tags:
+  - ai-visibility
+  - tactical-brief
+  - pr-agencies
+cluster: pr-pricing
+queryClass: commercial-intent
+discoverySource: gap-analysis
+whyNow: >-
+  CMO budgets flatlined at 7.7% of revenue (Gartner 2025); 39% of CMOs cutting
+  agency spend; demand for AI-aware PR rising while traditional retainer model
+  under pressure
+freshnessReason: >-
+  2026 pricing data from Publicity for Good, Gartner CMO Spend Survey, Forrester
+  B2B agency research
+canonicalUrl: ''
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/ai-pr-agency-pricing-retainer-costs-2026?concept=beacon"
-featured_image_alt: "AI PR Agency Pricing: What Retainers Actually Cost in 2026"
+featured_image: >-
+  https://christianlehman.com/images/ai-pr-agency-pricing-retainer-costs-2026.png
+featured_image_alt: 'AI PR Agency Pricing: What Retainers Actually Cost in 2026'
 ---
 
 PR agency retainers in 2026 range from $3,000 to over $100,000 per month, depending on agency tier, scope, and whether the firm actually delivers placements or just delivers activity reports. According to [Publicity for Good's 2026 pricing analysis](https://missiondrivenbrand.com/how-much-does-a-pr-agency-cost-in-2026-the-honest-pricing-breakdown), most B2B engagements fall between $5,000 and $25,000 monthly with six- to twelve-month minimum commitments. The question is no longer what PR costs — it is whether the retainer model itself still makes sense when AI visibility compounds every placement and 39% of CMOs are actively cutting agency budgets.

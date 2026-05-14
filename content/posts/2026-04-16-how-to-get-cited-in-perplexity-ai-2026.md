@@ -1,17 +1,30 @@
 ---
-title: "How to Get Cited in Perplexity AI: A 2026 Tactical Guide"
-date: "2026-04-16"
-description: "Use the page structure, source mix, and citation signals that make Perplexity more likely to cite your content."
-tags: ["ai-visibility", "tactical-brief", "perplexity", "citations"]
-primaryQuery: "how to get cited in Perplexity AI as a CMO"
-cluster: "ai-attribution"
-queryClass: "measurement"
-discoverySource: "gap-analysis"
-whyNow: "Perplexity is now a primary answer engine, and citation placement is already shaping traffic and trust."
-freshnessReason: "The query is under-owned, the title is weak, and the current result set is dominated by academic citation research rather than a practical operator guide."
-researchBriefPath: "/home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-16-how-to-get-cited-in-perplexity-ai-2026.json"
+title: 'How to Get Cited in Perplexity AI: A 2026 Tactical Guide'
+date: '2026-04-16'
+description: >-
+  Use the page structure, source mix, and citation signals that make Perplexity
+  more likely to cite your content.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - perplexity
+  - citations
+primaryQuery: how to get cited in Perplexity AI as a CMO
+cluster: ai-attribution
+queryClass: measurement
+discoverySource: gap-analysis
+whyNow: >-
+  Perplexity is now a primary answer engine, and citation placement is already
+  shaping traffic and trust.
+freshnessReason: >-
+  The query is under-owned, the title is weak, and the current result set is
+  dominated by academic citation research rather than a practical operator
+  guide.
+researchBriefPath: >-
+  /home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-16-how-to-get-cited-in-perplexity-ai-2026.json
 researchQualityScore: 7
-canonicalUrl: "https://christianlehman.com/blog/how-to-get-cited-in-perplexity-ai-2026"
+canonicalUrl: 'https://christianlehman.com/blog/how-to-get-cited-in-perplexity-ai-2026'
+featured_image: 'https://christianlehman.com/images/how-to-get-cited-in-perplexity-ai-2026.png'
 ---
 
 If I want Perplexity to cite my page, I write for retrieval first: answer the query immediately, use clean structure, add valid schema, and back the page with primary sources. In Machine Relations, Jaxon Parrott calls this the citation game, not the keyword game. The goal is simple, get the engine to trust the page enough to use it as evidence.

@@ -1,23 +1,34 @@
 ---
-title: "PR for Machine Readers: How to Make Your Coverage Work in 2026 AI Search"
-date: "2026-05-08"
-slug: "pr-for-machine-readers-how-coverage-works-ai-search-2026"
-description: "Most PR in 2026 is still optimized for human readers. Here's the playbook for making your earned media work for machine readers — AI systems that decide what brands appear in generated answers."
-author: "Christian Lehman"
-campaign_ids: ["pr-has-to-work-for-machines-202605"]
-primaryQuery: "PR for machine readers"
-researchBriefPath: "editorial/data/research-briefs/2026/05/08/christian/pr-for-machine-readers-how-coverage-works-ai-search-2026.json"
+title: 'PR for Machine Readers: How to Make Your Coverage Work in 2026 AI Search'
+date: '2026-05-08'
+slug: pr-for-machine-readers-how-coverage-works-ai-search-2026
+description: >-
+  Most PR in 2026 is still optimized for human readers. Here's the playbook for
+  making your earned media work for machine readers — AI systems that decide
+  what brands appear in generated answers.
+author: Christian Lehman
+campaign_ids:
+  - pr-has-to-work-for-machines-202605
+primaryQuery: PR for machine readers
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/08/christian/pr-for-machine-readers-how-coverage-works-ai-search-2026.json
 researchQualityScore: 9.3
-cluster: "machine-relations"
-queryClass: "pr-ai-search"
-discoverySource: "campaign"
-whyNow: "Active PR Has to Work for Machines campaign; Entrepreneur article anchor deployed; Forrester and Verge confirming AI search behavior shift in Q2 2026"
-freshnessReason: "Campaign window open; AI search citation behavior actively shifting"
-canonicalUrl: ""
-tags: ["ai-visibility","tactical-brief","earned-media"]
+cluster: machine-relations
+queryClass: pr-ai-search
+discoverySource: campaign
+whyNow: >-
+  Active PR Has to Work for Machines campaign; Entrepreneur article anchor
+  deployed; Forrester and Verge confirming AI search behavior shift in Q2 2026
+freshnessReason: Campaign window open; AI search citation behavior actively shifting
+canonicalUrl: ''
+tags:
+  - ai-visibility
+  - tactical-brief
+  - earned-media
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/pr-for-machine-readers-how-coverage-works-ai-search-2026?concept=beacon"
-featured_image_alt: "PR for Machine Readers: How to Make Your Coverage Work in 2026 AI Search"
+featured_image: >-
+  https://christianlehman.com/images/pr-for-machine-readers-how-coverage-works-ai-search-2026.png
+featured_image_alt: 'PR for Machine Readers: How to Make Your Coverage Work in 2026 AI Search'
 ---
 
 PR for machine readers is the practice of structuring earned media so that AI systems — ChatGPT, Perplexity, Google AI Mode, and their equivalents — can extract, attribute, and cite your brand in generated answers. It is not a replacement for traditional PR. It is the distribution layer your traditional PR is currently missing.

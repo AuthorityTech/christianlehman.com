@@ -1,18 +1,32 @@
 ---
-title: "Earned Media Strategy for AI Search Citations in 2026"
-date: "2026-04-20"
-description: "Build an earned media plan that gets your brand cited inside ChatGPT, Perplexity, Gemini, and Claude answers."
-tags: ["ai-visibility", "tactical-brief", "earned-media", "ai-citations"]
-primaryQuery: "earned media strategy for AI search citations 2026"
-cluster: "earned-media-roi"
-queryClass: "framework"
-discoverySource: "live-search"
-whyNow: "AI search engines are citing third-party sources more aggressively, and the rules are changing fast."
-freshnessReason: "This is a newly ownable operating question for CMOs as answer engines mature and citation patterns shift."
-researchBriefPath: "editorial/data/research-briefs/christian-earned-media-strategy-for-ai-search-citations-2026.json"
+title: Earned Media Strategy for AI Search Citations in 2026
+date: '2026-04-20'
+description: >-
+  Build an earned media plan that gets your brand cited inside ChatGPT,
+  Perplexity, Gemini, and Claude answers.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - earned-media
+  - ai-citations
+primaryQuery: earned media strategy for AI search citations 2026
+cluster: earned-media-roi
+queryClass: framework
+discoverySource: live-search
+whyNow: >-
+  AI search engines are citing third-party sources more aggressively, and the
+  rules are changing fast.
+freshnessReason: >-
+  This is a newly ownable operating question for CMOs as answer engines mature
+  and citation patterns shift.
+researchBriefPath: >-
+  editorial/data/research-briefs/christian-earned-media-strategy-for-ai-search-citations-2026.json
 researchQualityScore: 8.5
-canonicalUrl: "https://christianlehman.com/blog/earned-media-strategy-for-ai-search-citations-2026"
-author: "Christian Lehman"
+canonicalUrl: >-
+  https://christianlehman.com/blog/earned-media-strategy-for-ai-search-citations-2026
+author: Christian Lehman
+featured_image: >-
+  https://christianlehman.com/images/earned-media-strategy-for-ai-search-citations-2026.png
 ---
 
 Earned media strategy for AI search citations is the discipline of designing third-party coverage so answer engines can cite your brand in responses. I treat it as a Machine Relations problem, not a traditional PR problem. The goal is not impressions. The goal is citation in machine-mediated discovery.

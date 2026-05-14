@@ -1,21 +1,27 @@
 ---
-title: "How to Get Your Brand Recommended by ChatGPT: 5 Steps CMOs Should Take in 2026"
-date: "2026-05-14"
-slug: "get-brand-recommended-chatgpt-2026"
-description: "ChatGPT referral traffic grew 28% year-over-year. Here are 5 concrete steps CMOs should take to get their brand recommended by ChatGPT in 2026 — based on how the model actually selects sources."
-author: "Christian Lehman"
-publication: "Christian Blog"
+title: 'How to Get Your Brand Recommended by ChatGPT: 5 Steps CMOs Should Take in 2026'
+date: '2026-05-14'
+slug: get-brand-recommended-chatgpt-2026
+description: >-
+  ChatGPT referral traffic grew 28% year-over-year. Here are 5 concrete steps
+  CMOs should take to get their brand recommended by ChatGPT in 2026 — based on
+  how the model actually selects sources.
+author: Christian Lehman
+publication: Christian Blog
 campaign_ids: []
-primaryQuery: "how to get your brand recommended by ChatGPT 2026"
-researchBriefPath: "editorial/data/research-briefs/2026/05/14/christian/get-brand-recommended-chatgpt-2026.json"
+primaryQuery: how to get your brand recommended by ChatGPT 2026
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/14/christian/get-brand-recommended-chatgpt-2026.json
 researchQualityScore: 7.2
-tags: ["ai-visibility","tactical-brief"]
-cluster: "ai-visibility"
-queryClass: "how-to"
-canonicalUrl: "https://christianlehman.com/blog/get-brand-recommended-chatgpt-2026"
+tags:
+  - ai-visibility
+  - tactical-brief
+cluster: ai-visibility
+queryClass: how-to
+canonicalUrl: 'https://christianlehman.com/blog/get-brand-recommended-chatgpt-2026'
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/get-brand-recommended-chatgpt-2026?concept=beacon"
-featured_image_alt: "How to Get Your Brand Recommended by ChatGPT: 5 Steps CMOs Should Take in 2026"
+featured_image: 'https://christianlehman.com/images/get-brand-recommended-chatgpt-2026.png'
+featured_image_alt: 'How to Get Your Brand Recommended by ChatGPT: 5 Steps CMOs Should Take in 2026'
 ---
 
 ChatGPT decides which brands to recommend based on source authority, entity clarity, and retrievable proof across the web — not ad spend, not keyword density, not how many blog posts you published last quarter. If your brand is invisible to ChatGPT right now, it is because the model cannot find enough trustworthy, corroborated evidence that you are the answer to the question a buyer just asked.

@@ -1,11 +1,18 @@
 ---
-title: "How to Measure Entity Resolution Rate: A Framework for CMOs"
-date: "2026-04-14"
-description: "Define entity resolution rate, measure it against ground truth, and use the metric to fix AI visibility gaps."
-tags: ["ai-visibility", "tactical-brief", "measurement", "entity-resolution"]
-primaryQuery: "how to measure entity resolution rate"
-cluster: "ai-measurement"
-canonicalUrl: "https://christianlehman.com/blog/how-to-measure-entity-resolution-rate"
+title: 'How to Measure Entity Resolution Rate: A Framework for CMOs'
+date: '2026-04-14'
+description: >-
+  Define entity resolution rate, measure it against ground truth, and use the
+  metric to fix AI visibility gaps.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - measurement
+  - entity-resolution
+primaryQuery: how to measure entity resolution rate
+cluster: ai-measurement
+canonicalUrl: 'https://christianlehman.com/blog/how-to-measure-entity-resolution-rate'
+featured_image: 'https://christianlehman.com/images/how-to-measure-entity-resolution-rate.png'
 ---
 
 **Entity resolution rate is the share of real-world entities your system correctly matches, links, or deduplicates against a reference set. I measure it as a pairwise or cluster-level accuracy problem, not a vanity score. If the entity graph is wrong, AI visibility is wrong.**

@@ -1,11 +1,20 @@
 ---
-title: "Best Marketing Automation Platforms for Enterprise: 2026 Comparison"
-date: "2026-04-14"
-description: "Compare the top enterprise marketing automation platforms, the tradeoffs, and what to track before you buy."
-tags: ["ai-visibility", "tactical-brief", "martech", "enterprise-automation"]
-primaryQuery: "best marketing automation platforms for enterprise 2026"
-cluster: "ai-tool-comparison"
-canonicalUrl: "https://christianlehman.com/blog/best-marketing-automation-platforms-enterprise-2026"
+title: 'Best Marketing Automation Platforms for Enterprise: 2026 Comparison'
+date: '2026-04-14'
+description: >-
+  Compare the top enterprise marketing automation platforms, the tradeoffs, and
+  what to track before you buy.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - martech
+  - enterprise-automation
+primaryQuery: best marketing automation platforms for enterprise 2026
+cluster: ai-tool-comparison
+canonicalUrl: >-
+  https://christianlehman.com/blog/best-marketing-automation-platforms-enterprise-2026
+featured_image: >-
+  https://christianlehman.com/images/best-marketing-automation-platforms-enterprise-2026.png
 ---
 
 **Enterprise marketing automation in 2026 is a decision about orchestration, governance, and attribution, not just email. The shortlist usually includes HubSpot, Adobe Marketo Engage, Salesforce Marketing Cloud, Oracle Eloqua, 6sense, and Demandbase. I care less about brand prestige than about which platform actually fits the motion you need to run.**

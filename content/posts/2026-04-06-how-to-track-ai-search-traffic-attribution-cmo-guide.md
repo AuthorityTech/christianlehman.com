@@ -1,11 +1,22 @@
 ---
-title: "How to Track ChatGPT and Perplexity Traffic Attribution: A CMO's Setup Guide"
-date: "2026-04-06"
-description: "Step-by-step GA4 setup for tracking AI search traffic from ChatGPT, Perplexity, Claude, and Gemini, with the benchmarks and board-ready reporting framework CMOs actually need."
-tags: ["ai-visibility", "tactical-brief", "measurement", "ga4", "ai-attribution"]
-primaryQuery: "how to track AI search traffic attribution for CMOs"
-cluster: "ai-attribution"
-canonicalUrl: "https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide"
+title: 'How to Track ChatGPT and Perplexity Traffic Attribution: A CMO''s Setup Guide'
+date: '2026-04-06'
+description: >-
+  Step-by-step GA4 setup for tracking AI search traffic from ChatGPT,
+  Perplexity, Claude, and Gemini, with the benchmarks and board-ready reporting
+  framework CMOs actually need.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - measurement
+  - ga4
+  - ai-attribution
+primaryQuery: how to track AI search traffic attribution for CMOs
+cluster: ai-attribution
+canonicalUrl: >-
+  https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide
+featured_image: >-
+  https://christianlehman.com/images/how-to-track-ai-search-traffic-attribution-cmo-guide.png
 ---
 
 AI search traffic from ChatGPT, Perplexity, Claude, and Gemini is already landing on most sites, and GA4 is mislabeling a lot of it as Direct or burying it inside Referral. Without a custom channel configuration, you cannot see how much pipeline is coming from AI-cited content, which queries are driving it, or how it converts against organic search.

@@ -1,11 +1,22 @@
 ---
-title: "How to Measure AI Search Visibility: The CMO's Share of Citation Framework"
-date: "2026-04-10"
-description: "Most CMOs are measuring AI visibility wrong. Here's the metric that actually matters, Share of Citation, and the framework to track it across ChatGPT, Perplexity, Gemini, and Claude."
-tags: ["ai-visibility", "tactical-brief", "measurement", "ai-measurement", "share-of-citation"]
-primaryQuery: "how to measure AI search visibility brand share of voice"
-cluster: "ai-measurement"
-canonicalUrl: "https://christianlehman.com/blog/how-to-measure-ai-search-visibility-share-of-citation"
+title: 'How to Measure AI Search Visibility: The CMO''s Share of Citation Framework'
+date: '2026-04-10'
+description: >-
+  Most CMOs are measuring AI visibility wrong. Here's the metric that actually
+  matters, Share of Citation, and the framework to track it across ChatGPT,
+  Perplexity, Gemini, and Claude.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - measurement
+  - ai-measurement
+  - share-of-citation
+primaryQuery: how to measure AI search visibility brand share of voice
+cluster: ai-measurement
+canonicalUrl: >-
+  https://christianlehman.com/blog/how-to-measure-ai-search-visibility-share-of-citation
+featured_image: >-
+  https://christianlehman.com/images/how-to-measure-ai-search-visibility-share-of-citation.png
 ---
 
 To measure [AI visibility](https://machinerelations.ai/glossary/ai-visibility), track [Share of Citation](https://machinerelations.ai/glossary/share-of-citation), the percentage of citation slots your brand earns across a defined query set on ChatGPT, Perplexity, Gemini, and Claude. This is more precise than AI share of voice, which counts mentions. Citations are decisions AI engines make to attribute your brand as a source. Mentions are noise.

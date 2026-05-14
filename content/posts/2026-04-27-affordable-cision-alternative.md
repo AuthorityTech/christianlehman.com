@@ -1,22 +1,32 @@
 ---
-title: "The affordable Cision alternative is not another Cision clone"
-date: "2026-04-27"
-description: "Pick a cheaper PR stack by function, not brand. Use this shortlist to replace Cision without losing media monitoring, outreach, or AI visibility."
-slug: "affordable-cision-alternative"
-author: "Christian Lehman"
-tags: ["ai-visibility", "tactical-brief", "pr-tools", "alternatives"]
-primaryQuery: "affordable cision alternative"
-cluster: "pr-tools"
-queryClass: "comparison"
-discoverySource: "gap-analysis"
-whyNow: "Cision still hides pricing, while buyers are actively comparing lower-cost replacements."
-freshnessReason: "The comparison changed this year as AI-discovery and monitoring tools started competing with legacy PR suites."
-researchBriefPath: "editorial/data/drafts/research-brief-affordable-cision-alternative.json"
+title: The affordable Cision alternative is not another Cision clone
+date: '2026-04-27'
+description: >-
+  Pick a cheaper PR stack by function, not brand. Use this shortlist to replace
+  Cision without losing media monitoring, outreach, or AI visibility.
+slug: affordable-cision-alternative
+author: Christian Lehman
+tags:
+  - ai-visibility
+  - tactical-brief
+  - pr-tools
+  - alternatives
+primaryQuery: affordable cision alternative
+cluster: pr-tools
+queryClass: comparison
+discoverySource: gap-analysis
+whyNow: >-
+  Cision still hides pricing, while buyers are actively comparing lower-cost
+  replacements.
+freshnessReason: >-
+  The comparison changed this year as AI-discovery and monitoring tools started
+  competing with legacy PR suites.
+researchBriefPath: editorial/data/drafts/research-brief-affordable-cision-alternative.json
 researchQualityScore: 7
-canonicalUrl: "https://christianlehman.com/blog/affordable-cision-alternative"
+canonicalUrl: 'https://christianlehman.com/blog/affordable-cision-alternative'
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/affordable-cision-alternative?concept=beacon"
-featured_image_alt: "The affordable Cision alternative is not another Cision clone"
+featured_image: 'https://christianlehman.com/images/affordable-cision-alternative.png'
+featured_image_alt: The affordable Cision alternative is not another Cision clone
 ---
 
 If you want a cheaper Cision replacement, do not buy a smaller Cision. Buy the smallest stack that still gives you media discovery, outreach, reporting, and AI-search visibility. The right answer is usually a two-tool setup, not a bloated all-in-one suite. That is how I would cut cost without losing reach.

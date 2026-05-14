@@ -1,17 +1,28 @@
 ---
-title: "How to Get Featured in Forbes for AI Visibility: A CMO Playbook"
-date: "2026-04-20"
-description: "A practical playbook for earning Forbes coverage that AI engines can actually surface."
-tags: ["ai-visibility", "tactical-brief", "earned-media-roi", "forbes", "measurement"]
-primaryQuery: "how to get featured in Forbes for AI visibility"
-cluster: "earned-media-roi"
-queryClass: "framework"
-discoverySource: "signal-discovery"
-whyNow: "AI answer engines now shape the shortlist before buyers ever reach a website."
-freshnessReason: "Forbes coverage now matters as a citation source, not just a prestige signal."
-researchBriefPath: "/home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-20-how-to-get-featured-in-forbes-for-ai-visibility.json"
+title: 'How to Get Featured in Forbes for AI Visibility: A CMO Playbook'
+date: '2026-04-20'
+description: >-
+  A practical playbook for earning Forbes coverage that AI engines can actually
+  surface.
+tags:
+  - ai-visibility
+  - tactical-brief
+  - earned-media-roi
+  - forbes
+  - measurement
+primaryQuery: how to get featured in Forbes for AI visibility
+cluster: earned-media-roi
+queryClass: framework
+discoverySource: signal-discovery
+whyNow: AI answer engines now shape the shortlist before buyers ever reach a website.
+freshnessReason: 'Forbes coverage now matters as a citation source, not just a prestige signal.'
+researchBriefPath: >-
+  /home/jarvis/.openclaw/workspace-main/editorial/data/research-briefs/2026-04-20-how-to-get-featured-in-forbes-for-ai-visibility.json
 researchQualityScore: 8.5
-canonicalUrl: "https://christianlehman.com/blog/how-to-get-featured-in-forbes-for-ai-visibility-2026"
+canonicalUrl: >-
+  https://christianlehman.com/blog/how-to-get-featured-in-forbes-for-ai-visibility-2026
+featured_image: >-
+  https://christianlehman.com/images/how-to-get-featured-in-forbes-for-ai-visibility-2026.png
 ---
 
 Getting featured in Forbes for AI visibility starts with one proof-backed claim, placed in sources journalists already trust, with evidence a reporter can verify in five minutes. Forbes coverage matters more now because AI answer engines treat it as a high-trust citation source — and Forrester says AI visibility is a 2026 board-level priority for B2B leaders ([Forrester, 2026](https://www.forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit/)).

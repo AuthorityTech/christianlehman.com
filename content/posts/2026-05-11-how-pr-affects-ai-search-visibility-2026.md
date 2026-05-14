@@ -1,23 +1,37 @@
 ---
-title: "How PR Affects AI Search Visibility in 2026"
-date: "2026-05-11"
-slug: "how-pr-affects-ai-search-visibility-2026"
-description: "PR coverage now determines whether AI engines cite your brand. Here's the research on how PR affects AI search visibility and what your program needs to do differently."
-author: "Christian Lehman"
-campaign_ids: ["pr-has-to-work-for-machines-202605"]
-primaryQuery: "how PR affects AI search visibility"
-researchBriefPath: "editorial/data/research-briefs/2026/05/11/christian/how-pr-affects-ai-search-visibility-2026.json"
+title: How PR Affects AI Search Visibility in 2026
+date: '2026-05-11'
+slug: how-pr-affects-ai-search-visibility-2026
+description: >-
+  PR coverage now determines whether AI engines cite your brand. Here's the
+  research on how PR affects AI search visibility and what your program needs to
+  do differently.
+author: Christian Lehman
+campaign_ids:
+  - pr-has-to-work-for-machines-202605
+primaryQuery: how PR affects AI search visibility
+researchBriefPath: >-
+  editorial/data/research-briefs/2026/05/11/christian/how-pr-affects-ai-search-visibility-2026.json
 researchQualityScore: 8
-tags: ["ai-visibility","tactical-brief","earned-media","citations"]
-cluster: "pr-ai-visibility"
-queryClass: "how-pr-affects"
-discoverySource: "campaign"
-whyNow: "Active campaign pr-has-to-work-for-machines-202605; query passed admission control; distinct from existing pr-for-machine-readers post"
-freshnessReason: "Forrester Q1 2026 data; arxiv 2604.25707 and 2509.10762 published 2026; Entrepreneur anchor May 2026"
-canonicalUrl: ""
+tags:
+  - ai-visibility
+  - tactical-brief
+  - earned-media
+  - citations
+cluster: pr-ai-visibility
+queryClass: how-pr-affects
+discoverySource: campaign
+whyNow: >-
+  Active campaign pr-has-to-work-for-machines-202605; query passed admission
+  control; distinct from existing pr-for-machine-readers post
+freshnessReason: >-
+  Forrester Q1 2026 data; arxiv 2604.25707 and 2509.10762 published 2026;
+  Entrepreneur anchor May 2026
+canonicalUrl: ''
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/how-pr-affects-ai-search-visibility-2026?concept=beacon"
-featured_image_alt: "How PR Affects AI Search Visibility in 2026"
+featured_image: >-
+  https://christianlehman.com/images/how-pr-affects-ai-search-visibility-2026.png
+featured_image_alt: How PR Affects AI Search Visibility in 2026
 ---
 
 PR coverage now does two jobs. The first job is the one your team has always known: earn attention from journalists and buyers. The second job — the one most PR programs haven't been briefed on — is becoming a source AI engines can extract and cite when someone asks a question your brand should own.

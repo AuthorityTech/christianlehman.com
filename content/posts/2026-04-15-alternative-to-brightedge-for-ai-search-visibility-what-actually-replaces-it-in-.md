@@ -1,16 +1,31 @@
 ---
-title: "Alternative to BrightEdge for AI Search Visibility: What Actually Replaces It in 2026"
-date: "2026-04-15"
-description: "BrightEdge remains a strong enterprise SEO platform, but it does not replace a Machine Relations stack for AI citation tracking, earned media intelligence, and entity-level visibility."
-primaryQuery: "BrightEdge alternative for CMOs measuring AI search visibility"
-cluster: "brightedge-alternative"
-tags: [machine-relations, ai-search, brightedge, comparison, visibility]
-
-queryClass: "comparison"
-discoverySource: "gap-analysis"
-whyNow: "Enterprise teams are re-evaluating SEO stacks as AI search reshapes visibility."
-freshnessReason: "BrightEdge alternative queries are rising as teams realize SEO dashboards miss AI citation behavior."
+title: >-
+  Alternative to BrightEdge for AI Search Visibility: What Actually Replaces It
+  in 2026
+date: '2026-04-15'
+description: >-
+  BrightEdge remains a strong enterprise SEO platform, but it does not replace a
+  Machine Relations stack for AI citation tracking, earned media intelligence,
+  and entity-level visibility.
+primaryQuery: BrightEdge alternative for CMOs measuring AI search visibility
+cluster: brightedge-alternative
+tags:
+  - machine-relations
+  - ai-search
+  - brightedge
+  - comparison
+  - visibility
+queryClass: comparison
+discoverySource: gap-analysis
+whyNow: >-
+  Enterprise teams are re-evaluating SEO stacks as AI search reshapes
+  visibility.
+freshnessReason: >-
+  BrightEdge alternative queries are rising as teams realize SEO dashboards miss
+  AI citation behavior.
 researchQualityScore: 7
+featured_image: >-
+  https://christianlehman.com/images/alternative-to-brightedge-for-ai-search-visibility-what-actually-replaces-it-in-.png
 ---
 
 > **Best alternative to BrightEdge for AI search visibility:** a Machine Relations stack that combines citation tracking, earned media intelligence, and entity coverage across models.

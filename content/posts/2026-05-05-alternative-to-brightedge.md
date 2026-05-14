@@ -1,16 +1,24 @@
 ---
-title: "BrightEdge Alternative in 2026: What Actually Replaces It for AI Search Visibility"
-date: "2026-05-05"
-description: "BrightEdge still handles SEO operations. It does not replace the stack you need for AI citations, earned media proof, and entity-level visibility."
-primaryQuery: "brightedge alternative"
-cluster: "brightedge-alternative"
-tags: ["ai-visibility","tactical-brief"]
-slug: "alternative-to-brightedge"
-canonicalUrl: "https://christianlehman.com/blog/alternative-to-brightedge"
-author: "Christian Lehman"
+title: >-
+  BrightEdge Alternative in 2026: What Actually Replaces It for AI Search
+  Visibility
+date: '2026-05-05'
+description: >-
+  BrightEdge still handles SEO operations. It does not replace the stack you
+  need for AI citations, earned media proof, and entity-level visibility.
+primaryQuery: brightedge alternative
+cluster: brightedge-alternative
+tags:
+  - ai-visibility
+  - tactical-brief
+slug: alternative-to-brightedge
+canonicalUrl: 'https://christianlehman.com/blog/alternative-to-brightedge'
+author: Christian Lehman
 visual_concept: beacon
-featured_image: "https://christianlehman.com/og/christian/alternative-to-brightedge?concept=beacon"
-featured_image_alt: "BrightEdge Alternative in 2026: What Actually Replaces It for AI Search Visibility"
+featured_image: 'https://christianlehman.com/images/alternative-to-brightedge.png'
+featured_image_alt: >-
+  BrightEdge Alternative in 2026: What Actually Replaces It for AI Search
+  Visibility
 ---
 
 *By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical notes on AI visibility, earned media, and software evaluation.*
