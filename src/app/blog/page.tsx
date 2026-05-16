@@ -1,5 +1,6 @@
 import { getAllPosts } from "@/lib/posts";
 import { CANONICAL_ESSAY_SLUG } from "@/lib/seo";
+import { formatShareDate } from "@/lib/postShare";
 import Link from "next/link";
 import type { Metadata } from "next";
 const BASE = "https://christianlehman.com";
@@ -96,11 +97,6 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
   };
 }
 
-function formatDate(d: string) {
-  if (!d) return "";
-  return new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-}
-
 function PostList({ posts }: { posts: ReturnType<typeof getAllPosts> }) {
   return (
     <div className="space-y-10">
@@ -115,7 +111,7 @@ function PostList({ posts }: { posts: ReturnType<typeof getAllPosts> }) {
                 {post.description && <p className="text-[14px] leading-relaxed text-nothing-secondary">{post.description}</p>}
               </div>
               <time className="flex-shrink-0 whitespace-nowrap pt-[3px] font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">
-                {formatDate(post.date)}
+                {formatShareDate(post.date)}
               </time>
             </div>
             {post.tags && post.tags.length > 0 && (
@@ -172,7 +168,7 @@ export default function BlogPage() {
                   )}
                 </div>
                 <time className="flex-shrink-0 whitespace-nowrap pt-[3px] font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">
-                  {formatDate(canonicalEssay.date)}
+                  {formatShareDate(canonicalEssay.date)}
                 </time>
               </div>
             </Link>

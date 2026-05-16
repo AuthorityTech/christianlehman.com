@@ -25,8 +25,6 @@ researchBriefPath: editorial/data/drafts/research-brief-affordable-cision-altern
 researchQualityScore: 7
 canonicalUrl: 'https://christianlehman.com/blog/affordable-cision-alternative'
 visual_concept: beacon
-featured_image: 'https://christianlehman.com/images/affordable-cision-alternative.png'
-featured_image_alt: The affordable Cision alternative is not another Cision clone
 ---
 
 If you want a cheaper Cision replacement, do not buy a smaller Cision. Buy the smallest stack that still gives you media discovery, outreach, reporting, and AI-search visibility. The right answer is usually a two-tool setup, not a bloated all-in-one suite. That is how I would cut cost without losing reach.

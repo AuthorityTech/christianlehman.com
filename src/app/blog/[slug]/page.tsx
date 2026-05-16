@@ -7,6 +7,7 @@ import remarkHtml from "remark-html";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
+import { formatShareDate, getPostShare } from "@/lib/postShare";
 
 export const dynamicParams = true;
 export const revalidate = 3600;
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const image = post.featured_image;
+  const share = getPostShare(post);
   return {
     title: post.title,
     description: post.description,
@@ -39,21 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       modifiedTime: post.lastModified || post.date,
       authors: ["Christian Lehman"],
-      images: image ? [{ url: image, width: 1200, height: 630, alt: post.title }] : undefined,
+      images: [{ url: share.imageUrl, width: share.width, height: share.height, alt: share.alt }],
     },
     twitter: {
       card: "summary_large_image",
       creator: "@christianlehman",
       title: post.title + " — Christian Lehman",
       description: post.description,
-      images: image ? [image] : undefined,
+      images: [share.imageUrl],
     },
   };
-}
-
-function formatDate(d: string) {
-  if (!d) return "";
-  return new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
 
 export default async function PostPage({ params }: Props) {
@@ -68,11 +64,12 @@ export default async function PostPage({ params }: Props) {
     .process(normalizedContent);
   const html = normalizeProseHtml(processed.toString());
 
-  const image = post.featured_image;
+  const share = getPostShare(post);
   const pageUrl = "https://christianlehman.com/blog/" + slug;
   const webPageId = pageUrl + "#webpage";
   const articleId = pageUrl + "#article";
   const breadcrumbId = pageUrl + "#breadcrumb";
+  const primaryImageId = share.imageUrl + "#primaryimage";
 
   const postSchema = {
     "@context": "https://schema.org",
@@ -86,6 +83,7 @@ export default async function PostPage({ params }: Props) {
         about: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
         breadcrumb: { "@id": breadcrumbId },
         mainEntity: { "@id": articleId },
+        primaryImageOfPage: { "@id": primaryImageId },
       },
       {
         "@type": "BlogPosting",
@@ -95,7 +93,8 @@ export default async function PostPage({ params }: Props) {
         datePublished: post.date,
         dateModified: post.lastModified || post.date,
         url: pageUrl,
-        image,
+        image: { "@id": primaryImageId },
+        thumbnailUrl: share.imageUrl,
         author: {
           "@type": "Person",
           "@id": "https://christianlehman.com/#person",
@@ -108,6 +107,17 @@ export default async function PostPage({ params }: Props) {
         keywords: post.tags?.join(", ") ?? "",
         isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
         about: [{ "@id": MACHINE_RELATIONS_TERM_ID }, { "@id": "https://authoritytech.io/#organization" }],
+      },
+      {
+        "@type": "ImageObject",
+        "@id": primaryImageId,
+        url: share.imageUrl,
+        contentUrl: share.imageUrl,
+        width: share.width,
+        height: share.height,
+        caption: share.caption,
+        description: share.alt,
+        representativeOfPage: true,
       },
       {
         "@type": "BreadcrumbList",
@@ -200,7 +210,7 @@ export default async function PostPage({ params }: Props) {
         </div>
 
         <div className="flex items-center gap-3">
-          <time className="font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">{formatDate(post.date)}</time>
+          <time className="font-mono text-[11px] uppercase tracking-[0.06em] text-nothing-disabled">{formatShareDate(post.date)}</time>
           {post.tags && post.tags.length > 0 && (
             <>
               <span className="text-nothing-border">·</span>
@@ -219,18 +229,16 @@ export default async function PostPage({ params }: Props) {
         </div>
       </header>
 
-      {post.featured_image && (
-        <div className="-mx-0 mb-12">
-          <img
-            src={post.featured_image}
-            alt={post.title}
-            width={1200}
-            height={630}
-            className="w-full rounded-[4px] border border-nothing-border"
-            style={{ aspectRatio: "1200/630", objectFit: "cover" }}
-          />
-        </div>
-      )}
+      <div className="-mx-0 mb-12">
+        <img
+          src={share.imageUrl}
+          alt={share.alt}
+          width={share.width}
+          height={share.height}
+          className="w-full rounded-[4px] border border-nothing-border"
+          style={{ aspectRatio: "1200/630", objectFit: "cover" }}
+        />
+      </div>
 
       <div
         className="prose prose-nothing max-w-none prose-p:mb-5 prose-p:leading-[1.75] prose-p:text-nothing-primary prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-nothing-display prose-a:text-link prose-a:no-underline prose-strong:text-nothing-primary prose-li:text-nothing-secondary prose-blockquote:border-nothing-border prose-blockquote:text-nothing-secondary prose-code:text-nothing-primary prose-pre:rounded prose-pre:border prose-pre:border-nothing-border prose-pre:bg-nothing-raised prose-hr:border-nothing-border prose-h2:mb-4 prose-h2:mt-10 hover:prose-a:text-nothing-primary"
