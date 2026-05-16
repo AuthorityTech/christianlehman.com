@@ -92,32 +92,6 @@ function gridDots() {
   return dots;
 }
 
-function backgroundAscii(seed) {
-  const hash = hashString(seed);
-  const alphabet = ["0", "1", "/", ".", ":", "-", "_", "+", "|"];
-  return Array.from({ length: 15 }, (_, row) => {
-    const text = Array.from({ length: 74 }, (_, index) => alphabet[(hash + row * 13 + index * 7) % alphabet.length]).join("");
-    return {
-      type: "div",
-      props: {
-        style: {
-          position: "absolute",
-          left: 70 + (row % 3) * 18,
-          top: 118 + row * 28,
-          width: 1040,
-          fontSize: 12,
-          fontWeight: 400,
-          color: "#666666",
-          opacity: 0.12,
-          letterSpacing: 0,
-          lineHeight: 1,
-        },
-        children: text,
-      },
-    };
-  });
-}
-
 function accentDots(seed) {
   const hash = hashString(seed);
   return Array.from({ length: 34 }, (_, index) => ({
@@ -217,7 +191,6 @@ async function renderImage(post, fontData) {
       },
       children: [
         ...gridDots(),
-        ...backgroundAscii(seed),
         ...geometricLines(seed),
         ...accentDots(seed),
         {
