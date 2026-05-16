@@ -24,7 +24,7 @@ const doto = Doto({
   weight: ["400", "700"],
 });
 
-const OG_IMAGE = PROFILE_IMAGE_URL;
+const OG_IMAGE = SITE_URL + "/images/christian-lehman-cover-image.png";
 const MACHINE_RELATIONS_TERM_ID = "https://machinerelations.ai/#term";
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
     description:
       "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Tracks which brands are winning and losing the AI shortlist battle across every major B2B vertical.",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
+    images: [{ url: OG_IMAGE, width: 1672, height: 941, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -36,7 +36,7 @@ const schema = vm.runInNewContext(
   `(${schemaLiteral})`,
   {
     SITE_URL: "https://christianlehman.com",
-    OG_IMAGE: "https://christianlehman.com/og/default",
+    OG_IMAGE: "https://christianlehman.com/images/christian-lehman-cover-image.png",
     MACHINE_RELATIONS_TERM_ID,
   },
   { timeout: 1000 }
