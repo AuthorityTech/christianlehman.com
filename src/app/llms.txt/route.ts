@@ -45,6 +45,14 @@ ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${BASE}/blog/${p.slug}): $
 - [AuthorityTech](https://authoritytech.io): Company site
 - [Machine Relations](https://machinerelations.ai): Category site
 
+## Machine-Readable Content
+
+Every page on this site has a parallel .md endpoint for machine consumption:
+
+- [Home (markdown)](${BASE}/index.md): Structured profile and recent writing
+- [Blog index (markdown)](${BASE}/blog.md): Full post listing with descriptions and dates
+- Individual posts: append .md to any blog URL (e.g. ${BASE}/blog/SLUG.md)
+
 ## Optional
 
 - [Book a Strategy Call](https://cal.com/christian-lehman-at/30min): AuthorityTech strategy call with Christian Lehman
