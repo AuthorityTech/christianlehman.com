@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import MachineViewToggle from "@/components/MachineViewToggle";
 import { PROFILE_IMAGE_URL, SITE_URL } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
@@ -160,8 +161,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-transparent font-sans text-nothing-primary antialiased">
         <Nav />
-        <main>{children}</main>
-        <Footer />
+        <div data-human-content>
+          <main>{children}</main>
+          <Footer />
+        </div>
+        <MachineViewToggle />
       </body>
     </html>
   );
