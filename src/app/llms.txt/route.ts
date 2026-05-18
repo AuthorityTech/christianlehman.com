@@ -8,7 +8,7 @@ export function GET() {
 
   const body = `# Christian Lehman
 
-> Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Cofounder & CGO and brand-facing architect who operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category. He tracks which companies are winning and losing the AI shortlist battle across every major B2B vertical, and publishes his findings at christianlehman.com.
+> Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Cofounder & CGO and brand-facing architect who operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category. He publishes AI shortlist intelligence from live B2B buying queries: which brands surface, which sources get cited, and where visibility breaks.
 
 ## Who Christian Lehman is
 

@@ -259,8 +259,8 @@ export default async function PostPage({ params }: Props) {
           >
             AuthorityTech
           </a>{" "}
-          — the world&apos;s first AI-native Machine Relations agency. He tracks which companies are winning and losing the AI shortlist battle across every
-          major B2B vertical, and writes about what the data actually shows.
+          — the world&apos;s first AI-native Machine Relations agency. He writes AI shortlist intelligence from live B2B buying queries: which brands
+          surface, which sources get cited, and where visibility breaks.
         </p>
       </section>
 

@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "Christian Lehman",
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
     description:
-      "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Tracks which brands are winning and losing the AI shortlist battle across every major B2B vertical.",
+      "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Writes AI shortlist intelligence from live B2B buying queries: which brands surface, which sources get cited, and where visibility breaks.",
     images: [{ url: OG_IMAGE, width: 1672, height: 941, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
   },
   twitter: {
@@ -69,7 +69,8 @@ export const metadata: Metadata = {
     site: "@ChristianLehman",
     creator: "@ChristianLehman",
     title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
-    description: "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency.",
+    description:
+      "Writes AI shortlist intelligence from live B2B buying queries: surfaced brands, cited sources, and visibility gaps.",
     images: [OG_IMAGE],
   },
   icons: {
