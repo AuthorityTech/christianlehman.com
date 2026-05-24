@@ -384,21 +384,15 @@ h4 {
   cursor: not-allowed;
 }
 
-.cl-machine-panel__message {
+.cl-machine-panel pre {
   margin: 0;
   padding: 1.25rem;
-  color: var(--text-secondary);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
   font-family: var(--font-space-mono), "SF Mono", ui-monospace, monospace;
   font-size: 0.78rem;
   line-height: 1.58;
-}
-
-.cl-machine-panel__frame {
-  display: block;
-  width: 100%;
-  min-height: calc(100vh - 10rem);
-  border: 0;
-  background: var(--page-bg);
 }
 
 @media (max-width: 640px) {
