@@ -4,3 +4,6 @@ node_modules/
 out/
 .env*.local
 *.log
+tsconfig.tsbuildinfo
+graphify-out/
+*.md.bak
