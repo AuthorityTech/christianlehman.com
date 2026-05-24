@@ -9,7 +9,11 @@ const ROOT = path.resolve(__dirname, "..");
 const layout = fs.readFileSync(path.join(ROOT, "src", "app", "layout.tsx"), "utf8");
 const blogIndex = fs.readFileSync(path.join(ROOT, "src", "app", "blog", "page.tsx"), "utf8");
 const blogPost = fs.readFileSync(path.join(ROOT, "src", "app", "blog", "[slug]", "page.tsx"), "utf8");
-const llms = fs.readFileSync(path.join(ROOT, "src", "app", "llms.txt", "route.ts"), "utf8");
+let llms = fs.readFileSync(path.join(ROOT, "src", "app", "llms.txt", "route.ts"), "utf8");
+const llmsManifest = path.join(ROOT, "src", "lib", "site-manifest.ts");
+if (llms.includes("buildLlmsTxtBody") && fs.existsSync(llmsManifest)) {
+  llms += `\n${fs.readFileSync(llmsManifest, "utf8")}`;
+}
 const robots = fs.readFileSync(path.join(ROOT, "src", "app", "robots.ts"), "utf8");
 
 function fail(message) {
