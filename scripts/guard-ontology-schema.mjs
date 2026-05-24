@@ -28,7 +28,11 @@ const layout = read(LAYOUT_FILE);
 const blogIndex = read(BLOG_INDEX_FILE);
 const blogPost = read(BLOG_POST_FILE);
 const robots = read(ROBOTS_FILE);
-const llms = read(LLMS_FILE);
+let llms = read(LLMS_FILE);
+const LLMS_MANIFEST = path.join(ROOT, "src", "lib", "site-manifest.ts");
+if (llms.includes("buildLlmsTxtBody") && fs.existsSync(LLMS_MANIFEST)) {
+  llms += `\n${fs.readFileSync(LLMS_MANIFEST, "utf8")}`;
+}
 read(CONTRACT_FILE);
 
 assertMatch(layout, /"@id":\s*SITE_URL \+ "\/#person"/, "Christian person node must remain canonical to christianlehman.com/#person");
