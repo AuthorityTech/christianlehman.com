@@ -12,7 +12,7 @@ discoverySource: "ai-demand-404"
 whyNow: "Forrester Wave Q1 2026 revenue marketing platforms published; 75% of partner ecosystem marketing decision-makers increasing tech investment; AI-native orchestration reshaping buyer evaluation"
 freshnessReason: "Forrester Wave Q1 2026, Forrester partner ecosystem marketing survey 2026, Gartner B2B reviews refresh"
 canonicalUrl: ""
-tags: ["ai-visibility", "tactical-brief", "martech", "marketing-automation"]
+tags: ["ai-visibility","tactical-brief","pr-tools","measurement","shortlists"]
 ---
 
 The right marketing automation shortlist for 2026 has seven platforms on it, not thirty-four. Every listicle inflates the count because inclusion is free and exclusion requires a point of view. This is the shortlist I would actually hand to a CMO who needs to make a decision this quarter.
@@ -80,3 +80,10 @@ This matters for the shortlist decision in two ways:
 If you are inbound or scaling mid-market, shortlist HubSpot and ActiveCampaign. If you are enterprise B2B with real ops, shortlist Marketo and Salesforce Marketing Cloud. If your motion is multi-channel consumer or product-led, shortlist Braze, Klaviyo, or Customer.io. Then let integration count and attribution quality break the tie.
 
 That is seven platforms, not thirty-four. The rest is noise.
+<!-- SELF_HEAL_BLOCK_START additional-source-context 1779809633729 -->
+## Additional source context
+
+- Log in to your account to continue reading this research. ([The Forrester Tech Tide™: B2C Marketing Technology, Q1 2026 | Forrester (forrester.com)](https://forrester.com/report/the-forrester-tech-tide-tm-b2c-marketing-technology-q1-2026/RES192475)).
+- Best Marketing Automation Software 2026: Independent Buyer Guide top of page Search Marketing teams in 2026 are operating under more pressure than ever - expected to generate pipeline, prove ROI, and personalise buyer journeys at scale, while managing an incre ([Best Marketing Automation Software 2026: Independent Buyer Guide (viewpointanalysis.com)](https://viewpointanalysis.com/post/marketing-automation-software-options-2026), 2026).
+- President 🏆Advil Relaunch Breaking category norms with a meaningfully disruptive platform by Haleon, Publicis Le ONE & Elmwood 🏆Bukwud Maple Syrup a Household Staple with Katherine Ryan by Valeo Food Group The Marketing Society 41st Global Awards Shortlist 2 ([The Marketing Society 41st Global Awards Shortlist 2026 | The Marketing Society (marketingsociety.com)](https://marketingsociety.com/news/marketing-society-41st-global-awards-shortlist-2026)).
+<!-- SELF_HEAL_BLOCK_END -->
