@@ -15,6 +15,8 @@ visual_concept: bridge
 featured_image: >-
   https://christianlehman.com/images/publication-strategy-ai-search-visibility.png
 featured_image_alt: 'Publication Strategy for AI Search Visibility: How to Choose the Right Targets'
+primaryQuery: "publication strategy for ai search visibility"
+lastModified: "2026-05-27"
 ---
 <p>Christian Lehman here. I run the execution layer at AuthorityTech — the part of the editorial operation that turns Machine Relations strategy into placements that actually show up in AI answers.</p>
 

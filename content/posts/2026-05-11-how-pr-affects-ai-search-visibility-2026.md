@@ -32,6 +32,7 @@ visual_concept: beacon
 featured_image: >-
   https://christianlehman.com/images/how-pr-affects-ai-search-visibility-2026.png
 featured_image_alt: How PR Affects AI Search Visibility in 2026
+lastModified: "2026-05-27"
 ---
 
 PR coverage now does two jobs. The first job is the one your team has always known: earn attention from journalists and buyers. The second job — the one most PR programs haven't been briefed on — is becoming a source AI engines can extract and cite when someone asks a question your brand should own.
@@ -116,3 +117,26 @@ PR has always been about credibility. AI search just made that credibility measu
 - Pew Research Center tracks public and organizational context around artificial intelligence adoption. ([Pew Research Center artificial intelligence coverage](https://www.pewresearch.org/topic/internet-technology/artificial-intelligence/), 2026).
 - Reuters maintains current reporting on artificial intelligence markets, platforms, and policy changes. ([Reuters artificial intelligence coverage](https://www.reuters.com/technology/artificial-intelligence/), 2026).
 <!-- SELF_HEAL_BLOCK_END -->
+
+## Frequently Asked Questions
+
+### Why AI Engines Pull from Earned Media, Not Your Blog?
+
+The common assumption is that SEO and owned content are the primary levers for AI visibility. That assumption is wrong.
+
+### What are the 3 Mechanisms That Connect PR to AI Citation?
+
+Not all PR coverage creates AI visibility. Understanding the mechanism lets you direct your program at the right outputs.
+
+### What Your PR Strategy Needs to Do Differently?
+
+Most PR programs are optimized for human-readership metrics: journalist reach, impressions, share of voice in clipping reports. These metrics do not capture machine-readability.
+
+### How to Measure PR's Impact on AI Visibility?
+
+Pages that meet the structured evidence standard used in GEO research achieve a 78% citation rate across AI platforms — significantly above baseline. (arxiv.org) Your PR coverage can hit that threshold if it is placed correctly and written to be extractable.
+
+### What is the Monday Action?
+
+Take your last five significant PR placements. Search the core query each placement was meant to support — in Perplexity, ChatGPT, and Google AI Overview. Check whether those placements appear in the cited sources.
+

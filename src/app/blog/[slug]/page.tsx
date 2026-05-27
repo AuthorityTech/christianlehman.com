@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
 import { formatShareDate, getPostShare } from "@/lib/postShare";
+import { extractFaqFromHtml, faqSchemaNode } from "@/lib/geo-schema";
 
 export const dynamicParams = true;
 export const revalidate = 3600;
@@ -66,6 +67,8 @@ export default async function PostPage({ params }: Props) {
 
   const share = getPostShare(post);
   const pageUrl = "https://christianlehman.com/blog/" + slug;
+  const faqItems = extractFaqFromHtml(html);
+  const faqNode = faqSchemaNode(faqItems, pageUrl);
   const webPageId = pageUrl + "#webpage";
   const articleId = pageUrl + "#article";
   const breadcrumbId = pageUrl + "#breadcrumb";
@@ -155,6 +158,7 @@ export default async function PostPage({ params }: Props) {
           },
         ],
       },
+      ...(faqNode ? [faqNode] : []),
     ],
   };
 
