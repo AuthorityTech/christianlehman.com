@@ -110,6 +110,10 @@ export default async function PostPage({ params }: Props) {
         keywords: post.tags?.join(", ") ?? "",
         isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
         about: [{ "@id": MACHINE_RELATIONS_TERM_ID }, { "@id": "https://authoritytech.io/#organization" }],
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["[data-speakable='headline']", "[data-speakable='summary']"],
+        },
       },
       {
         "@type": "ImageObject",
