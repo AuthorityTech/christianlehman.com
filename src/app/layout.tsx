@@ -26,7 +26,8 @@ const doto = Doto({
 });
 
 const OG_IMAGE = SITE_URL + "/images/christian-lehman-cover-image.png";
-const MACHINE_RELATIONS_TERM_ID = "https://machinerelations.ai/#term";
+import { IDS } from "@editorialkit/schema";
+const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

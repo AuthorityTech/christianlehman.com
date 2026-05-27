@@ -22,7 +22,8 @@ export function generateStaticParams() {
 }
 
 const DEFAULT_AVATAR = PROFILE_IMAGE_URL;
-const MACHINE_RELATIONS_TERM_ID = "https://machinerelations.ai/#term";
+import { IDS } from "@editorialkit/schema";
+const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

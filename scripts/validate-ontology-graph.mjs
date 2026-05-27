@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import vm from "node:vm";
 import { fileURLToPath } from "url";
+import { IDS } from "@editorialkit/schema";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -21,23 +22,17 @@ function fail(message) {
   process.exit(1);
 }
 
-function extractConst(source, name) {
-  const match = source.match(new RegExp(`const ${name}\\s*=\\s*\"([^\"]+)\";`));
-  if (!match) fail(`Missing required constant '${name}' in layout.tsx`);
-  return match[1];
-}
-
 function extractSchemaObject(source) {
   const match = source.match(/const schema\s*=\s*({[\s\S]*?});\n\nexport default function RootLayout/);
   if (!match) fail("Unable to find schema object in layout.tsx");
   return match[1];
 }
 
-const MACHINE_RELATIONS_TERM_ID = extractConst(layout, "MACHINE_RELATIONS_TERM_ID");
-const schemaLiteral = extractSchemaObject(layout);
+// Constants from shared package — no regex extraction needed
+const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
 
 const schema = vm.runInNewContext(
-  `(${schemaLiteral})`,
+  `(${extractSchemaObject(layout)})`,
   {
     SITE_URL: "https://christianlehman.com",
     OG_IMAGE: "https://christianlehman.com/images/christian-lehman-cover-image.png",
