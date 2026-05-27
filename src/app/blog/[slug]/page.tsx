@@ -180,9 +180,10 @@ export default async function PostPage({ params }: Props) {
       </nav>
 
       <header className="mb-10">
-        <h1 className="mb-5 font-display text-[1.65rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display md:text-[2rem]">
+        <h1 data-speakable="headline" className="mb-5 font-display text-[1.65rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display md:text-[2rem]">
           {post.title}
         </h1>
+        {post.description && <p data-speakable="summary" className="mb-5 text-[14px] font-light leading-relaxed text-nothing-secondary">{post.description}</p>}
 
         <div className="mb-4 flex items-center gap-3">
           <img
