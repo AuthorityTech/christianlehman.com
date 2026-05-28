@@ -28,6 +28,7 @@ const doto = Doto({
 const OG_IMAGE = SITE_URL + "/images/christian-lehman-cover-image.png";
 import { IDS } from "@editorialkit/schema";
 const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
+const MACHINE_RELATIONS_TERM_SET_ID = IDS.MR_TERM_SET;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -98,18 +99,13 @@ const schema = {
       name: "Christian Lehman",
       givenName: "Christian",
       familyName: "Lehman",
-      jobTitle: "Co-Founder, AuthorityTech",
+      jobTitle: "Co-Founder & Chief Growth Officer",
       description:
         "Christian Lehman is the cofounder and chief growth officer of AuthorityTech. He is the brand-facing architect and operator of Machine Relations execution across growth and client delivery.",
       url: SITE_URL,
       image: OG_IMAGE,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
-      worksFor: { "@id": "https://authoritytech.io/#organization" },
-      sameAs: [
-        SITE_URL,
-        "https://www.linkedin.com/in/christianhlehman",
-        "https://x.com/ChristianLehman",
-      ],
+      worksFor: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
       knowsAbout: [
         { "@id": MACHINE_RELATIONS_TERM_ID },
         "AI Visibility",
@@ -118,22 +114,86 @@ const schema = {
         "Earned Media",
         "AI Shortlist Optimization",
       ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Co-Founder & Chief Growth Officer",
+        description:
+          "Co-Founder and Chief Growth Officer of AuthorityTech, the first Machine Relations agency. Operates MR execution across growth and client delivery.",
+      },
+      sameAs: [
+        SITE_URL,
+        "https://www.linkedin.com/in/christianhlehman",
+        "https://x.com/ChristianLehman",
+        "https://medium.com/@christian-lehman",
+      ],
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://authoritytech.io/#organization",
+      name: "AuthorityTech",
+      url: "https://authoritytech.io",
+      knowsAbout: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": MACHINE_RELATIONS_TERM_ID,
+      name: "Machine Relations",
+      termCode: "machine-relations",
+      description:
+        "A discipline coined by Jaxon Parrott for optimizing brand discoverability across AI search engines including ChatGPT, Perplexity, Gemini, and Claude. The AI-era successor to traditional public relations.",
+      url: "https://machinerelations.ai",
+      inDefinedTermSet: {
+        "@type": "DefinedTermSet",
+        "@id": MACHINE_RELATIONS_TERM_SET_ID,
+        name: "Machine Relations Terminology",
+        url: "https://machinerelations.ai/glossary",
+      },
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": MACHINE_RELATIONS_TERM_SET_ID,
+      name: "Machine Relations Terminology",
+      url: "https://machinerelations.ai/glossary",
+      hasDefinedTerm: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
     },
     {
       "@type": "WebSite",
       "@id": SITE_URL + "/#website",
       url: SITE_URL,
       name: "Christian Lehman",
-      description: "Official site and writing of Christian Lehman, cofounder and chief growth officer of AuthorityTech.",
+      description: "Official site and writing of Christian Lehman, Co-Founder & Chief Growth Officer of AuthorityTech.",
       creator: { "@type": "Person", "@id": SITE_URL + "/#person" },
       about: { "@id": MACHINE_RELATIONS_TERM_ID },
-      potentialAction: [{ "@type": "ReadAction", target: SITE_URL + "/blog" }],
+      potentialAction: [
+        {
+          "@type": "ReadAction",
+          target: SITE_URL + "/blog",
+        },
+        {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: SITE_URL + "/blog?query={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      ],
+    },
+    {
+      "@type": "Blog",
+      "@id": SITE_URL + "/blog#blog",
+      name: "Writing — Christian Lehman",
+      description:
+        "For CMOs and growth leaders: what is working in PR, AI search, and winning visibility in the AI era. By Christian Lehman, Co-Founder of AuthorityTech.",
+      url: SITE_URL + "/blog",
+      author: { "@type": "Person", "@id": SITE_URL + "/#person" },
+      publisher: { "@type": "Person", "@id": SITE_URL + "/#person" },
     },
     {
       "@type": "ProfilePage",
       "@id": SITE_URL + "/#profile-page",
       url: SITE_URL,
-      name: "Christian Lehman — Co-Founder, AuthorityTech",
+      name: "Christian Lehman Profile",
       isPartOf: { "@id": SITE_URL + "/#website" },
       mainEntity: { "@id": SITE_URL + "/#person" },
     },
