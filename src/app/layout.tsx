@@ -105,7 +105,7 @@ const schema = {
       url: SITE_URL,
       image: OG_IMAGE,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
-      worksFor: { "@type": "Organization", "@id": "https://authoritytech.io/#organization" },
+      worksFor: { "@id": "https://authoritytech.io/#organization" },
       knowsAbout: [
         { "@id": MACHINE_RELATIONS_TERM_ID },
         "AI Visibility",
