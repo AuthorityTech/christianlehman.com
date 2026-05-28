@@ -42,8 +42,7 @@ assertMatch(layout, /"@type":\s*"WebSite"[\s\S]{0,500}?creator:\s*\{\s*"@type":\
 if (/"@type":\s*"WebSite"[\s\S]{0,500}?author:/s.test(layout)) fail("WebSite must not use author; use creator");
 assertMatch(layout, /"@type":\s*"WebSite"[\s\S]{0,500}?about:\s*\{\s*"@id":\s*MACHINE_RELATIONS_TERM_ID\s*\}/s, "WebSite.about must reference canonical Machine Relations @id");
 assertMatch(blogIndex, /"@type":\s*"WebPage"[\s\S]{0,220}?"@id":\s*`\$\{BASE\}\/blog`/s, "Blog index breadcrumbs must use explicit WebPage item objects");
-assertMatch(blogPost, /"@type":\s*"WebPage"[\s\S]{0,220}?"@id":\s*pageUrl/s, "Blog post breadcrumbs must use explicit WebPage item objects");
-if (/sameAs:\s*\[[^\]]*authoritytech\.io[^\]]*\]/s.test(blogPost) || /sameAs:\s*\[[^\]]*machinerelations\.ai[^\]]*\]/s.test(blogPost)) fail("BlogPosting author.sameAs must only include personal profiles");
+assertMatch(blogPost, /generateBlogJsonLd.*CL_BLOG_CONFIG/s, "blog/[slug]/page.tsx must use generateBlogJsonLd with CL_BLOG_CONFIG from @editorialkit/schema");
 if (/coined Machine Relations/i.test(layout) || /coined Machine Relations/i.test(llms)) fail("Christian surfaces must not imply he coined Machine Relations");
 assertMatch(llms, /Machine Relations is the category Jaxon Parrott coined/i, "llms.txt must state Jaxon coined Machine Relations");
 assertMatch(robots, /PerplexityBot/, "robots must allow PerplexityBot");
