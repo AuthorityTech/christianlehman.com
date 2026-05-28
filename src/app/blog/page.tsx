@@ -44,7 +44,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
       {
         "@type": "Blog",
         "@id": `${BASE}/blog#blog`,
-        name: "FounderOS — Christian Lehman",
+        name: "Christian Lehman — The Machine Relations Growth Playbook",
         description:
           "Writing for CMOs and growth leaders on PR, AI search, and winning visibility in the AI era — by Christian Lehman, AuthorityTech and Machine Relations.",
         url: `${BASE}/blog`,
@@ -54,7 +54,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
         "@type": "CollectionPage",
         "@id": `${BASE}/blog#collection`,
         url: `${BASE}/blog`,
-        name: "Writing — FounderOS",
+        name: "The Machine Relations Growth Playbook",
         isPartOf: { "@id": `${BASE}/#website` },
         mainEntity: { "@id": `${BASE}/blog#item-list` },
         breadcrumb: { "@id": `${BASE}/blog#breadcrumb` },
@@ -62,7 +62,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
       {
         "@type": "ItemList",
         "@id": `${BASE}/blog#item-list`,
-        name: "FounderOS Posts",
+        name: "Growth Playbook Posts",
         numberOfItems: itemList.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
         itemListElement: itemList,

@@ -182,7 +182,7 @@ const schema = {
     {
       "@type": "Blog",
       "@id": SITE_URL + "/blog#blog",
-      name: "Writing — Christian Lehman",
+      name: "Christian Lehman — The Machine Relations Growth Playbook",
       description:
         "For CMOs and growth leaders: what is working in PR, AI search, and winning visibility in the AI era. By Christian Lehman, Co-Founder of AuthorityTech.",
       url: SITE_URL + "/blog",
