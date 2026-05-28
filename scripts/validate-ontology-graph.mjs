@@ -89,6 +89,43 @@ if (/sameAs:\s*\[[^\]]*authoritytech\.io[^\]]*\]/s.test(blogPost) || /sameAs:\s*
   fail("Blog post author.sameAs must only contain personal profile URLs");
 }
 
+// ─── Required node checks per doctrine ──────────────────────────────────────
+const term = byId.get("https://machinerelations.ai/#term");
+const termSet = byId.get("https://machinerelations.ai/glossary#definedtermset");
+const org = byId.get("https://authoritytech.io/#organization");
+const blog = byId.get("https://christianlehman.com/blog#blog");
+const profilePage = byId.get("https://christianlehman.com/#profile-page");
+
+if (!term) fail("Missing DefinedTerm node for Machine Relations");
+if (!termSet) fail("Missing DefinedTermSet node for Machine Relations glossary");
+if (!org) fail("Missing AuthorityTech Organization stub");
+if (!blog) fail("Missing Blog node (christianlehman.com/blog#blog)");
+if (blog["@type"] !== "Blog") fail("Blog node must be @type Blog");
+if (blog.author?.["@id"] !== personId) {
+  fail("Blog.author must reference canonical Christian person @id");
+}
+if (!profilePage) fail("Missing ProfilePage node (christianlehman.com/#profile-page)");
+if (profilePage.mainEntity?.["@id"] !== personId) {
+  fail("ProfilePage.mainEntity must reference canonical Christian person @id");
+}
+if (term.inDefinedTermSet?.["@id"] !== "https://machinerelations.ai/glossary#definedtermset") {
+  fail("DefinedTerm.inDefinedTermSet must point to canonical term set @id");
+}
+
+// ─── Forbidden entity gates ─────────────────────────────────────────────────
+// CL is a personal site. Jaxon Person, Service, SoftwareApplication are forbidden.
+if (byId.has("https://jaxonparrott.com/#person")) {
+  fail("Jaxon Person node is forbidden on CL — Jaxon's entity lives on jaxonparrott.com");
+}
+for (const node of graph) {
+  if (node?.["@type"] === "Service") {
+    fail("Service node is forbidden on CL — this is a personal site, not an agency");
+  }
+  if (node?.["@type"] === "SoftwareApplication") {
+    fail("SoftwareApplication is forbidden on CL");
+  }
+}
+
 const graphText = JSON.stringify(graph);
 if (/Christian Lehman coined Machine Relations/i.test(graphText + "\n" + llms)) {
   fail("Christian surfaces must not imply he coined Machine Relations");
