@@ -30,6 +30,7 @@ function extractSchemaObject(source) {
 
 // Constants from shared package — no regex extraction needed
 const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
+const MACHINE_RELATIONS_TERM_SET_ID = IDS.MR_TERM_SET;
 
 const schema = vm.runInNewContext(
   `(${extractSchemaObject(layout)})`,
@@ -37,6 +38,7 @@ const schema = vm.runInNewContext(
     SITE_URL: "https://christianlehman.com",
     OG_IMAGE: "https://christianlehman.com/images/christian-lehman-cover-image.png",
     MACHINE_RELATIONS_TERM_ID,
+    MACHINE_RELATIONS_TERM_SET_ID,
   },
   { timeout: 1000 }
 );
