@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
 import { formatShareDate, getPostShare } from "@/lib/postShare";
-import { extractFaqFromHtml, faqSchemaNode } from "@/lib/geo-schema";
+import { generateBlogJsonLd, CL_BLOG_CONFIG } from "@editorialkit/schema";
 
 export const dynamicParams = true;
 export const revalidate = 3600;
@@ -22,8 +22,6 @@ export function generateStaticParams() {
 }
 
 const DEFAULT_AVATAR = PROFILE_IMAGE_URL;
-import { IDS } from "@editorialkit/schema";
-const MACHINE_RELATIONS_TERM_ID = IDS.MR_TERM;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -67,109 +65,24 @@ export default async function PostPage({ params }: Props) {
   const html = normalizeProseHtml(processed.toString());
 
   const share = getPostShare(post);
-  const pageUrl = "https://christianlehman.com/blog/" + slug;
-  const faqItems = extractFaqFromHtml(html);
-  const faqNode = faqSchemaNode(faqItems, pageUrl);
-  const webPageId = pageUrl + "#webpage";
-  const articleId = pageUrl + "#article";
-  const breadcrumbId = pageUrl + "#breadcrumb";
-  const primaryImageId = share.imageUrl + "#primaryimage";
 
-  const postSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": webPageId,
-        url: pageUrl,
-        name: post.title,
-        isPartOf: { "@id": "https://christianlehman.com/#website" },
-        about: [{ "@id": MACHINE_RELATIONS_TERM_ID }],
-        breadcrumb: { "@id": breadcrumbId },
-        mainEntity: { "@id": articleId },
-        primaryImageOfPage: { "@id": primaryImageId },
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": articleId,
-        headline: post.title,
-        description: post.description,
-        datePublished: post.date,
-        dateModified: post.lastModified || post.date,
-        url: pageUrl,
-        image: { "@id": primaryImageId },
-        thumbnailUrl: share.imageUrl,
-        author: {
-          "@type": "Person",
-          "@id": "https://christianlehman.com/#person",
-          name: "Christian Lehman",
-          url: "https://christianlehman.com",
-          jobTitle: "Co-Founder, AuthorityTech",
-        },
-        publisher: { "@type": "Person", "@id": "https://christianlehman.com/#person" },
-        mainEntityOfPage: { "@id": webPageId },
-        keywords: post.tags?.join(", ") ?? "",
-        isPartOf: { "@type": "Blog", "@id": "https://christianlehman.com/blog#blog" },
-        about: [{ "@id": MACHINE_RELATIONS_TERM_ID }, { "@id": "https://authoritytech.io/#organization" }],
-        speakable: {
-          "@type": "SpeakableSpecification",
-          cssSelector: ["[data-speakable='headline']", "[data-speakable='summary']"],
-        },
-      },
-      {
-        "@type": "ImageObject",
-        "@id": primaryImageId,
-        url: share.imageUrl,
-        contentUrl: share.imageUrl,
-        width: share.width,
-        height: share.height,
-        caption: share.caption,
-        description: share.alt,
-        representativeOfPage: true,
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": breadcrumbId,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: {
-              "@type": "WebPage",
-              "@id": "https://christianlehman.com",
-              name: "Home",
-            },
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Writing",
-            item: {
-              "@type": "WebPage",
-              "@id": "https://christianlehman.com/blog",
-              name: "Writing",
-            },
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: post.title,
-            item: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-              name: post.title,
-            },
-          },
-        ],
-      },
-      ...(faqNode ? [faqNode] : []),
-    ],
-  };
+  const blogLd = generateBlogJsonLd(
+    {
+      slug,
+      title: post.title,
+      description: post.description,
+      publishDate: post.date,
+      lastModified: post.lastModified,
+      body: html,
+      featuredImage: share.imageUrl,
+      featuredImageAlt: share.alt,
+    },
+    CL_BLOG_CONFIG,
+  );
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-16 md:py-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(postSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogLd }} />
 
       <nav className="mb-12">
         <Link
