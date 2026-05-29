@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npm run build",
   "redirects": [
     {
       "source": "/blog/how-to-get-cited-in-chatgpt-cmo-earned-media-playbook",
