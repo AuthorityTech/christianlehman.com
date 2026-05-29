@@ -2,6 +2,7 @@ import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
+import { BLOG_COPY, HOME_COPY } from "@/lib/page-copy";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://christianlehman.com" },
@@ -29,52 +30,16 @@ export default function HomePage() {
           />
           <div>
             <h1 className="font-display text-[2.25rem] font-normal leading-[1.1] tracking-[-0.02em] text-nothing-display">
-              Christian Lehman
+              {HOME_COPY.name}
             </h1>
             <p className="mt-2 font-mono text-[11px] uppercase leading-snug tracking-[0.08em] text-nothing-secondary">
-              Co-Founder,{" "}
-              <a
-                href="https://authoritytech.io"
-                target="_blank"
-                rel="noopener"
-                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
-              >
-                AuthorityTech
-              </a>
-              {" "}
-              ·{" "}
-              <a
-                href="https://machinerelations.ai"
-                target="_blank"
-                rel="noopener"
-                className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
-              >
-                Machine Relations
-              </a>
+              {HOME_COPY.roleLine}
             </p>
           </div>
         </div>
 
         <p className="max-w-xl text-[15px] font-light leading-[1.65] text-nothing-secondary">
-          I help companies become visible to AI. Co-Founded{" "}
-          <a
-            href="https://authoritytech.io"
-            target="_blank"
-            rel="noopener"
-            className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
-          >
-            AuthorityTech
-          </a>{" "}
-          — the world&apos;s first AI-native Machine Relations agency. Revenue operator, B2B growth strategist, and practitioner of{" "}
-          <a
-            href="https://machinerelations.ai"
-            target="_blank"
-            rel="noopener"
-            className="text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
-          >
-            Machine Relations
-          </a>
-          : the discipline of making brands visible to the AI engines your buyers use to make decisions.
+          {HOME_COPY.summary}
         </p>
 
         <div className="mt-10 flex flex-wrap gap-6 font-mono text-[11px] uppercase tracking-[0.1em] text-nothing-disabled">
@@ -103,7 +68,7 @@ export default function HomePage() {
       {posts.length > 0 && (
         <section>
           <div className="mb-10 flex items-center justify-between">
-            <h2 className="font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Writing</h2>
+            <h2 className="font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">{BLOG_COPY.heading}</h2>
             <Link
               href="/blog"
               className="font-mono text-[11px] uppercase tracking-[0.08em] text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
@@ -131,7 +96,7 @@ export default function HomePage() {
 
       {posts.length === 0 && (
         <section>
-          <p className="text-[14px] text-nothing-secondary">Writing coming soon.</p>
+          <p className="text-[14px] text-nothing-secondary">{HOME_COPY.emptyWriting}</p>
         </section>
       )}
     </div>

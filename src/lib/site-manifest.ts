@@ -1,5 +1,6 @@
 import { getAllPosts } from "./posts";
 import { SITE_URL } from "./site";
+import { BLOG_COPY, HOME_COPY } from "./page-copy";
 
 export function buildLlmsTxtBody(): string {
   const posts = getAllPosts();
@@ -59,15 +60,15 @@ Every page on this site has a parallel .md endpoint for machine consumption:
 
 export function buildHomePageMarkdown(): string {
   const posts = getAllPosts().slice(0, 10);
-  return `# Christian Lehman
+  return `# ${HOME_COPY.name}
 
-> Cofounder & CGO of AuthorityTech. Brand-facing architect of Machine Relations execution across revenue, client acquisition, and category growth.
+> ${HOME_COPY.machineSummary}
 
 - Site: ${SITE_URL}
 - llms.txt: ${SITE_URL}/llms.txt
 - Blog: ${SITE_URL}/blog
 
-## Recent Writing
+## ${HOME_COPY.recentHeading}
 
 ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}) — ${p.description.slice(0, 120)}`).join("\n") : "- See blog index."}
 
@@ -78,9 +79,9 @@ ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}
 
 export function buildBlogIndexMarkdown(): string {
   const posts = getAllPosts();
-  return `# Writing — Christian Lehman
+  return `# ${BLOG_COPY.heading} — ${HOME_COPY.name}
 
-> AI shortlist intelligence, publication citation data, and Machine Relations strategy.
+> ${BLOG_COPY.machineDescription}
 
 ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}.md) — ${p.description.slice(0, 120)} (${p.date || ""})`).join("\n") : "- Publishing soon."}
 

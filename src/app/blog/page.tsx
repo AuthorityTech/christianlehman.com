@@ -1,19 +1,18 @@
 import { getAllPosts } from "@/lib/posts";
 import { CANONICAL_ESSAY_SLUG } from "@/lib/seo";
 import { formatShareDate } from "@/lib/postShare";
+import { BLOG_COPY } from "@/lib/page-copy";
 import Link from "next/link";
 import type { Metadata } from "next";
 const BASE = "https://christianlehman.com";
 
 export const metadata: Metadata = {
-  title: "Writing",
-  description:
-    "Christian Lehman writes for CMOs and growth leaders on what is working in PR, AI search, and winning visibility in the AI era — AuthorityTech, Machine Relations.",
+  title: BLOG_COPY.title,
+  description: BLOG_COPY.metadataDescription,
   alternates: { canonical: "https://christianlehman.com/blog" },
   openGraph: {
     title: "Writing — Christian Lehman",
-    description:
-      "For CMOs and growth leaders: what is working in PR, AI search, and winning the AI era.",
+    description: BLOG_COPY.visibleDescription,
     url: "https://christianlehman.com/blog",
   },
 };
@@ -44,9 +43,8 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
       {
         "@type": "Blog",
         "@id": `${BASE}/blog#blog`,
-        name: "Christian Lehman — The Machine Relations Growth Playbook",
-        description:
-          "Writing for CMOs and growth leaders on PR, AI search, and winning visibility in the AI era — by Christian Lehman, AuthorityTech and Machine Relations.",
+        name: BLOG_COPY.schemaName,
+        description: BLOG_COPY.schemaDescription,
         url: `${BASE}/blog`,
         author: { "@type": "Person", "@id": `${BASE}/#person` },
       },
@@ -54,7 +52,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
         "@type": "CollectionPage",
         "@id": `${BASE}/blog#collection`,
         url: `${BASE}/blog`,
-        name: "The Machine Relations Growth Playbook",
+        name: BLOG_COPY.collectionName,
         isPartOf: { "@id": `${BASE}/#website` },
         mainEntity: { "@id": `${BASE}/blog#item-list` },
         breadcrumb: { "@id": `${BASE}/blog#breadcrumb` },
@@ -62,7 +60,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
       {
         "@type": "ItemList",
         "@id": `${BASE}/blog#item-list`,
-        name: "Growth Playbook Posts",
+        name: BLOG_COPY.itemListName,
         numberOfItems: itemList.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
         itemListElement: itemList,
@@ -88,7 +86,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
             item: {
               "@type": "WebPage",
               "@id": `${BASE}/blog`,
-              name: "Writing",
+              name: BLOG_COPY.heading,
             },
           },
         ],
@@ -146,17 +144,17 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
 
       <header className="mb-16">
-        <h1 className="font-display mb-3 text-[2rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display">Writing</h1>
+        <h1 className="font-display mb-3 text-[2rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display">{BLOG_COPY.heading}</h1>
         <p className="max-w-xl text-[14px] font-light leading-relaxed text-nothing-secondary">
-          I write for CMOs and growth leaders on what is actually working in PR, AI search, and winning visibility in the AI era — not theory, but what the data and the field are showing.
+          {BLOG_COPY.visibleDescription}
         </p>
       </header>
 
       {canonicalEssay && (
         <section className="mb-16">
-          <h2 className="mb-5 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Start Here</h2>
+          <h2 className="mb-5 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">{BLOG_COPY.startHereHeading}</h2>
           <article className="border border-nothing-border bg-nothing-surface p-5">
-            <p className="mb-2 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-accent">Foundational Essay</p>
+            <p className="mb-2 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-accent">{BLOG_COPY.foundationalEssayLabel}</p>
             <Link href={"/blog/" + canonicalEssay.slug} className="group block">
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
@@ -178,7 +176,7 @@ export default function BlogPage() {
 
       {founderos.length > 0 && (
         <section className="mb-16">
-          <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Briefs</h2>
+          <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">{BLOG_COPY.briefsHeading}</h2>
           <PostList posts={founderos} />
         </section>
       )}
@@ -187,14 +185,14 @@ export default function BlogPage() {
         <>
           {founderos.length > 0 && <hr className="mb-16 border-nothing-border" />}
           <section className="mb-20">
-            <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">Essays</h2>
+            <h2 className="mb-8 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">{BLOG_COPY.essaysHeading}</h2>
             <PostList posts={essays} />
           </section>
         </>
       )}
 
       {essays.length === 0 && founderos.length === 0 && (
-        <p className="text-[14px] text-nothing-secondary">Coming soon.</p>
+        <p className="text-[14px] text-nothing-secondary">{BLOG_COPY.emptyWriting}</p>
       )}
 
       <hr className="mb-16 border-nothing-border" />
