@@ -12,6 +12,9 @@ on:
       - 'packages/**'
       - 'scripts/validate-ontology-graph.mjs'
       - 'scripts/guard-ontology-schema.mjs'
+      - 'src/app/page.tsx'
+      - 'scripts/validate-live-schema.mjs'
+      - 'scripts/schema-vocab-cache.json'
       - '.github/workflows/schema-integrity.yml'
   pull_request:
     branches: [main]
@@ -24,6 +27,9 @@ on:
       - 'packages/**'
       - 'scripts/validate-ontology-graph.mjs'
       - 'scripts/guard-ontology-schema.mjs'
+      - 'src/app/page.tsx'
+      - 'scripts/validate-live-schema.mjs'
+      - 'scripts/schema-vocab-cache.json'
       - '.github/workflows/schema-integrity.yml'
 
 concurrency:
@@ -71,3 +77,17 @@ jobs:
 
       - name: Full build
         run: npm run build
+
+      - name: Schema type validation (served build vs schema.org)
+        run: |
+          npm start &
+          SERVER_PID=$!
+          echo "Waiting for server on :3000..."
+          for i in $(seq 1 30); do
+            curl -sf -m 2 http://localhost:3000/ -o /dev/null && { echo "ready after ${i}s"; break; }
+            sleep 1
+          done
+          node scripts/validate-live-schema.mjs --site christianlehman.com --base http://localhost:3000
+          CODE=$?
+          kill $SERVER_PID 2>/dev/null || true
+          exit $CODE
