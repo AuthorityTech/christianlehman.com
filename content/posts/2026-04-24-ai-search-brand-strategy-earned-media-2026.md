@@ -1,23 +1,16 @@
 ---
 title: "AI Search Brand Strategy: Why Earned Media Is the Only Proof AI Engines Trust"
-date: '2026-06-02'
+date: "2026-04-24"
 slug: ai-search-brand-strategy-earned-media-2026
 description: >-
   AI engines cite brands with third-party proof, not brand claims. Build an AI
   search brand strategy around earned media, entity consistency, and a
   measurement model that rewards citation, not impressions.
 primaryQuery: AI search brand strategy earned media 2026
-author: Christian Lehman
-tags:
-  - ai-visibility
-  - tactical-brief
-  - measurement
-  - citations
-  - earned-media
+author: "Christian Lehman"
+tags: ["ai-visibility","tactical-brief"]
 visual_concept: bridge
-featured_image: >-
   https://christianlehman.com/images/ai-search-brand-strategy-earned-media-2026.png
-featured_image_alt: AI Search Brand Strategy — Earned Media as the Proof Layer for AI Citation
 spineEdgeId: "weak:cross-signal-christianlehman-com-blog-ai-search-brand-strategy-earned-media-2026:267acf0cb3e2"
 ---
 Your AI search brand strategy is only as strong as the proof layer outside your own site. ChatGPT, Perplexity, Gemini, and Google AI Overviews do not cite your opinion. They cite earned media, original research, and consistent entity signals that third parties have already validated. Build that proof stack or stay invisible.
