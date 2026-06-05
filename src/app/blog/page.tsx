@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/posts";
-import { CANONICAL_ESSAY_SLUG } from "@/lib/seo";
+import { BLOG_SEO_DESCRIPTION, BLOG_SEO_TITLE, CANONICAL_ESSAY_SLUG } from "@/lib/seo";
 import { formatShareDate } from "@/lib/postShare";
 import { BLOG_COPY } from "@/lib/page-copy";
 import Link from "next/link";
@@ -7,13 +7,18 @@ import type { Metadata } from "next";
 const BASE = "https://christianlehman.com";
 
 export const metadata: Metadata = {
-  title: BLOG_COPY.title,
-  description: BLOG_COPY.metadataDescription,
+  title: { absolute: BLOG_SEO_TITLE },
+  description: BLOG_SEO_DESCRIPTION,
   alternates: { canonical: "https://christianlehman.com/blog" },
   openGraph: {
-    title: "Writing — Christian Lehman",
-    description: BLOG_COPY.visibleDescription,
+    title: BLOG_SEO_TITLE,
+    description: BLOG_SEO_DESCRIPTION,
     url: "https://christianlehman.com/blog",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: BLOG_SEO_TITLE,
+    description: BLOG_SEO_DESCRIPTION,
   },
 };
 

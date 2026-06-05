@@ -7,6 +7,7 @@ import remarkHtml from "remark-html";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
+import { buildSeoDescription, buildSeoTitle } from "@/lib/seo";
 import { formatShareDate, getPostShare } from "@/lib/postShare";
 import { generateBlogJsonLd, CL_BLOG_CONFIG } from "@editorialkit/schema";
 
@@ -28,15 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
   const share = getPostShare(post);
+  const seoTitle = buildSeoTitle(post.title);
+  const seoDescription = buildSeoDescription(post.description);
+  const canonical = "https://christianlehman.com/blog/" + slug;
   return {
-    title: post.title,
-    description: post.description,
-    alternates: { canonical: "https://christianlehman.com/blog/" + slug },
+    title: { absolute: seoTitle },
+    description: seoDescription,
+    alternates: { canonical },
     openGraph: {
-      title: post.title + " — Christian Lehman",
-      description: post.description,
+      title: seoTitle,
+      description: seoDescription,
       type: "article",
-      url: "https://christianlehman.com/blog/" + slug,
+      url: canonical,
       publishedTime: post.date,
       modifiedTime: post.lastModified || post.date,
       authors: ["Christian Lehman"],
@@ -45,8 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       creator: "@christianlehman",
-      title: post.title + " — Christian Lehman",
-      description: post.description,
+      title: seoTitle,
+      description: seoDescription,
       images: [share.imageUrl],
     },
   };

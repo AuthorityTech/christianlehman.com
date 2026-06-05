@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MachineViewToggle from "@/components/MachineViewToggle";
 import { PROFILE_IMAGE_URL, SITE_URL } from "@/lib/site";
+import { SITE_SEO_DESCRIPTION, SITE_SEO_TITLE } from "@/lib/seo";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -33,11 +34,10 @@ const MACHINE_RELATIONS_TERM_SET_ID = IDS.MR_TERM_SET;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
-    template: "%s — Christian Lehman",
+    default: SITE_SEO_TITLE,
+    template: "%s",
   },
-  description:
-    "Christian Lehman is the cofounder and chief growth officer of AuthorityTech. He is the brand-facing architect and operator of Machine Relations execution across growth and client delivery.",
+  description: SITE_SEO_DESCRIPTION,
   keywords: [
     "Machine Relations",
     "AuthorityTech",
@@ -62,18 +62,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Christian Lehman",
-    title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
-    description:
-      "Co-Founder of AuthorityTech — the world\'s first Machine Relations agency. Writes AI shortlist intelligence from live B2B buying queries: which brands surface, which sources get cited, and where visibility breaks.",
+    title: SITE_SEO_TITLE,
+    description: SITE_SEO_DESCRIPTION,
     images: [{ url: OG_IMAGE, width: 1672, height: 941, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@ChristianLehman",
     creator: "@ChristianLehman",
-    title: "Christian Lehman — Co-Founder, AuthorityTech · Machine Relations",
-    description:
-      "Writes AI shortlist intelligence from live B2B buying queries: surfaced brands, cited sources, and visibility gaps.",
+    title: SITE_SEO_TITLE,
+    description: SITE_SEO_DESCRIPTION,
     images: [OG_IMAGE],
   },
   icons: {

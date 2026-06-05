@@ -18,11 +18,31 @@ export interface Post extends PostMeta {
   content: string;
 }
 
+function toText(value: unknown, fallback = ""): string {
+  if (value == null) return fallback;
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  if (Array.isArray(value)) return value.map((item) => toText(item)).filter(Boolean).join(", ");
+  if (typeof value === "object") return fallback;
+  const text = String(value).replace(/\s+/g, " ").trim();
+  return text || fallback;
+}
+
+function toTags(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.map((tag) => toText(tag)).filter(Boolean);
+}
+
 function toIsoDate(value: unknown): string | undefined {
-  if (typeof value !== "string" || !value.trim()) return undefined;
-  const parsed = new Date(value);
+  const text = toText(value);
+  if (!text) return undefined;
+  const parsed = new Date(text);
   if (Number.isNaN(parsed.getTime())) return undefined;
   return parsed.toISOString();
+}
+
+function toDateOnly(value: unknown): string {
+  const iso = toIsoDate(value);
+  return iso ? iso.slice(0, 10) : "";
 }
 
 export function getAllPosts(): PostMeta[] {
@@ -44,12 +64,12 @@ export function getAllPosts(): PostMeta[] {
       undefined;
     return {
       slug,
-      title: data.title ?? slug,
-      date: data.date ?? "",
+      title: toText(data.title, slug),
+      date: toDateOnly(data.date),
       lastModified,
-      description: data.description ?? "",
-      tags: data.tags ?? [],
-      section: data.section ?? "founderos",
+      description: toText(data.description),
+      tags: toTags(data.tags),
+      section: toText(data.section, "founderos"),
     };
   });
 }
@@ -71,12 +91,12 @@ export function getPost(slug: string): Post | null {
     undefined;
   return {
     slug,
-    title: data.title ?? slug,
-    date: data.date ?? "",
+    title: toText(data.title, slug),
+    date: toDateOnly(data.date),
     lastModified,
-    description: data.description ?? "",
-    tags: data.tags ?? [],
-    section: data.section ?? "founderos",
+    description: toText(data.description),
+    tags: toTags(data.tags),
+    section: toText(data.section, "founderos"),
     content,
   };
 }

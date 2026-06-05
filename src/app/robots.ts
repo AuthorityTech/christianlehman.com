@@ -10,10 +10,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/", disallow: "/blog-md/" },
       { userAgent: AI_AND_SEARCH_BOTS, allow: "/" },
     ],
-    sitemap: [
-      "https://christianlehman.com/sitemap.xml",
-      "https://christianlehman.com/pages/sitemap.xml",
-      "https://christianlehman.com/blog/sitemap.xml",
-    ],
+    sitemap: "https://christianlehman.com/sitemap.xml",
   };
 }

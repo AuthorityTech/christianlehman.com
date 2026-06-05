@@ -72,6 +72,15 @@ function newestMarkdownFile(relativeDir) {
   return files.at(-1) || null;
 }
 
+function markdownSlugs(relativeDir) {
+  const dir = path.join(ROOT, relativeDir);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter((name) => name.endsWith(".md") && !name.startsWith("_"))
+    .sort()
+    .map((name) => name.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, ""));
+}
+
 if (!fs.existsSync(OUT_DIR)) {
   console.error("crawl-guard: build output not found. Run npm run build first.");
   process.exit(1);
@@ -112,6 +121,26 @@ for (const collection of machineViewContract.contentCollections || []) {
 
 const robots = readOutput("robots.txt", { required: false });
 if (robots) requireIncludes(robots, ["/blog-md/"], "robots.txt");
+
+const sitemap = readOutput("sitemap.xml", { required: false });
+if (sitemap) {
+  if (/<sitemapindex\b/i.test(sitemap)) {
+    fail("sitemap.xml", "Root sitemap must list page URLs directly, not only child sitemaps.");
+  }
+  const locs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+  const postSlugs = markdownSlugs("content/posts");
+  const expected = [
+    "https://christianlehman.com",
+    "https://christianlehman.com/blog",
+    ...postSlugs.map((slug) => `https://christianlehman.com/blog/${slug}`),
+  ];
+  if (locs.length !== expected.length) {
+    fail("sitemap.xml", `Expected ${expected.length} URL(s), found ${locs.length}.`);
+  }
+  for (const url of expected) {
+    if (!locs.includes(url)) fail("sitemap.xml", `Missing sitemap URL: ${url}`);
+  }
+}
 
 if (failures.length) {
   console.error(`crawl-guard failed with ${failures.length} issue(s):`);
