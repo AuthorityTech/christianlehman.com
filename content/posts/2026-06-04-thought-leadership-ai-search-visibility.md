@@ -2,7 +2,7 @@
 title: "How Thought Leadership Drives AI Search Visibility in 2026"
 date: "2026-06-04"
 slug: "thought-leadership-ai-search-visibility"
-description: ""
+description: "87% of brand AI search visibility goes unrealized. Here is the research and the five-point audit that makes thought leadership citable by AI engines."
 author: "Christian Lehman"
 campaign_ids: []
 primaryQuery: "thought leadership ai search visibility"
