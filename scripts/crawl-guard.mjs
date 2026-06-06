@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { machineViewContract } from "./machine-view-contract.mjs";
+import { getAllPostRoutes, getAllSiteRoutes } from "../src/lib/content-manifest.mjs";
 
 const ROOT = process.cwd();
 function resolveOutDir() {
@@ -40,6 +41,10 @@ function routeExists(relativePath) {
   return false;
 }
 
+function normalizeRoutePath(routePath) {
+  return routePath.replace(/^\/+/, "");
+}
+
 function requireIncludes(content, checks, location) {
   for (const check of checks || []) {
     if (!content.toLowerCase().includes(String(check).toLowerCase())) {
@@ -72,15 +77,6 @@ function newestMarkdownFile(relativeDir) {
   return files.at(-1) || null;
 }
 
-function markdownSlugs(relativeDir) {
-  const dir = path.join(ROOT, relativeDir);
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir)
-    .filter((name) => name.endsWith(".md") && !name.startsWith("_"))
-    .sort()
-    .map((name) => name.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, ""));
-}
-
 if (!fs.existsSync(OUT_DIR)) {
   console.error("crawl-guard: build output not found. Run npm run build first.");
   process.exit(1);
@@ -99,6 +95,38 @@ for (const page of machineViewContract.staticMarkdown || []) {
 if (machineViewContract.llms) {
   const llms = readOutput(machineViewContract.llms.path);
   if (llms) requireIncludes(llms, machineViewContract.llms.required, machineViewContract.llms.path);
+}
+
+const posts = getAllPostRoutes();
+const blogMarkdown = readOutput("blog.md", { required: false });
+if (blogMarkdown) {
+  for (const post of posts) {
+    requireIncludes(blogMarkdown, [post.title, post.markdownUrl], "blog.md");
+  }
+}
+
+const llms = readOutput("llms.txt", { required: false });
+if (llms) {
+  for (const post of posts) {
+    requireIncludes(llms, [post.url, post.markdownUrl], "llms.txt");
+  }
+}
+
+const feed = readOutput("feed.xml", { required: false });
+if (feed) {
+  for (const post of posts) {
+    requireIncludes(feed, [post.url, post.rssGuid], "feed.xml");
+  }
+}
+
+for (const post of posts) {
+  const routePath = normalizeRoutePath(post.markdownRoutePath);
+  if (!routeExists(routePath)) {
+    fail(routePath, "Manifest post machine route missing in build output.");
+    continue;
+  }
+  const rendered = readOutput(routePath, { required: false });
+  if (rendered) requireIncludes(rendered, [post.title, post.url, post.canonical], routePath);
 }
 
 for (const collection of machineViewContract.contentCollections || []) {
@@ -128,12 +156,7 @@ if (sitemap) {
     fail("sitemap.xml", "Root sitemap must list page URLs directly, not only child sitemaps.");
   }
   const locs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
-  const postSlugs = markdownSlugs("content/posts");
-  const expected = [
-    "https://christianlehman.com",
-    "https://christianlehman.com/blog",
-    ...postSlugs.map((slug) => `https://christianlehman.com/blog/${slug}`),
-  ];
+  const expected = getAllSiteRoutes().map((route) => route.url);
   if (locs.length !== expected.length) {
     fail("sitemap.xml", `Expected ${expected.length} URL(s), found ${locs.length}.`);
   }

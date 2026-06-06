@@ -1,8 +1,8 @@
 import type { PostMeta } from "@/lib/posts";
+import { SITE_URL } from "@/lib/site";
 
 export const POST_SHARE_IMAGE_WIDTH = 1200;
 export const POST_SHARE_IMAGE_HEIGHT = 630;
-export const SITE_URL = "https://christianlehman.com";
 
 type DateLike = string | Date | undefined | null;
 
@@ -49,17 +49,19 @@ function normalizeTags(tags?: string[]) {
     .slice(0, 3);
 }
 
-export function getPostShare(post: Pick<PostMeta, "slug" | "title" | "date" | "tags" | "section">): PostShare {
+export function getPostShare(
+  post: Pick<PostMeta, "slug" | "title" | "date" | "tags" | "section" | "imageUrl" | "imageAlt">,
+): PostShare {
   const sectionLabel = getPostSectionLabel(post.section);
   const displayDate = formatShareDate(post.date);
   const tags = normalizeTags(post.tags);
   const captionParts = [post.title, sectionLabel, displayDate].filter(Boolean);
 
   return {
-    imageUrl: getPostShareImageUrl(post.slug),
+    imageUrl: post.imageUrl || getPostShareImageUrl(post.slug),
     width: POST_SHARE_IMAGE_WIDTH,
     height: POST_SHARE_IMAGE_HEIGHT,
-    alt: `${post.title} — ${sectionLabel} by Christian Lehman`,
+    alt: post.imageAlt || `${post.title} - ${sectionLabel} by Christian Lehman`,
     caption: captionParts.join(" · "),
     sectionLabel,
     displayDate,

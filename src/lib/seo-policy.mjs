@@ -49,9 +49,31 @@ export function trimAtWordBoundary(value, maxLength = SEO_LIMITS.descriptionMax)
   return `${trimmed}${suffix}`.slice(0, maxLength);
 }
 
+export function htmlSerializedLength(value) {
+  return normalizeSeoText(value).split("").reduce((length, char) => {
+    if (char === "&") return length + 5;
+    if (char === "<" || char === ">") return length + 4;
+    if (char === "'") return length + 5;
+    if (char === '"') return length + 6;
+    return length + 1;
+  }, 0);
+}
+
+export function trimForHtmlSerializedLength(value, maxLength) {
+  const text = normalizeSeoText(value);
+  if (htmlSerializedLength(text) <= maxLength) return text;
+
+  for (let rawLimit = text.length - 1; rawLimit > 0; rawLimit -= 1) {
+    const candidate = trimAtWordBoundary(text, rawLimit);
+    if (htmlSerializedLength(candidate) <= maxLength) return candidate;
+  }
+
+  return "";
+}
+
 export function buildSeoTitle(value, fallback = SITE_SEO_TITLE) {
   const title = normalizeSeoText(value) || fallback;
-  return trimAtWordBoundary(title, SEO_LIMITS.titleMax);
+  return trimForHtmlSerializedLength(title, SEO_LIMITS.titleMax);
 }
 
 export function buildSeoDescription(value, fallback = SITE_SEO_DESCRIPTION) {
@@ -61,7 +83,7 @@ export function buildSeoDescription(value, fallback = SITE_SEO_DESCRIPTION) {
     description = `${description} ${DESCRIPTION_EXTENSION}`;
   }
 
-  return trimAtWordBoundary(description, SEO_LIMITS.descriptionMax);
+  return trimForHtmlSerializedLength(description, SEO_LIMITS.descriptionMax);
 }
 
 export function seoMetadataForRoute({ title, description, canonical }) {

@@ -9,13 +9,12 @@ import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { fileURLToPath } from "url";
 import { createRequire } from "module";
+import { getAllPostRoutes, SITE_URL } from "../src/lib/content-manifest.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const POSTS_DIR = path.join(ROOT, "content/posts");
 const IMAGES_DIR = path.join(ROOT, "public/images");
 const WIDTH = 1200;
 const HEIGHT = 630;
@@ -332,41 +331,29 @@ async function renderImage(post, fontData) {
   return resvg.render().asPng();
 }
 
-if (!fs.existsSync(POSTS_DIR)) {
-  console.log("No posts directory — nothing to do.");
-  process.exit(0);
-}
-
 fs.mkdirSync(IMAGES_DIR, { recursive: true });
 const fontData = {
   regular: fs.readFileSync(FONT_REGULAR_PATH),
   medium: fs.readFileSync(FONT_MEDIUM_PATH),
 };
-const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md")).sort();
+const posts = getAllPostRoutes().slice().sort((a, b) => a.slug.localeCompare(b.slug));
 let generated = 0;
 let unchanged = 0;
-let skippedDuplicateSlugs = 0;
-const seenSlugs = new Set();
+let skippedExternal = 0;
 
-for (const filename of files) {
-  const filepath = path.join(POSTS_DIR, filename);
-  const raw = fs.readFileSync(filepath, "utf8");
-  const { data } = matter(raw);
-  const slug = filename.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
-
-  if (seenSlugs.has(slug)) {
-    skippedDuplicateSlugs += 1;
+for (const post of posts) {
+  if (post.imageUrl !== `${SITE_URL}${post.imagePath}`) {
+    skippedExternal += 1;
     continue;
   }
-  seenSlugs.add(slug);
 
-  const imageFile = path.join(IMAGES_DIR, `${slug}.png`);
+  const imageFile = path.join(IMAGES_DIR, `${post.slug}.png`);
   const png = await renderImage({
-    slug,
-    title: data.title || slug,
-    date: data.date,
-    tags: data.tags || [],
-    section: data.section || "founderos",
+    slug: post.slug,
+    title: post.title,
+    date: post.date,
+    tags: post.tags,
+    section: post.section,
   }, fontData);
 
   if (!fs.existsSync(imageFile) || !fs.readFileSync(imageFile).equals(png)) {
@@ -377,4 +364,4 @@ for (const filename of files) {
   }
 }
 
-console.log(`Generated ${generated} image(s); unchanged ${unchanged} image(s); skipped ${skippedDuplicateSlugs} duplicate slug(s).`);
+console.log(`Generated ${generated} image(s); unchanged ${unchanged} image(s); skipped external ${skippedExternal} image(s).`);

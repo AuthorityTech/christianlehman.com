@@ -1,4 +1,3 @@
-import { getAllPosts, getPost } from "@/lib/posts";
 import { normalizeMarkdown, normalizeProseHtml } from "@/lib/normalizeMarkdown";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
@@ -7,7 +6,7 @@ import remarkHtml from "remark-html";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PROFILE_IMAGE_URL } from "@/lib/site";
-import { buildSeoDescription, buildSeoTitle } from "@/lib/seo";
+import { getPostRoute } from "@/lib/content-manifest.mjs";
 import { formatShareDate, getPostShare } from "@/lib/postShare";
 import { generateBlogJsonLd, CL_BLOG_CONFIG } from "@editorialkit/schema";
 
@@ -26,21 +25,18 @@ const DEFAULT_AVATAR = PROFILE_IMAGE_URL;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getPostRoute(slug);
   if (!post) return {};
   const share = getPostShare(post);
-  const seoTitle = buildSeoTitle(post.title);
-  const seoDescription = buildSeoDescription(post.description);
-  const canonical = "https://christianlehman.com/blog/" + slug;
   return {
-    title: { absolute: seoTitle },
-    description: seoDescription,
-    alternates: { canonical },
+    title: { absolute: post.seoTitle },
+    description: post.seoDescription,
+    alternates: { canonical: post.canonical },
     openGraph: {
-      title: seoTitle,
-      description: seoDescription,
+      title: post.seoTitle,
+      description: post.seoDescription,
       type: "article",
-      url: canonical,
+      url: post.url,
       publishedTime: post.date,
       modifiedTime: post.lastModified || post.date,
       authors: ["Christian Lehman"],
@@ -49,8 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       creator: "@christianlehman",
-      title: seoTitle,
-      description: seoDescription,
+      title: post.seoTitle,
+      description: post.seoDescription,
       images: [share.imageUrl],
     },
   };
@@ -58,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPost(slug);
+  const post = getPostRoute(slug);
   if (!post) notFound();
 
   const normalizedContent = normalizeMarkdown(post.content);
@@ -74,7 +70,7 @@ export default async function PostPage({ params }: Props) {
     {
       slug,
       title: post.title,
-      description: post.description,
+      description: post.seoDescription,
       publishDate: post.date,
       lastModified: post.lastModified,
       body: html,

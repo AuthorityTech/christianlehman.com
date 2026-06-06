@@ -12,33 +12,26 @@
  */
 
 import { execSync } from "node:child_process";
-import { readdirSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { resolve, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { getAllPostRoutes, SITE_URL } from "../src/lib/content-manifest.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 const KEY = "e865ee49880a220d1cb170ccfe089a15";
 const HOST = "christianlehman.com";
-const BASE = `https://${HOST}`;
-const KEY_LOCATION = `${BASE}/${KEY}.txt`;
+const KEY_LOCATION = `${SITE_URL}/${KEY}.txt`;
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/IndexNow";
 
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-/** Convert a content/posts filename to a blog URL. */
-function postFileToUrl(filename) {
-  // content/posts/YYYY-MM-DD-{slug}.md  ->  /blog/{slug}
-  const base = filename.replace(/^content\/posts\//, "").replace(/\.md$/, "");
-  // Strip the leading date prefix: "2026-03-01-my-slug" -> "my-slug"
-  const slug = base.replace(/^\d{4}-\d{2}-\d{2}-/, "");
-  return `${BASE}/blog/${slug}`;
+function routeBySourcePath() {
+  const entries = getAllPostRoutes().map((route) => [
+    relative(ROOT, route.sourcePath).replaceAll("\\", "/"),
+    route,
+  ]);
+  return new Map(entries);
 }
 
-/** Run a git command and return stdout, or null on failure. */
 function git(cmd) {
   try {
     return execSync(cmd, { cwd: ROOT, encoding: "utf-8" }).trim();
@@ -47,45 +40,38 @@ function git(cmd) {
   }
 }
 
-// ---------------------------------------------------------------------------
-// URL collection strategies
-// ---------------------------------------------------------------------------
-
 function urlsFromGitDiff() {
   const diff = git("git diff --name-only HEAD~1 HEAD");
   if (!diff) return null; // shallow clone or no history
 
   const files = diff.split("\n").filter(Boolean);
-  const postFiles = files.filter((f) => f.startsWith("content/posts/") && f.endsWith(".md"));
+  const routes = routeBySourcePath();
+  const postFiles = files.filter((file) => routes.has(file));
 
   if (postFiles.length === 0) {
     console.log("No post changes detected in last commit.");
     return [];
   }
 
-  const urls = postFiles.map(postFileToUrl);
-  // Also submit the blog listing page so engines re-crawl it.
-  urls.push(`${BASE}/blog`);
+  const urls = postFiles.map((file) => routes.get(file)?.url).filter(Boolean);
+  urls.push(`${SITE_URL}/blog`);
   return urls;
 }
 
 function urlsFromGitLsFiles() {
   console.log("Falling back to git ls-files (shallow clone detected).");
-  const ls = git("git ls-files -- content/posts/");
+  const ls = git("git ls-files");
   if (!ls) return [];
 
-  const files = ls.split("\n").filter(Boolean);
-  const urls = files.map(postFileToUrl);
-  urls.push(`${BASE}/blog`);
+  const routes = routeBySourcePath();
+  const files = ls.split("\n").filter((file) => routes.has(file));
+  const urls = files.map((file) => routes.get(file)?.url).filter(Boolean);
+  urls.push(`${SITE_URL}/blog`);
   return urls;
 }
 
 function urlsFromAllPosts() {
-  const postsDir = resolve(ROOT, "content/posts");
-  const files = readdirSync(postsDir).filter((f) => f.endsWith(".md"));
-  const urls = files.map((f) => postFileToUrl(`content/posts/${f}`));
-  urls.push(`${BASE}/blog`);
-  return urls;
+  return [...getAllPostRoutes().map((route) => route.url), `${SITE_URL}/blog`];
 }
 
 function urlsFromFlag(raw) {
@@ -95,10 +81,6 @@ function urlsFromFlag(raw) {
     .map((u) => u.trim())
     .filter(Boolean);
 }
-
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
 
 async function main() {
   const args = process.argv.slice(2);

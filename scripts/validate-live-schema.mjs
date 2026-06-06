@@ -22,6 +22,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { getAllSiteRoutes } from "../src/lib/content-manifest.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const VOCAB_CACHE_PATH = join(__dirname, "schema-vocab-cache.json");
@@ -239,6 +240,8 @@ const SITES = {
     entity: "PL",
   },
 };
+
+SITES["christianlehman.com"].pages = getAllSiteRoutes().map((route) => route.path);
 
 // Canonical entity IDs from @editorialkit/schema
 const CANONICAL_IDS = {

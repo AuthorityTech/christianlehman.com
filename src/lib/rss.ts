@@ -1,6 +1,6 @@
-import { getAllPosts, type PostMeta } from "@/lib/posts";
+import { getAllPostRoutes, SITE_URL } from "@/lib/content-manifest.mjs";
 
-const BASE = "https://christianlehman.com";
+type PostSiteRoute = ReturnType<typeof getAllPostRoutes>[number];
 
 function escapeXml(value: string): string {
   return value
@@ -17,13 +17,13 @@ function toRfc2822(value: string | undefined): string {
   return parsed.toUTCString();
 }
 
-function renderItem(post: PostMeta): string {
-  const url = `${BASE}/blog/${post.slug}`;
+function renderItem(post: PostSiteRoute): string {
+  const url = post.url;
   const title = escapeXml(post.title || post.slug);
-  const description = escapeXml(post.description || "");
+  const description = escapeXml(post.seoDescription || post.description || "");
   const published = toRfc2822(post.date);
   const updated = toRfc2822(post.lastModified || post.date);
-  const guid = escapeXml(`${url}#article`);
+  const guid = escapeXml(post.rssGuid);
   const categories =
     post.tags?.map((tag) => `<category>${escapeXml(tag)}</category>`).join("") ?? "";
 
@@ -41,7 +41,7 @@ function renderItem(post: PostMeta): string {
 }
 
 export function buildRssXml(): string {
-  const posts = getAllPosts();
+  const posts = getAllPostRoutes();
   const latestTimestamp = posts.reduce((max, post) => {
     const ts = new Date(post.lastModified || post.date || 0).getTime();
     return Number.isFinite(ts) ? Math.max(max, ts) : max;
@@ -54,13 +54,13 @@ export function buildRssXml(): string {
   <channel>
     <title>Christian Lehman — The Machine Relations Growth Playbook</title>
     <description>For CMOs and growth leaders: PR, AI search, and winning visibility in the AI era — Christian Lehman, AuthorityTech and Machine Relations.</description>
-    <link>${BASE}/blog</link>
+    <link>${SITE_URL}/blog</link>
     <language>en-us</language>
     <managingEditor>contact@christianlehman.com (Christian Lehman)</managingEditor>
     <webMaster>contact@christianlehman.com (Christian Lehman)</webMaster>
     <lastBuildDate>${latest}</lastBuildDate>
     <ttl>60</ttl>
-    <atom:link href="${BASE}/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
     ${items}
   </channel>
 </rss>`;

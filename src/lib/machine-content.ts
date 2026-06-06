@@ -1,4 +1,4 @@
-import { getPost } from "@/lib/posts";
+import { getPostRoute } from "@/lib/content-manifest.mjs";
 import {
   buildBlogIndexMarkdown,
   buildHomePageMarkdown,
@@ -23,15 +23,17 @@ export function blogIndexMarkdown(): string {
 }
 
 export function blogPostMarkdown(slug: string): string | null {
-  const post = getPost(slug);
+  const post = getPostRoute(slug);
   if (!post) return null;
 
   return `# ${post.title}
 
-> ${post.description}
+> ${post.seoDescription}
 
 - Published: ${post.date || ""}
-- URL: ${SITE_URL}/blog/${slug}
+- URL: ${post.url}
+- Canonical: ${post.canonical}
+- Machine URL: ${post.markdownUrl}
 
 ---
 
@@ -39,6 +41,6 @@ ${post.content.trim()}
 
 ---
 
-*Machine-readable version of [${SITE_URL}/blog/${slug}](${SITE_URL}/blog/${slug})*
+*Machine-readable version of [${post.url}](${post.url})*
 `;
 }

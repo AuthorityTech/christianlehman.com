@@ -1,10 +1,11 @@
-import { getAllPosts } from "@/lib/posts";
 import { BLOG_SEO_DESCRIPTION, BLOG_SEO_TITLE, CANONICAL_ESSAY_SLUG } from "@/lib/seo";
+import { getAllPostRoutes, SITE_URL } from "@/lib/content-manifest.mjs";
 import { formatShareDate } from "@/lib/postShare";
 import { BLOG_COPY } from "@/lib/page-copy";
 import Link from "next/link";
 import type { Metadata } from "next";
-const BASE = "https://christianlehman.com";
+
+type PostSiteRoute = ReturnType<typeof getAllPostRoutes>[number];
 
 export const metadata: Metadata = {
   title: { absolute: BLOG_SEO_TITLE },
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
+function buildBlogSchema(posts: PostSiteRoute[]) {
   const canonical = posts.find((post) => post.slug === CANONICAL_ESSAY_SLUG);
   const orderedPosts = canonical
     ? [canonical, ...posts.filter((post) => post.slug !== CANONICAL_ESSAY_SLUG)]
@@ -31,11 +32,11 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
   const itemList = orderedPosts.map((post, idx) => ({
     "@type": "ListItem",
     position: idx + 1,
-    url: `${BASE}/blog/${post.slug}`,
+    url: post.url,
     item: {
       "@type": "BlogPosting",
-      "@id": `${BASE}/blog/${post.slug}#article`,
-      url: `${BASE}/blog/${post.slug}`,
+      "@id": post.schemaId,
+      url: post.url,
       headline: post.title,
       datePublished: post.date,
       dateModified: post.lastModified || post.date,
@@ -47,24 +48,24 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
     "@graph": [
       {
         "@type": "Blog",
-        "@id": `${BASE}/blog#blog`,
+        "@id": `${SITE_URL}/blog#blog`,
         name: BLOG_COPY.schemaName,
         description: BLOG_COPY.schemaDescription,
-        url: `${BASE}/blog`,
-        author: { "@type": "Person", "@id": `${BASE}/#person` },
+        url: `${SITE_URL}/blog`,
+        author: { "@type": "Person", "@id": `${SITE_URL}/#person` },
       },
       {
         "@type": "CollectionPage",
-        "@id": `${BASE}/blog#collection`,
-        url: `${BASE}/blog`,
+        "@id": `${SITE_URL}/blog#collection`,
+        url: `${SITE_URL}/blog`,
         name: BLOG_COPY.collectionName,
-        isPartOf: { "@id": `${BASE}/#website` },
-        mainEntity: { "@id": `${BASE}/blog#item-list` },
-        breadcrumb: { "@id": `${BASE}/blog#breadcrumb` },
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        mainEntity: { "@id": `${SITE_URL}/blog#item-list` },
+        breadcrumb: { "@id": `${SITE_URL}/blog#breadcrumb` },
       },
       {
         "@type": "ItemList",
-        "@id": `${BASE}/blog#item-list`,
+        "@id": `${SITE_URL}/blog#item-list`,
         name: BLOG_COPY.itemListName,
         numberOfItems: itemList.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
@@ -72,7 +73,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `${BASE}/blog#breadcrumb`,
+        "@id": `${SITE_URL}/blog#breadcrumb`,
         itemListElement: [
           {
             "@type": "ListItem",
@@ -80,7 +81,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
             name: "Home",
             item: {
               "@type": "WebPage",
-              "@id": `${BASE}`,
+              "@id": `${SITE_URL}`,
               name: "Home",
             },
           },
@@ -90,7 +91,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
             name: "Writing",
             item: {
               "@type": "WebPage",
-              "@id": `${BASE}/blog`,
+              "@id": `${SITE_URL}/blog`,
               name: BLOG_COPY.heading,
             },
           },
@@ -100,7 +101,7 @@ function buildBlogSchema(posts: ReturnType<typeof getAllPosts>) {
   };
 }
 
-function PostList({ posts }: { posts: ReturnType<typeof getAllPosts> }) {
+function PostList({ posts }: { posts: PostSiteRoute[] }) {
   return (
     <div className="space-y-10">
       {posts.map((post) => (
@@ -137,7 +138,7 @@ function PostList({ posts }: { posts: ReturnType<typeof getAllPosts> }) {
 }
 
 export default function BlogPage() {
-  const all = getAllPosts();
+  const all = getAllPostRoutes();
   const blogSchema = buildBlogSchema(all);
   const canonicalEssay = all.find((post) => post.slug === CANONICAL_ESSAY_SLUG);
   const remaining = all.filter((post) => post.slug !== CANONICAL_ESSAY_SLUG);

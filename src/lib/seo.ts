@@ -6,9 +6,11 @@ export {
   SITE_SEO_TITLE,
   buildSeoDescription,
   buildSeoTitle,
+  htmlSerializedLength,
   normalizeSeoText,
   seoMetadataForRoute,
   trimAtWordBoundary,
+  trimForHtmlSerializedLength,
 } from "./seo-policy.mjs";
 
 export const CANONICAL_ESSAY_SLUG: string | null = null;

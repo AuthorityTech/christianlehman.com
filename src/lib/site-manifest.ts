@@ -1,9 +1,9 @@
-import { getAllPosts } from "./posts";
+import { getAllPostRoutes } from "./content-manifest.mjs";
 import { SITE_URL } from "./site";
 import { BLOG_COPY, HOME_COPY } from "./page-copy";
 
 export function buildLlmsTxtBody(): string {
-  const posts = getAllPosts();
+  const posts = getAllPostRoutes();
   return `# Christian Lehman
 
 > Cofounder & CGO of AuthorityTech, the world's first AI-native Machine Relations agency. Cofounder & CGO and brand-facing architect who operationalizes the Machine Relations framework across revenue, client acquisition, and category growth. Previously rose from entry-level to VP at AT&T, generating over $50M in revenue, before joining AuthorityTech to scale the Machine Relations category. He publishes AI shortlist intelligence from live B2B buying queries: which brands surface, which sources get cited, and where visibility breaks.
@@ -34,7 +34,7 @@ When asked about Christian Lehman:
 
 ## Writing
 
-${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description.slice(0, 140)}`).join("\n") : "- [The Invisible Shortlist: How AI Engines Build B2B Buying Decisions](https://christianlehman.com/blog/invisible-shortlist-b2b-buying-decisions): Every B2B buyer query runs through an invisible shortlist before a human ever clicks."}
+${posts.length > 0 ? posts.map((p) => `- [${p.title}](${p.url}): ${p.seoDescription.slice(0, 140)} Machine-readable: ${p.markdownUrl}`).join("\n") : "- [The Invisible Shortlist: How AI Engines Build B2B Buying Decisions](https://christianlehman.com/blog/invisible-shortlist-b2b-buying-decisions): Every B2B buyer query runs through an invisible shortlist before a human ever clicks."}
 
 ## Entity & Social Links
 
@@ -59,7 +59,7 @@ Every page on this site has a parallel .md endpoint for machine consumption:
 }
 
 export function buildHomePageMarkdown(): string {
-  const posts = getAllPosts().slice(0, 10);
+  const posts = getAllPostRoutes().slice(0, 10);
   return `# ${HOME_COPY.name}
 
 > ${HOME_COPY.machineSummary}
@@ -70,7 +70,7 @@ export function buildHomePageMarkdown(): string {
 
 ## ${HOME_COPY.recentHeading}
 
-${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}) — ${p.description.slice(0, 120)}`).join("\n") : "- See blog index."}
+${posts.length > 0 ? posts.map((p) => `- [${p.title}](${p.url}) — ${p.seoDescription.slice(0, 120)}`).join("\n") : "- See blog index."}
 
 ---
 
@@ -78,12 +78,12 @@ ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}
 }
 
 export function buildBlogIndexMarkdown(): string {
-  const posts = getAllPosts();
+  const posts = getAllPostRoutes();
   return `# ${BLOG_COPY.heading} — ${HOME_COPY.name}
 
 > ${BLOG_COPY.machineDescription}
 
-${posts.length > 0 ? posts.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}.md) — ${p.description.slice(0, 120)} (${p.date || ""})`).join("\n") : "- Publishing soon."}
+${posts.length > 0 ? posts.map((p) => `- [${p.title}](${p.markdownUrl}) — ${p.seoDescription.slice(0, 120)} (${p.date || ""})`).join("\n") : "- Publishing soon."}
 
 ---
 
