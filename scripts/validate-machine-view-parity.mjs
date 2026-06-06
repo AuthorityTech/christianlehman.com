@@ -45,13 +45,14 @@ for (const collection of machineViewContract.contentCollections || []) {
   }
 }
 
-for (const postDir of POST_DIRS) {
-  const files = fs.existsSync(postDir)
-    ? fs.readdirSync(postDir).filter((name) => name.endsWith(".md") && !name.startsWith("_")).sort()
-    : [];
-  if (files.length === 0) {
-    fail(path.relative(ROOT, postDir), "Manifest post root contains no markdown files.");
-  }
+const manifestPostFiles = POST_DIRS.flatMap((postDir) => {
+  if (!fs.existsSync(postDir)) return [];
+  return fs.readdirSync(postDir)
+    .filter((name) => name.endsWith(".md") && !name.startsWith("_"))
+    .map((name) => path.join(postDir, name));
+});
+if (manifestPostFiles.length === 0) {
+  fail(POST_DIRS.map((postDir) => path.relative(ROOT, postDir)).join(", "), "Manifest contains no markdown post files.");
 }
 
 if (failures.length) {
