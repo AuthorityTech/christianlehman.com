@@ -19,7 +19,10 @@
     "gsc:check": "bash scripts/gsc-check.sh",
     "vercel:status": "bash scripts/vercel-status.sh",
     "indexnow": "node scripts/ping-indexnow.mjs",
-    "indexnow:all": "node scripts/ping-indexnow.mjs --all"
+    "indexnow:all": "node scripts/ping-indexnow.mjs --all",
+    "indexing:wait": "node scripts/wait-for-live-sitemap.mjs",
+    "indexing:google-sitemap": "node scripts/submit-google-sitemap.mjs",
+    "indexing:submit": "npm run indexing:wait && npm run indexnow:all && npm run indexing:google-sitemap"
   },
   "dependencies": {
     "@editorialkit/schema": "file:packages/editorialkit-schema-1.2.0.tgz",

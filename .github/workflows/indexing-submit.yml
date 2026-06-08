@@ -1,0 +1,57 @@
+name: Indexing Submit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**"
+      - "src/content/posts/**"
+      - "src/app/**"
+      - "src/lib/**"
+      - "public/**"
+      - "next.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - ".github/workflows/indexing-submit.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: indexing-submit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  submit-indexing-signals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate manifest and internal links
+        run: |
+          npm run content:manifest
+          npm run content:links
+
+      - name: Wait for production sitemap
+        run: npm run indexing:wait
+
+      - name: Submit all canonical URLs to IndexNow
+        run: npm run indexnow:all
+
+      - name: Submit sitemap to Google Search Console
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: sc-domain:christianlehman.com
+          GSC_SITEMAP_URL: https://christianlehman.com/sitemap.xml
+        run: npm run indexing:google-sitemap

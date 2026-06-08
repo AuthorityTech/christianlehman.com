@@ -14,7 +14,7 @@
 import { execSync } from "node:child_process";
 import { resolve, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
-import { getAllPostRoutes, SITE_URL } from "../src/lib/content-manifest.mjs";
+import { getAllPostRoutes, getAllSiteRoutes, SITE_URL } from "../src/lib/content-manifest.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -71,7 +71,7 @@ function urlsFromGitLsFiles() {
 }
 
 function urlsFromAllPosts() {
-  return [...getAllPostRoutes().map((route) => route.url), `${SITE_URL}/blog`];
+  return getAllSiteRoutes().map((route) => route.url);
 }
 
 function urlsFromFlag(raw) {
