@@ -140,10 +140,3 @@ If it cannot show the shortlist, the proof blocks, and the measurement model, it
 - Anthropic documents citation and retrieval behavior for Claude-based workflows. ([Anthropic docs](https://docs.anthropic.com), 2026).
 - Microsoft documents Copilot and AI-driven search behavior in its product material. ([Microsoft Copilot](https://www.microsoft.com/en-us/microsoft-copilot), 2026).
 <!-- SELF_HEAL_BLOCK_END -->
-
-<!-- AUTO-BACKFILL-LINKS:START -->
-## Related Reading
-- [Machine Relations for MarTech Companies: How to Win AI Engine Authority in a 15,000-Tool Landscape](/industries/martech/machine-relations)
-- [Machine Relations for Professional Services Firms: Why Consulting Authority Now Lives in AI Answers](/industries/professional-services/machine-relations)
-- [Machine Relations by Industry: AI Visibility Playbooks for 2026](/industries/_index)
-<!-- AUTO-BACKFILL-LINKS:END -->

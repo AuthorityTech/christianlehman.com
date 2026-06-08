@@ -65,7 +65,7 @@ Google's guide is explicit: content that an AI model could generate independentl
 
 The measurement gap is real. As [TechCrunch reported in May 2026](https://techcrunch.com/video/google-just-broke-seo-heres-what-replaces-it), most brands have almost no visibility into how AI systems describe them to potential customers. Traditional SEO dashboards do not track AI citation, and most analytics platforms cannot attribute LLM-referred traffic.
 
-I have been [tracking AI search traffic attribution](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution) since early 2026, and here is what works:
+I have been [tracking AI search traffic attribution](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide) since early 2026, and here is what works:
 
 - **Monitor AI referral traffic separately.** ChatGPT-User, ClaudeBot, and PerplexityBot referrals in your server logs are direct evidence of AI retrieval. Track them as a distinct channel.
 - **Test your brand queries in AI engines directly.** Search your core topics in ChatGPT, Perplexity, Claude, and Gemini. Note whether your brand appears, what it says, and whether citations link back to your content.
