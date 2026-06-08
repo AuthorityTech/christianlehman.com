@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import crypto from "node:crypto";
+import fs from "node:fs";
 import { SITE_URL } from "../src/lib/content-manifest.mjs";
 
 const SCOPE = "https://www.googleapis.com/auth/webmasters";
@@ -18,12 +19,15 @@ function base64Url(input) {
 
 function readServiceAccount() {
   const raw = process.env.GSC_SERVICE_ACCOUNT_JSON;
-  if (!raw) {
-    throw new Error("Missing GSC_SERVICE_ACCOUNT_JSON.");
+  const credentialsPath =
+    process.env.GOOGLE_SEARCH_CONSOLE_CREDENTIALS ||
+    process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (!raw && !credentialsPath) {
+    throw new Error("Missing GSC_SERVICE_ACCOUNT_JSON, GOOGLE_SEARCH_CONSOLE_CREDENTIALS, or GOOGLE_APPLICATION_CREDENTIALS.");
   }
-  const account = JSON.parse(raw);
+  const account = JSON.parse(raw || fs.readFileSync(credentialsPath, "utf8"));
   if (!account.client_email || !account.private_key) {
-    throw new Error("GSC_SERVICE_ACCOUNT_JSON must include client_email and private_key.");
+    throw new Error("Google service-account credentials must include client_email and private_key.");
   }
   return account;
 }
