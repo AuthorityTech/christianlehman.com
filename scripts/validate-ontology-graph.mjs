@@ -37,6 +37,7 @@ const schema = vm.runInNewContext(
   {
     SITE_URL: "https://christianlehman.com",
     OG_IMAGE: "https://christianlehman.com/images/christian-lehman-cover-image.png",
+    PROFILE_IMAGE_URL: "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp",
     MACHINE_RELATIONS_TERM_ID,
     MACHINE_RELATIONS_TERM_SET_ID,
   },
@@ -68,6 +69,9 @@ if (!knowsAbout.some((entry) => entry?.["@id"] === "https://machinerelations.ai/
 
 if (!String(person.description || "").toLowerCase().includes("architect")) {
   fail("Christian Person description must preserve architect framing");
+}
+if (person.image !== "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp") {
+  fail("Christian Person.image must use the visible homepage profile image");
 }
 if (website.creator?.["@id"] !== personId) {
   fail("WebSite.creator must reference canonical Christian person @id");

@@ -32,6 +32,18 @@ function isAbsoluteCleanUrl(value) {
   return !/[][()]/.test(value);
 }
 
+function isGeneratedPostPngUrl(value, slug) {
+  if (!isAbsoluteCleanUrl(value)) return false;
+  const parsed = new URL(value);
+  return parsed.pathname === `/images/${slug}.png` && !parsed.search && !parsed.hash;
+}
+
+function isStandaloneAssetLoc(value) {
+  if (!isAbsoluteCleanUrl(value)) return false;
+  const parsed = new URL(value);
+  return /^\/images\/[^/?#]+\.(?:png|jpe?g|webp|gif|svg)$/i.test(parsed.pathname) || parsed.pathname.startsWith("/og/");
+}
+
 function validateMachineLink(location, link) {
   if (!link || typeof link !== "object") {
     fail(location, "Missing machine link object.");
@@ -90,6 +102,30 @@ function validateMachineMarkdown(content, location) {
   }
 }
 
+function validatePrimaryImage(location, route, expectedPost) {
+  const image = route.primaryImage;
+  if (!image || typeof image !== "object") {
+    fail(location, "Missing primaryImage evidence.");
+    return;
+  }
+  if (image.canonicalUrl !== expectedPost.url) fail(location, "primaryImage.canonicalUrl must match the canonical post URL.");
+  if (!isGeneratedPostPngUrl(image.imageUrl, expectedPost.slug)) {
+    fail(location, `primaryImage.imageUrl must be the generated /images/${expectedPost.slug}.png URL.`);
+  }
+  if (typeof image.alt !== "string" || !image.alt.trim()) fail(location, "primaryImage.alt must be non-empty.");
+  if (typeof image.caption !== "string" || !image.caption.trim()) fail(location, "primaryImage.caption must be non-empty.");
+  if (image.width !== expectedPost.primaryImage.width) fail(location, "primaryImage.width drifted from the content manifest.");
+  if (image.height !== expectedPost.primaryImage.height) fail(location, "primaryImage.height drifted from the content manifest.");
+  if (image.policy !== expectedPost.primaryImage.policy) fail(location, "primaryImage.policy drifted from the content manifest.");
+  if (image.source !== expectedPost.primaryImage.source) fail(location, "primaryImage.source drifted from the content manifest.");
+  if (image.contentType !== expectedPost.primaryImage.contentType) fail(location, "primaryImage.contentType drifted from the content manifest.");
+  if (image.byteSignature !== expectedPost.primaryImage.byteSignature) fail(location, "primaryImage.byteSignature drifted from the content manifest.");
+  if (image.embeddedOnPage !== true) fail(location, "primaryImage.embeddedOnPage must be true.");
+  if (image.schemaEligible !== true) fail(location, "primaryImage.schemaEligible must be true.");
+  if (image.sitemapEligible !== true) fail(location, "primaryImage.sitemapEligible must be true.");
+  if (image.manifestEligible !== true) fail(location, "primaryImage.manifestEligible must be true.");
+}
+
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
@@ -136,6 +172,7 @@ if (machineViewContract.llms) {
 }
 
 const posts = getAllPostRoutes();
+const postsByUrl = new Map(posts.map((post) => [post.url, post]));
 const blogMarkdown = readOutput("blog.md", { required: false });
 if (blogMarkdown) {
   for (const post of posts) {
@@ -167,6 +204,7 @@ if (machineSitemap) {
   }
   if (parsed) {
     const expectedRoutes = getAllSiteRoutes();
+    const expectedByUrl = new Map(expectedRoutes.map((route) => [route.url, route]));
     if (parsed.count !== expectedRoutes.length) {
       fail("machine-sitemap.json", `Expected ${expectedRoutes.length} route(s), found ${parsed.count}.`);
     }
@@ -209,6 +247,8 @@ if (machineSitemap) {
         for (const [sourceIndex, sourceUrl] of (route.sourceUrls || []).entries()) {
           if (!isAbsoluteCleanUrl(sourceUrl)) fail(`${location}.sourceUrls[${sourceIndex}]`, `Invalid source URL: ${sourceUrl}`);
         }
+        const expectedRoute = expectedByUrl.get(route.url);
+        if (expectedRoute?.kind === "post") validatePrimaryImage(location, route, expectedRoute);
       }
     }
   }
@@ -253,13 +293,30 @@ if (sitemap) {
   if (/<sitemapindex\b/i.test(sitemap)) {
     fail("sitemap.xml", "Root sitemap must list page URLs directly, not only child sitemaps.");
   }
-  const locs = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
+  const urlBlocks = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => match[1]);
+  const locs = urlBlocks.flatMap((block) => [...block.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]));
   const expected = getAllSiteRoutes().map((route) => route.url);
   if (locs.length !== expected.length) {
     fail("sitemap.xml", `Expected ${expected.length} URL(s), found ${locs.length}.`);
   }
   for (const url of expected) {
     if (!locs.includes(url)) fail("sitemap.xml", `Missing sitemap URL: ${url}`);
+  }
+  for (const [index, block] of urlBlocks.entries()) {
+    const loc = block.match(/<loc>(.*?)<\/loc>/)?.[1] || "";
+    const imageLocs = [...block.matchAll(/<image:loc>(.*?)<\/image:loc>/g)].map((match) => match[1]);
+    const location = `sitemap.xml url[${index}]`;
+    if (isStandaloneAssetLoc(loc)) fail(location, `Image or generated asset URL cannot be a standalone sitemap loc: ${loc}`);
+
+    const post = postsByUrl.get(loc);
+    if (!post && imageLocs.length) fail(location, "Image sitemap tags may appear only under canonical post URLs.");
+    if (post) {
+      if (imageLocs.length !== 1) fail(location, `Expected one image sitemap loc for post, found ${imageLocs.length}.`);
+      for (const imageLoc of imageLocs) {
+        if (!isGeneratedPostPngUrl(imageLoc, post.slug)) fail(location, `Invalid image sitemap loc: ${imageLoc}`);
+        if (imageLoc !== post.primaryImage.imageUrl) fail(location, "Image sitemap loc drifted from primaryImage.imageUrl.");
+      }
+    }
   }
 }
 

@@ -1,8 +1,14 @@
 import type { PostMeta } from "@/lib/posts";
 import { SITE_URL } from "@/lib/site";
+import {
+  buildPostImageAlt,
+  generatedPostImageUrl,
+  POST_IMAGE_HEIGHT,
+  POST_IMAGE_WIDTH,
+} from "@/lib/image-evidence.mjs";
 
-export const POST_SHARE_IMAGE_WIDTH = 1200;
-export const POST_SHARE_IMAGE_HEIGHT = 630;
+export const POST_SHARE_IMAGE_WIDTH = POST_IMAGE_WIDTH;
+export const POST_SHARE_IMAGE_HEIGHT = POST_IMAGE_HEIGHT;
 
 type DateLike = string | Date | undefined | null;
 
@@ -18,7 +24,7 @@ export interface PostShare {
 }
 
 export function getPostShareImageUrl(slug: string, siteUrl = SITE_URL) {
-  return `${siteUrl}/images/${slug}.png`;
+  return generatedPostImageUrl(slug, siteUrl);
 }
 
 export function getPostSectionLabel(section?: string) {
@@ -61,7 +67,7 @@ export function getPostShare(
     imageUrl: post.imageUrl || getPostShareImageUrl(post.slug),
     width: POST_SHARE_IMAGE_WIDTH,
     height: POST_SHARE_IMAGE_HEIGHT,
-    alt: post.imageAlt || `${post.title} - ${sectionLabel} by Christian Lehman`,
+    alt: post.imageAlt || buildPostImageAlt({ title: post.title, sectionLabel }),
     caption: captionParts.join(" · "),
     sectionLabel,
     displayDate,

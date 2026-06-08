@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { buildImageEvidence } from "./image-evidence.mjs";
 import { SITE_URL } from "./site-constants.mjs";
 import {
   buildSeoDescription,
@@ -45,6 +46,16 @@ function toText(value, fallback = "") {
 function toTags(value) {
   if (!Array.isArray(value)) return [];
   return value.map((tag) => toText(tag)).filter(Boolean);
+}
+
+/**
+ * @param {string} section
+ * @returns {string}
+ */
+function postSectionLabel(section) {
+  if (section === "essay") return "Essay";
+  if (section === "newsletter") return "Newsletter";
+  return "AI Visibility Brief";
 }
 
 /**
@@ -99,25 +110,6 @@ function primaryDateValue(data) {
 }
 
 /**
- * @param {unknown} value
- * @returns {string}
- */
-function imageUrlFromFrontmatter(value) {
-  if (typeof value === "string") return toText(value);
-  if (value && typeof value === "object" && "url" in value) return toText(value.url);
-  return "";
-}
-
-/**
- * @param {unknown} value
- * @returns {string}
- */
-function imageAltFromFrontmatter(value) {
-  if (value && typeof value === "object" && "alt" in value) return toText(value.alt);
-  return "";
-}
-
-/**
  * @param {string} content
  * @param {string} fallback
  * @returns {string}
@@ -159,6 +151,7 @@ function buildDisplayDescription(value, content, fallback) {
  *   filenameDate: string;
  *   rawTags: unknown;
  *   tags: string[];
+ *   imageRepairs: Array<{ field: string; action: string; beforeLength: number; afterLength: number }>;
  * }} input
  * @returns {Array<{ field: string; action: string; beforeLength: number; afterLength: number }>}
  */
@@ -174,8 +167,9 @@ function createRepairs({
   filenameDate,
   rawTags,
   tags,
+  imageRepairs,
 }) {
-  const repairs = [];
+  const repairs = [...imageRepairs];
   const rawDescriptionText = normalizeSeoText(rawDescription);
   if (title !== seoTitle || title.length > SEO_LIMITS.titleMax) {
     repairs.push({
@@ -259,9 +253,16 @@ function postRouteFromFile(sourcePath, filename) {
   const url = `${SITE_URL}${pathValue}`;
   const markdownPath = `/blog/${slug}.md`;
   const markdownRoutePath = `/blog-md/${slug}`;
-  const imagePath = `/images/${slug}.png`;
-  const frontmatterImageUrl = imageUrlFromFrontmatter(data.image);
-  const frontmatterImageAlt = imageAltFromFrontmatter(data.image);
+  const primaryImage = buildImageEvidence({
+    slug,
+    title,
+    canonicalUrl: url,
+    sectionLabel: postSectionLabel(section),
+    imageCandidate: data.image,
+    featuredImageCandidate: data.featured_image,
+    imageAltCandidate: data.image,
+    featuredImageAltCandidate: data.featured_image_alt,
+  });
 
   return {
     kind: "post",
@@ -273,9 +274,10 @@ function postRouteFromFile(sourcePath, filename) {
     markdownPath,
     markdownRoutePath,
     markdownUrl: `${SITE_URL}${markdownPath}`,
-    imagePath,
-    imageUrl: frontmatterImageUrl || `${SITE_URL}${imagePath}`,
-    imageAlt: frontmatterImageAlt,
+    imagePath: primaryImage.imagePath,
+    imageUrl: primaryImage.imageUrl,
+    imageAlt: primaryImage.alt,
+    primaryImage,
     schemaId: `${url}#article`,
     rssGuid: `${url}#article`,
     title,
@@ -299,6 +301,7 @@ function postRouteFromFile(sourcePath, filename) {
       filenameDate,
       rawTags: data.tags,
       tags,
+      imageRepairs: primaryImage.repairs,
     }),
   };
 }

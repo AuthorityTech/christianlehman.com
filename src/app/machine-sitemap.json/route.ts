@@ -35,6 +35,22 @@ type PostRoute = BaseRoute & {
   date: string;
   tags: string[];
   content: string;
+  primaryImage: {
+    canonicalUrl: string;
+    imageUrl: string;
+    alt: string;
+    caption: string;
+    width: number;
+    height: number;
+    policy: string;
+    source: string;
+    contentType: string;
+    byteSignature: string;
+    embeddedOnPage: boolean;
+    schemaEligible: boolean;
+    sitemapEligible: boolean;
+    manifestEligible: boolean;
+  };
 };
 
 const SITE_CONCEPT: MachineLink = {
@@ -137,6 +153,22 @@ function machinePostRoutes() {
       supportLinks: sourceUrls.length ? sourceUrls.map(sourceLink) : [BLOG_CONCEPT],
       sourceUrls,
       issues: repairIssues(post.repairs),
+      primaryImage: {
+        canonicalUrl: post.primaryImage.canonicalUrl,
+        imageUrl: post.primaryImage.imageUrl,
+        alt: post.primaryImage.alt,
+        caption: post.primaryImage.caption,
+        width: post.primaryImage.width,
+        height: post.primaryImage.height,
+        policy: post.primaryImage.policy,
+        source: post.primaryImage.source,
+        contentType: post.primaryImage.contentType,
+        byteSignature: post.primaryImage.byteSignature,
+        embeddedOnPage: post.primaryImage.embeddedOnPage,
+        schemaEligible: post.primaryImage.schemaEligible,
+        sitemapEligible: post.primaryImage.sitemapEligible,
+        manifestEligible: post.primaryImage.manifestEligible,
+      },
       schemaId: post.schemaId,
       datePublished: post.date,
       dateModified: post.lastModified || post.date,

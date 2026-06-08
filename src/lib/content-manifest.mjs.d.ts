@@ -1,3 +1,5 @@
+import type { ImageEvidence } from "./image-evidence.mjs";
+
 export interface ContentRepair {
   field: string;
   action: string;
@@ -28,6 +30,7 @@ export interface PostSiteRoute extends BaseSiteRoute {
   imagePath: string;
   imageUrl: string;
   imageAlt: string;
+  primaryImage: ImageEvidence;
   schemaId: string;
   rssGuid: string;
   date: string;

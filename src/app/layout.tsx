@@ -101,7 +101,7 @@ const schema = {
       description:
         "Christian Lehman is the cofounder and chief growth officer of AuthorityTech. He is the brand-facing architect and operator of Machine Relations execution across growth and client delivery.",
       url: SITE_URL,
-      image: OG_IMAGE,
+      image: PROFILE_IMAGE_URL,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
       worksFor: { "@id": "https://authoritytech.io/#organization" },
       knowsAbout: [
