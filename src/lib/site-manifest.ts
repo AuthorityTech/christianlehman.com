@@ -73,9 +73,16 @@ export function buildHomePageMarkdown(): string {
 
 ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${p.url}) — ${p.seoDescription.slice(0, 120)}`).join("\n") : "- See blog index."}
 
+## Machine-readable related links
+
+- [Canonical home page](${SITE_URL})
+- [Blog index](${SITE_URL}/blog)
+- [Machine sitemap](${SITE_URL}/machine-sitemap.json)
+- [LLM instructions](${SITE_URL}/llms.txt)
+
 ---
 
-*Machine-readable version of [${SITE_URL}](${SITE_URL})*`;
+*Machine-readable version of [Christian Lehman home page](${SITE_URL})*`;
 }
 
 export function buildBlogIndexMarkdown(): string {
@@ -86,7 +93,14 @@ export function buildBlogIndexMarkdown(): string {
 
 ${posts.length > 0 ? posts.map((p) => `- [${p.title}](${p.markdownUrl}) — ${p.seoDescription.slice(0, 120)} (${p.date || ""})`).join("\n") : "- Publishing soon."}
 
+## Machine-readable related links
+
+- [Canonical blog index](${SITE_URL}/blog)
+- [Home page](${SITE_URL})
+- [Machine sitemap](${SITE_URL}/machine-sitemap.json)
+- [LLM instructions](${SITE_URL}/llms.txt)
+
 ---
 
-*Machine-readable version of [${SITE_URL}/blog](${SITE_URL}/blog)*`;
+*Machine-readable version of [Christian Lehman writing index](${SITE_URL}/blog)*`;
 }
