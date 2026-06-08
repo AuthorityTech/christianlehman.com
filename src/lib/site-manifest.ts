@@ -49,6 +49,7 @@ Every page on this site has a parallel .md endpoint for machine consumption:
 
 - [Home (markdown)](${SITE_URL}/index.md): Structured profile and recent writing
 - [Blog index (markdown)](${SITE_URL}/blog.md): Full post listing with descriptions and dates
+- [Machine sitemap (JSON)](${SITE_URL}/machine-sitemap.json): Canonical-to-markdown map for all machine-readable routes
 - Individual posts: append .md to any blog URL (e.g. ${SITE_URL}/blog/SLUG.md)
 
 ## Optional

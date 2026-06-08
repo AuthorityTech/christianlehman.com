@@ -119,6 +119,26 @@ if (feed) {
   }
 }
 
+const machineSitemap = readOutput("machine-sitemap.json", { required: false });
+if (machineSitemap) {
+  let parsed;
+  try {
+    parsed = JSON.parse(machineSitemap);
+  } catch (error) {
+    fail("machine-sitemap.json", `Invalid JSON: ${error.message}`);
+  }
+  if (parsed) {
+    const expectedRoutes = getAllSiteRoutes();
+    if (parsed.count !== expectedRoutes.length) {
+      fail("machine-sitemap.json", `Expected ${expectedRoutes.length} route(s), found ${parsed.count}.`);
+    }
+    for (const route of expectedRoutes) {
+      requireIncludes(machineSitemap, [route.url], "machine-sitemap.json");
+      if (route.kind === "post") requireIncludes(machineSitemap, [route.markdownUrl], "machine-sitemap.json");
+    }
+  }
+}
+
 for (const post of posts) {
   const routePath = normalizeRoutePath(post.markdownRoutePath);
   if (!routeExists(routePath)) {
