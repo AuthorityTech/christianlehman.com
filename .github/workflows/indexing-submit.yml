@@ -54,4 +54,9 @@ jobs:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_SITE_URL: sc-domain:christianlehman.com
           GSC_SITEMAP_URL: https://christianlehman.com/sitemap.xml
-        run: npm run indexing:google-sitemap
+        run: |
+          if [ -z "${GSC_SERVICE_ACCOUNT_JSON}" ]; then
+            echo "::warning::GSC_SERVICE_ACCOUNT_JSON is not configured; skipped Google Search Console sitemap submission."
+            exit 0
+          fi
+          npm run indexing:google-sitemap
