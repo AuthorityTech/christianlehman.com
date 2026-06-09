@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -93,7 +93,7 @@ jobs:
 
       - name: Upload graph artifact
         if: hashFiles('graphify-out/graph.json') != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: brain-sync-${{ vars.BRAIN_LANE }}-${{ github.sha }}
           path: graphify-out
