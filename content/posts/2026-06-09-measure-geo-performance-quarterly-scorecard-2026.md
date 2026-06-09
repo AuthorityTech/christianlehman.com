@@ -57,7 +57,7 @@ Not every metric needs the same frequency. Here's the cadence I use:
 
 Weekly metrics feed the operating team. Monthly metrics feed the board deck. The quarterly report synthesizes trends across all five, with a one-slide summary: mention rate trajectory, citation rate trajectory, share of voice delta, and source coverage change.
 
-If you're already [tracking AI search traffic attribution](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution), these metrics layer on top. Attribution tells you what AI traffic does after it arrives. The GEO scorecard tells you whether traffic has a reason to arrive in the first place.
+If you're already [tracking AI search traffic attribution](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide), these metrics layer on top. Attribution tells you what AI traffic does after it arrives. The GEO scorecard tells you whether traffic has a reason to arrive in the first place.
 
 ## GEO ROI: Tying Citations to Pipeline
 
@@ -65,7 +65,7 @@ The board doesn't fund dashboards. They fund revenue. Here's the ROI formula tha
 
 **GEO ROI = (AI-attributed traffic x conversion rate x customer lifetime value) / GEO investment**
 
-The numerator requires [AI traffic attribution](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution) — identifying which site visits come from AI engine referrals. The conversion data comes from your existing CRM pipeline. The denominator is whatever you're spending on content optimization, [source authority building](https://machinerelations.ai/research/generative-engine-optimization-definition-2026), and monitoring tools.
+The numerator requires [AI traffic attribution](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide) — identifying which site visits come from AI engine referrals. The conversion data comes from your existing CRM pipeline. The denominator is whatever you're spending on content optimization, [source authority building](https://machinerelations.ai/research/generative-engine-optimization-definition-2026), and monitoring tools.
 
 One data point that makes this case: AI-referred traffic [converts at 1.2–1.8x the rate](https://gen-optima.com/geo/how-to-measure-geo-roi-kpi-framework-2026) of generic organic traffic for B2B brands. The hypothesis is intent quality — someone asking ChatGPT "which AI visibility platforms should I evaluate" is further down the funnel than someone browsing a Google SERP. If your attribution confirms a similar ratio, that's the number that gets the budget conversation unstuck.
 
