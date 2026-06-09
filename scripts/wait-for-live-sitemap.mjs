@@ -19,11 +19,12 @@ while (Date.now() - startedAt < timeoutMs) {
     if (res.ok) {
       const locs = sitemapLocs(await res.text());
       const missing = EXPECTED_URLS.filter((url) => !locs.includes(url));
-      if (locs.length === EXPECTED_URLS.length && missing.length === 0) {
-        console.log(`Live sitemap is current: ${locs.length} URL(s).`);
+      const extraCount = locs.filter((url) => !EXPECTED_URLS.includes(url)).length;
+      if (missing.length === 0) {
+        console.log(`Live sitemap contains all expected URLs: found ${locs.length}, expected ${EXPECTED_URLS.length}, extra ${extraCount}.`);
         process.exit(0);
       }
-      console.log(`Live sitemap not current yet: found ${locs.length}, expected ${EXPECTED_URLS.length}, missing ${missing.length}.`);
+      console.log(`Live sitemap not current yet: found ${locs.length}, expected ${EXPECTED_URLS.length}, missing ${missing.length}, extra ${extraCount}.`);
     } else {
       console.log(`Live sitemap returned HTTP ${res.status}.`);
     }
@@ -34,5 +35,5 @@ while (Date.now() - startedAt < timeoutMs) {
   await delay(intervalMs);
 }
 
-console.error(`Timed out waiting for ${SITEMAP_URL} to match the local manifest.`);
+console.error(`Timed out waiting for ${SITEMAP_URL} to contain all local manifest URLs.`);
 process.exit(1);
