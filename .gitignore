@@ -7,3 +7,6 @@ out/
 tsconfig.tsbuildinfo
 graphify-out/
 *.md.bak
+.agents/
+.audit/
+.cursor/
