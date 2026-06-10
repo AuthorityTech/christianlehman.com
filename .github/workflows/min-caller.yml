@@ -6,4 +6,3 @@ jobs:
     uses: AuthorityTech/.github/.github/workflows/min-reusable.yml@main
     with:
       lane: test
-    secrets: inherit
