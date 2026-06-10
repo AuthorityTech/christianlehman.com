@@ -1,0 +1,8 @@
+name: Min Caller
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: AuthorityTech/.github/.github/workflows/min-reusable.yml@main
+    with:
+      lane: test
