@@ -10,6 +10,7 @@ export const HOME_COPY = {
   links: [
     { label: "AuthorityTech", href: "https://authoritytech.io" },
     { label: "Machine Relations", href: "https://machinerelations.ai" },
+    { label: "MRI Score", href: "https://machinerelations.ai/glossary/mri-score" },
   ],
 } as const;
 
