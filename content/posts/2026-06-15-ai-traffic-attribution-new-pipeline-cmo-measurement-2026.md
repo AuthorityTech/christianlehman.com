@@ -96,7 +96,7 @@ Stop thinking about AI traffic as a marketing curiosity and start treating it as
 - Conversion rate delta between AI-referred and organic sessions
 - Coverage: how many of your target buyer queries return your brand in AI engine answers
 
-I wrote previously about [how to track AI search traffic attribution](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution) at the tactical level. This pipeline model sits above that — it is the executive layer that turns tracking data into budget and resource decisions.
+I wrote previously about [how to track AI search traffic attribution](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide) at the tactical level. This pipeline model sits above that — it is the executive layer that turns tracking data into budget and resource decisions.
 
 ## Why This Is a Source Architecture Problem
 
