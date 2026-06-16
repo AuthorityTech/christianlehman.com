@@ -9,4 +9,6 @@ graphify-out/
 *.md.bak
 .agents/
 .audit/
-.cursor/
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
