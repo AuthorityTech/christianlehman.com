@@ -79,6 +79,8 @@ Visibility is not the end metric. I track four things to determine whether GEO s
 
 The companies getting real results are not spending the most. They are the ones who built measurement first and then scaled what they could prove. [AI search traffic and Google traffic diverge](/blog/why-ai-search-rankings-and-google-rankings-diverge) more every quarter. A budget that treats them as the same channel will underperform in both.
 
+My recommendation: run a 90-day measurement sprint before committing to any reallocation above the balanced model. Instrument AI referral attribution, establish baseline share of citation for your top five queries, and track cost per AI-sourced lead alongside your existing SEO metrics. If the numbers justify scaling after that window, you will have the evidence to defend the budget internally — and the data to optimize it quarterly instead of guessing annually.
+
 ## FAQ
 
 ### What percentage of my marketing budget should go to GEO in 2026?
