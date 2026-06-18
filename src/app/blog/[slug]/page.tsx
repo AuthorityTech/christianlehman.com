@@ -218,8 +218,8 @@ export default async function PostPage({ params }: Props) {
         </article>
 
         {showSectionNav && (
-          <aside className="hidden lg:block">
-            <nav aria-label="Sections" className="sticky top-20 border-l border-nothing-border pl-4">
+          <aside className="hidden max-h-[calc(100vh-5rem)] self-start overflow-y-auto lg:sticky lg:top-20 lg:block">
+            <nav aria-label="Sections" className="border-l border-nothing-border pl-4">
               <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.1em] text-nothing-disabled">Sections</p>
               <ol className="space-y-2">
                 {post.sectionNav.map((item) => (
