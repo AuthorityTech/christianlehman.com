@@ -6,6 +6,7 @@
     "seo:guard": "node scripts/validate-seo-metadata.mjs",
     "seo:report": "node scripts/report-seo-repairs.mjs",
     "content:manifest": "node scripts/validate-content-manifest.mjs",
+    "content:section-nav": "node scripts/validate-section-nav.mjs",
     "content:links": "node scripts/validate-internal-links.mjs",
     "image:machine": "node scripts/validate-image-machine-layer.mjs",
     "machine-layer:guard": "npm run content:manifest && npm run content:links && npm run machine:parity && npm run image:machine && npm run seo:guard",

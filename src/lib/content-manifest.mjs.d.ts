@@ -1,4 +1,5 @@
 import type { ImageEvidence } from "./image-evidence.mjs";
+import type { SectionNavItem } from "./section-nav.mjs";
 
 export interface ContentRepair {
   field: string;
@@ -37,6 +38,7 @@ export interface PostSiteRoute extends BaseSiteRoute {
   tags: string[];
   section: string;
   content: string;
+  sectionNav: SectionNavItem[];
 }
 
 export interface StaticSiteRoute extends BaseSiteRoute {

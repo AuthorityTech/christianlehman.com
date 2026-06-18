@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { buildImageEvidence } from "./image-evidence.mjs";
+import { buildSectionNav } from "./section-nav.mjs";
 import { SITE_URL } from "./site-constants.mjs";
 import {
   buildSeoDescription,
@@ -289,6 +290,7 @@ function postRouteFromFile(sourcePath, filename) {
     tags,
     section,
     content: parsed.content,
+    sectionNav: buildSectionNav(parsed.content),
     repairs: createRepairs({
       title,
       seoTitle,

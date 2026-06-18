@@ -1,4 +1,5 @@
 import { getAllPostRoutes, getPostRoute } from "@/lib/content-manifest.mjs";
+import type { SectionNavItem } from "@/lib/section-nav.mjs";
 
 export interface PostMeta {
   slug: string;
@@ -14,6 +15,7 @@ export interface PostMeta {
 
 export interface Post extends PostMeta {
   content: string;
+  sectionNav: SectionNavItem[];
 }
 
 export function getAllPosts(): PostMeta[] {
@@ -44,5 +46,6 @@ export function getPost(slug: string): Post | null {
     imageUrl: post.imageUrl,
     imageAlt: post.imageAlt,
     content: post.content,
+    sectionNav: post.sectionNav,
   };
 }
