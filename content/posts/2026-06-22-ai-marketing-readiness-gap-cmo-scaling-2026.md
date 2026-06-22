@@ -56,7 +56,7 @@ If you're in the 70%, here's the execution sequence I'd run this quarter:
 
 **Audit your data foundation before your next tool purchase.** Map every data source that feeds your marketing AI. If more than two are disconnected, stale, or manually updated, fix that before adding anything new. Tools don't fix broken data.
 
-**Build a measurement layer that captures AI-source traffic separately.** You need to know what revenue came from AI-influenced discovery — [ChatGPT referrals, Perplexity citations, AI Overview appearances](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution) — vs. traditional organic and paid. If you can't separate these, you can't justify or optimize AI spend.
+**Build a measurement layer that captures AI-source traffic separately.** You need to know what revenue came from AI-influenced discovery — [ChatGPT referrals, Perplexity citations, AI Overview appearances](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide) — vs. traditional organic and paid. If you can't separate these, you can't justify or optimize AI spend.
 
 **Map your distribution to where AI engines look.** This means earned media on authoritative domains, structured data that AI can extract, and content architecture built for citation — not just ranking. I've written about [why earned media beats content tweaks for AI citations](https://christianlehman.com/blog/why-earned-media-beats-content-tweaks-chatgpt-citations) — the short version is that AI engines weight third-party authority signals differently than Google does.
 
@@ -78,7 +78,7 @@ Only 30%, according to [Gartner's 2026 CMO Spend Survey](https://www.businesswir
 
 ### How much should a CMO allocate to AI marketing in 2026?
 
-The survey average is 15.3% of marketing budget. But AI-ready organizations — the ones seeing results — allocate 21.3%. The bigger question is whether your data and measurement infrastructure can compound that spend. Throwing more money at AI without [attribution infrastructure](https://christianlehman.com/blog/how-to-track-chatgpt-perplexity-ai-search-traffic-attribution) in place is the fastest way to join the 70%.
+The survey average is 15.3% of marketing budget. But AI-ready organizations — the ones seeing results — allocate 21.3%. The bigger question is whether your data and measurement infrastructure can compound that spend. Throwing more money at AI without [attribution infrastructure](https://christianlehman.com/blog/how-to-track-ai-search-traffic-attribution-cmo-guide) in place is the fastest way to join the 70%.
 
 ### What separates CMOs who get revenue impact from AI vs. those who don't?
 
