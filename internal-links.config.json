@@ -1,0 +1,2 @@
+{ "siteHost": "christianlehman.com", "lanes": [
+  { "dir": "content/posts", "prefix": "/blog", "stripDate": true } ] }
