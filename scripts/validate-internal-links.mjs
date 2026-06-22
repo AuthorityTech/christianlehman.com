@@ -37,6 +37,54 @@ const allowedPaths = new Set([
   "/sitemap.xml",
 ]);
 
+// Redirect-awareness: a link that matches a redirect source is valid when the
+// redirect chain terminates at a resolving destination (external URL or an
+// existing internal route). This prevents a renamed/moved slug whose live 301
+// still serves real content from being flagged as a dead internal link.
+function resolvesAllowed(pathname) {
+  if (pathname == null) return false;
+  if (allowedPaths.has(pathname)) return true;
+  return allowedPaths.has(pathname.endsWith(".md") ? pathname.slice(0, -3) : `${pathname}.md`);
+}
+
+function loadVercelRedirects() {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), "vercel.json"), "utf8");
+    const json = JSON.parse(raw);
+    return (json.redirects || [])
+      .filter((r) => r && typeof r.source === "string" && typeof r.destination === "string")
+      .map((r) => ({ source: normalizePathname(r.source.split(/[?#]/)[0]), destination: r.destination }));
+  } catch {
+    return [];
+  }
+}
+
+const redirects = loadVercelRedirects();
+const redirectBySource = new Map(redirects.map((r) => [r.source, r.destination]));
+
+function redirectResolves(source, depth = 0) {
+  if (depth > 10) return false;
+  const dest = redirectBySource.get(source);
+  if (dest == null) return false;
+  if (/^https?:\/\//i.test(dest)) {
+    try {
+      return new URL(dest).origin !== SITE_URL || resolvesAllowed(normalizePathname(new URL(dest).pathname));
+    } catch {
+      return true;
+    }
+  }
+  const destPath = normalizePathname(dest.split(/[?#]/)[0]);
+  if (resolvesAllowed(destPath)) return true;
+  return redirectResolves(destPath, depth + 1);
+}
+
+for (const { source } of redirects) {
+  if (redirectResolves(source)) {
+    allowedPaths.add(source);
+    allowedPaths.add(source.endsWith(".md") ? source.slice(0, -3) : `${source}.md`);
+  }
+}
+
 function sameSitePath(href) {
   if (href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return null;
   if (href.startsWith("/")) return normalizePathname(href.split(/[?#]/)[0] || "/");
