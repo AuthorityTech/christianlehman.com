@@ -3,7 +3,7 @@ import ThemeNavButton from "@/components/ThemeNavButton";
 export default function Nav() {
   return (
     <nav className="border-b border-nothing-border bg-nothing-surface/95">
-      <div className="mx-auto flex max-w-2xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <a
           href="/"
           className="font-mono text-[11px] font-normal uppercase tracking-[0.12em] text-nothing-display transition-colors duration-200 ease-nothing hover:text-link"
