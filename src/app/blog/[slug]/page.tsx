@@ -73,10 +73,10 @@ export default async function PostPage({ params }: Props) {
   );
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+    <div data-article-toc={showSectionNav ? "" : undefined} className="mx-auto max-w-content px-6 py-16 md:py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogLd }} />
 
-      <nav className="mx-auto mb-12 max-w-2xl">
+      <nav className="mb-12">
         <Link
           href="/blog"
           className="font-mono text-[11px] uppercase tracking-[0.08em] text-link transition-colors duration-200 ease-nothing hover:text-nothing-primary"
@@ -85,7 +85,7 @@ export default async function PostPage({ params }: Props) {
         </Link>
       </nav>
 
-      <div className={showSectionNav ? "grid gap-12 lg:grid-cols-[minmax(0,42rem)_12rem] lg:items-start lg:justify-center" : "mx-auto max-w-2xl"}>
+      <div className={showSectionNav ? "xl:grid xl:gap-8 xl:grid-cols-[minmax(0,1fr)_14rem] xl:items-start" : ""}>
         <article className="min-w-0">
           <header className="mb-10">
             <h1 data-speakable="headline" className="mb-5 font-display text-[1.65rem] font-normal leading-tight tracking-[-0.02em] text-nothing-display md:text-[2rem]">
@@ -218,7 +218,7 @@ export default async function PostPage({ params }: Props) {
         </article>
 
         {showSectionNav && (
-          <aside className="hidden max-h-[calc(100vh-5rem)] self-start overflow-y-auto lg:sticky lg:top-20 lg:block">
+          <aside className="hidden max-h-[calc(100vh-5rem)] self-start overflow-y-auto xl:sticky xl:top-20 xl:block">
             <nav aria-label="Sections" className="border-l border-nothing-border pl-4">
               <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.1em] text-nothing-disabled">Sections</p>
               <ol className="space-y-2">
