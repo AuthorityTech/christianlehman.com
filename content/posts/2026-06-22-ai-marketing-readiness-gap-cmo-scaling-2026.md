@@ -1,5 +1,5 @@
 ---
-title: "Why 70 Percent of CMOs Are Wasting Their AI Marketing Budget and What the Ready 30 Percent Do Differently"
+title: "AI Marketing Readiness Gap for CMO Scaling in 2026"
 date: "2026-06-22"
 slug: "ai-marketing-readiness-gap-cmo-scaling-2026"
 description: "Gartner's 2026 survey shows CMOs spend 15.3% of budgets on AI but only 30% can scale it. Here's the execution gap and what the ready organizations do that you don't."
