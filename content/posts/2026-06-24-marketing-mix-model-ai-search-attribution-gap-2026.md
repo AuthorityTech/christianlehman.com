@@ -39,6 +39,16 @@ The structural problem: your MMM optimizes budget toward channels with measurabl
 
 [46.9% of US marketers plan to increase their investment in marketing mix modeling](https://marketingagent.blog/2025/12/08/marketing-mix-modeling-mmm-for-2026-how-brands-are-reinvesting-in-it-amid-data-disruptions/). More spend on a model that cannot see AI search does not produce better decisions. It produces more confident wrong ones.
 
+## How to Tell Your MMM Already Has This Problem
+
+Three signals suggest your model is already misattributing AI-influenced revenue.
+
+**Your "direct" channel keeps growing without explanation.** When a buyer researches your product through ChatGPT, forms an opinion, and then types your URL directly into their browser, that conversion shows up as "direct" traffic. If your direct channel's conversion rate has climbed in the past 12 months while your direct-traffic acquisition efforts haven't changed, AI search is likely the hidden driver. The same pattern applies to branded search — buyers who learn about you through AI answers often confirm via a branded Google search, inflating that channel's apparent contribution.
+
+**Your organic traffic is flat but pipeline from content is up.** Traditional organic rankings may be declining or stagnant while your content actually drives more pipeline — because the content is being cited in AI responses rather than discovered through Google SERPs. If content-attributed pipeline has decoupled from organic session volume, AI citation is the missing variable.
+
+**Your MMM recommends cutting content investment.** This is the most dangerous signal. Because content's contribution to AI citation is invisible to the model, MMM budget optimization will systematically recommend reducing content spend in favor of channels with measurable returns. But content is the raw material that AI engines cite. Cutting it based on a model that cannot see its highest-value distribution channel creates a compounding loss: less content produces fewer AI citations, which reduces the pipeline your model was already unable to measure.
+
 ## Three Measurement Adjustments Before Your Q4 Budget Cycle
 
 I am not arguing you should abandon MMM. It remains the best tool for strategic budget allocation when it has the right inputs. The problem is the inputs, not the model. Here are three adjustments that fix the AI blind spot.
@@ -49,7 +59,7 @@ Most analytics platforms now support AI referral source segmentation. [Google An
 
 **2. Run incrementality tests on AI-influenced cohorts.**
 
-Geo-holdout tests and audience-level experiments are how you establish causal impact for any channel your MMM struggles to measure. [The MMM + MTA + incrementality framework](https://praxxiiglobal.com/insights/marketing-attribution-in-2026-why-last-click-is-dead-and-the-mmm-mta-incremental) produces 18-35% blended ROAS lift in the first 12 months when applied correctly. The same methodology works for AI search: compare conversion rates and pipeline velocity in cohorts where your brand is cited in AI answers versus where it is not.
+Geo-holdout tests and audience-level experiments are how you establish causal impact for any channel your MMM struggles to measure. [The MMM + MTA + incrementality framework](https://praxxiiglobal.com/insights/marketing-attribution-in-2026-why-last-click-is-dead-and-the-mmm-mta-incremental) produces 18-35% blended ROAS lift in the first 12 months when applied correctly. The same methodology works for AI search: compare conversion rates and pipeline velocity in cohorts where your brand is cited in AI answers versus where it is not. Start with your highest-intent query clusters — if your brand appears in ChatGPT or Perplexity answers for "best [your category] for [your ICP segment]" queries, compare those accounts' close rates against accounts from the same segment without AI citation exposure. The incremental lift data gives your MMM a calibration anchor it currently lacks.
 
 **3. Track share of citation alongside traditional share of voice.**
 
