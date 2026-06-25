@@ -48,7 +48,7 @@ The discipline of AI visibility did not exist three years ago. The [talent pool 
 
 This matters because AI citations depend heavily on unowned channels — Reddit, Wikipedia, YouTube, LinkedIn, third-party review sites. A solo hire cannot single-handedly operate across all of these surfaces. An agency with an existing distribution network can.
 
-But agencies face their own constraint: most of them are also learning this in real time. A [2026 decision framework from Soar](https://soar.sh/blog/ai-visibility-in-house-vs-agency-2026) identifies eight factors that actually determine which model works, and timeline is the first one. In-house requires nine to twelve months before measurable results. Agencies deliver progress within two quarters. If your board wants signal by Q3, the math is straightforward.
+But agencies face their own constraint: most of them are also learning this in real time, and [choosing the wrong type of agency](/blog/guaranteed-pr-agencies-wrong-bet-ai-visibility-2026) compounds the problem. A [2026 decision framework from Soar](https://soar.sh/blog/ai-visibility-in-house-vs-agency-2026) identifies eight factors that actually determine which model works, and timeline is the first one. In-house requires nine to twelve months before measurable results. Agencies deliver progress within two quarters. If your board wants signal by Q3, the math is straightforward.
 
 ## The Decision Framework: Eight Factors That Actually Matter
 
@@ -65,7 +65,7 @@ I have adapted the clearest version of this I have seen into a decision table. S
 | **Talent access** | Can hire senior GEO in your market | Scarce talent, long hiring timelines |
 | **Budget commitment** | 18-24 months of continuous funding | Quarterly flexibility preferred |
 
-If you scored five or more factors toward agency, start there. Five or more toward in-house, hire first. If it is split, that is where the hybrid model earns its keep.
+If you scored five or more factors toward agency, start there. Five or more toward in-house, hire first. If it is split, that is where the hybrid model earns its keep. Once you have decided on the agency path, the [vendor evaluation framework](/blog/evaluate-ai-visibility-vendors-cmo-framework-2026) covers how to compare specific providers.
 
 ## The Hybrid Model Most Companies Actually Need
 
@@ -83,7 +83,7 @@ The principle is clean: keep the "why" in-house and buy the "how" at scale. Bran
 
 ## What Software Actually Solves (and Where It Falls Short)
 
-Enterprise platforms are entering this space fast. Adobe launched a [Brand Visibility](https://business.adobe.com/products/brand-visibility.html) product specifically for AI search optimization. [Frase.io](https://frase.io/blog/the-10-best-ai-visibility-tools-in-2026) and [Profound](https://tryprofound.com/blog/choosing-ai-visibility-provider) have comparison guides positioning dozens of monitoring and optimization tools.
+Enterprise platforms are entering this space fast. Adobe launched a [Brand Visibility](https://business.adobe.com/products/brand-visibility.html) product specifically for AI search optimization. [Frase.io](https://frase.io/blog/the-10-best-ai-visibility-tools-in-2026) and [Profound](https://tryprofound.com/blog/choosing-ai-visibility-provider) have comparison guides positioning dozens of monitoring and optimization tools. I reviewed the [seven platforms that actually show what AI engines see](/blog/best-ai-visibility-tools-cmos-2026) separately.
 
 Software solves the measurement layer well: tracking which AI engines cite you, monitoring share of citation across ChatGPT, Perplexity, Claude, and Gemini, benchmarking against competitors. SMBs [spend proportionally more on tools (32% of GEO budget)](https://presenc.ai/research/geo-budget-benchmarks-2026) because monitoring platforms can substitute for some agency functions at lower scale.
 

@@ -84,7 +84,7 @@ Measurement is necessary. It is not sufficient.
 
 This is where the [Machine Relations](https://machinerelations.ai/) framework matters. Most AI visibility vendors optimize one layer — tracking. But earning AI citations requires a full system: building entity authority that AI engines recognize, structuring content so models can extract clean claims, earning citations across multiple engines, distributing through channels AI agents actually crawl, and then measuring the result. Tracking without the upstream work is like installing a speedometer on a parked car.
 
-If I am evaluating whether to spend budget on a visibility vendor, the first question is not "what tool?" — it is "have we built the thing the tool would measure?" A [visibility audit](https://app.authoritytech.io/visibility-audit) answers that question faster than any vendor demo.
+If I am evaluating whether to spend budget on a visibility vendor, the first question is not "what tool?" — it is "have we built the thing the tool would measure?" A [visibility audit](https://app.authoritytech.io/visibility-audit) answers that question faster than any vendor demo. And once you know the answer, the [software vs. agency vs. hybrid decision](/blog/ai-visibility-software-vs-agency-services-cmo-2026) determines where the budget actually goes.
 
 ## FAQ
 
