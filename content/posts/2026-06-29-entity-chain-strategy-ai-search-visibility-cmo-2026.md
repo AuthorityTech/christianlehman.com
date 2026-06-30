@@ -1,5 +1,5 @@
 ---
-title: "Entity Chain Strategy: How CMOs Build Compounding AI Search Visibility in 2026"
+title: "How to Build Entity Chains for AI Search Visibility in 2026"
 date: "2026-06-29"
 slug: "entity-chain-strategy-ai-search-visibility-cmo-2026"
 description: "Entity chains — not individual pages — determine which brands AI engines cite. Here is the execution sequence CMOs need to build compounding AI search visibility."
