@@ -17,7 +17,7 @@ canonicalUrl: ""
 tags: ["ai-visibility","tactical-brief","shortlists"]
 ---
 
-ContractSafe holds a [4.7 out of 5.0 on G2](https://www.g2.com/products/contractsafe/reviews) across 132 reviews, a [4.9 on GetApp](https://www.getapp.com/operations-management-software/a/contractsafe/) across 180 reviews, and [five G2 Summer 2026 badges](https://www.contractsafe.com/blog/contractsafe-g2-badges) including Best Estimated ROI and Fastest Implementation for mid-market. Yet when a buyer asks ChatGPT, Perplexity, or Claude to recommend contract lifecycle management software, ContractSafe rarely appears. That disconnect — strong user proof with no AI shortlist presence — is the single most expensive visibility problem mid-market SaaS vendors face right now.
+ContractSafe holds a [4.7 out of 5.0 on G2](https://www.g2.com/products/contractsafe/reviews) across 132 reviews, a [4.9 on GetApp](https://www.getapp.com/operations-management-software/a/contractsafe/) across 180 reviews, and [five G2 Summer 2026 badges](https://www.contractsafe.com/blog/contractsafe-g2-badges) including Best Estimated ROI and Fastest Implementation for mid-market. Yet when a buyer asks ChatGPT, Perplexity, or Claude to recommend contract lifecycle management software for their organization, ContractSafe rarely appears. That disconnect — strong user proof with no AI shortlist presence — is the single most expensive visibility problem mid-market SaaS vendors face right now.
 
 ## What CLM Shortlists Look Like When Buyers Ask AI in 2026
 
