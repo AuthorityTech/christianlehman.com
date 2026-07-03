@@ -73,6 +73,14 @@ When I evaluate agencies for AI-era earned media, I use five filters:
 
 **5. Do they understand the AI governance layer?** The benchmark shows [only 21.4% of organizations have formal AI policies](https://prnewswire.com/news-releases/pr-is-the-primary-driver-of-revenue-authority-and-visibility-in-the-ai-era-302767631.html), with top concerns being data privacy (40.1%), accuracy risks (37.9%), and brand voice authenticity (29.2%). Your agency should have a position on how AI-generated content, AI-assisted pitching, and AI citation tracking fit into their workflow.
 
+## The Bottom Line
+
+The performance-based model solved the accountability problem on price. You know what a placement costs. But in 2026, cost accountability without citation accountability is incomplete. The 858-respondent benchmark data makes the gap measurable: nearly two-thirds of PR professionals acknowledge AI search has changed the game, but only one in five has built the measurement framework to prove it.
+
+If you are evaluating performance-based PR agencies right now, start with the AI citation question before the pricing question. A $375 placement that enters ChatGPT's citation pool for your target buying query compounds value every time that query gets asked. A $375 placement on a site no AI engine references is a line item with no return trajectory.
+
+The agencies that will win the next 18 months are the ones building their reporting around AI citation outcomes, not the ones still counting clips and calling it performance.
+
 ## FAQ
 
 ### What is the average cost of a performance-based PR agency in 2026?
