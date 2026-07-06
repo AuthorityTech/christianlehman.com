@@ -1,12 +1,12 @@
 ---
-title: 'How to Optimize Authorship Credentials for AI Visibility and Citation Worthiness'
+title: '7 Best Practices for Optimizing Authorship and Credentials to Improve AI Visibility and Citation Worthiness'
 date: '2026-03-22'
 slug: publication-strategy-ai-search-visibility
 description: >-
   Expert bylines generate 25–45% more AI citations than anonymous placements.
-  Seven evidence-backed practices for optimizing authorship credentials,
-  academic signals, and publication targeting to maximize AI visibility and
-  citation worthiness across ChatGPT, Perplexity, and Google AI Overviews.
+  Seven best practices for optimizing authorship and credentials, academic
+  signals, and publication targeting to improve AI visibility and citation
+  worthiness across ChatGPT, Perplexity, and Google AI Overviews.
 author: "Christian Lehman"
 tags: ["ai-visibility","tactical-brief","earned-media"]
 visual_concept: bridge
