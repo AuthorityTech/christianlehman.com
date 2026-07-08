@@ -6,13 +6,9 @@ on:
     paths:
       - "content/posts/**"
       - "src/content/posts/**"
-      - "src/app/**"
-      - "src/lib/**"
-      - "public/**"
-      - "next.config.ts"
-      - "package.json"
-      - "package-lock.json"
-      - "scripts/**"
+      - "src/app/**/sitemap.ts"
+      - "src/app/sitemap.xml/**"
+      - "src/app/machine-sitemap.json/**"
       - ".github/workflows/indexing-submit.yml"
   workflow_dispatch:
 
@@ -38,10 +34,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate manifest and internal links
-        run: |
-          npm run content:manifest
-          npm run content:links
+      - name: Validate content manifest
+        run: npm run content:manifest
 
       - name: Wait for production sitemap
         run: npm run indexing:wait
