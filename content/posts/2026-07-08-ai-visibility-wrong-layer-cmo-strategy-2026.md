@@ -1,5 +1,5 @@
 ---
-title: "Most AI Visibility Strategies Fail at the Wrong Layer — Here Is Where CMOs Should Actually Invest"
+title: "Why AI Visibility Strategy Fails at the Wrong Layer for CMOs"
 date: "2026-07-08"
 slug: "ai-visibility-wrong-layer-cmo-strategy-2026"
 description: "88% of CMOs are asked about AI visibility but only 34% have a strategy. The problem: most teams invest entirely at the retrieval layer while ignoring the entity and context layers where AI engines actually form brand decisions."
