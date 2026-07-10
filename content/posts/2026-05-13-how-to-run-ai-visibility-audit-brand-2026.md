@@ -16,9 +16,10 @@ cluster: measurement
 queryClass: how-to
 discoverySource: demand-pattern
 whyNow: >-
-  AI visibility audit category exploding mid-2026; 25+ dedicated tools launched,
-  Forbes and G2 publishing audit frameworks, enterprise adoption accelerating
-freshnessReason: 'July 2026 tool landscape, Forbes/G2 audit frameworks June 2026, 25+ tool launches'
+  AI visibility audit category accelerating mid-2026; 30+ dedicated tools now
+  live, Adobe Brand Visibility tracking 10 LLM families, enterprise adoption
+  standard
+freshnessReason: 'July 2026 tool landscape, Adobe Brand Visibility launch, 30+ tool market, Birdeye/Temso/Gauge entrants'
 canonicalUrl: ''
 tags: ["ai-visibility","tactical-brief"]
 visual_concept: beacon
@@ -31,7 +32,7 @@ An AI visibility audit measures whether your brand appears — and how it appear
 
 Your Google Search Console data shows rankings. Your analytics show clicks. Neither tells you whether AI engines are citing, recommending, or ignoring your brand when a buyer asks "best [your category] tools" or "how to solve [your problem]."
 
-[Forrester's 2026 B2B Summit](https://forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit) identified AI visibility as a strategic imperative because AI answer engines are transforming how B2B buyers research, compare, and evaluate vendors. [Forbes published a 30-minute audit framework](https://www.forbes.com/councils/forbesbusinesscouncil/2026/06/16/is-your-business-visible-to-ai-the-30-minute-framework-to-audit-your-ai-search-readiness/) in June 2026 built around four dimensions: AI visibility, entity clarity, content citability, and trust signals. The message is clear — this is no longer optional.
+[Forrester's 2026 B2B Summit](https://forrester.com/blogs/is-ai-visibility-your-2026-imperative-learn-how-to-achieve-it-at-b2b-summit) identified AI visibility as a strategic imperative because AI answer engines are transforming how B2B buyers research, compare, and evaluate vendors. [Forbes published a 30-minute audit framework](https://www.forbes.com/councils/forbesbusinesscouncil/2026/06/16/is-your-business-visible-to-ai-the-30-minute-framework-to-audit-your-ai-search-readiness/) in June 2026 built around four dimensions: AI visibility, entity clarity, content citability, and trust signals. By July 2026, [Adobe launched Brand Visibility](https://business.adobe.com/uk/products/brand-visibility.html) — a unified GEO platform tracking brand presence across ten LLM families including ChatGPT, Perplexity, Google AI Mode, and Microsoft Copilot with competitive share-of-voice benchmarking. When Adobe builds a product for it, the category is no longer emerging — it is enterprise infrastructure.
 
 The audit framework below covers the seven areas where brands fail in AI discovery — and where the fix is usually operational, not creative.
 
@@ -65,7 +66,7 @@ To measure it: take your 20–30 buyer queries, run them across engines, count h
 
 Most brands I work with start below 5%. The ones winning in AI discovery are above 15%. The gap between those numbers is where the audit earns its keep.
 
-The mid-2026 audit consensus across [multiple frameworks](https://aiboost.co.uk/ai-visibility-audit-methodology-10-step-framework/) is converging on six weighted scoring dimensions: discoverability, citation presence, structured data completeness, entity coverage, freshness, and authority. Roll these into a single visibility score so you can track improvement over time and benchmark across competitors.
+The mid-2026 audit consensus across [multiple frameworks](https://aiboost.co.uk/ai-visibility-audit-methodology-10-step-framework/) is converging on six weighted scoring dimensions: discoverability, citation presence, structured data completeness, entity coverage, freshness, and authority. [AI Labs Audit](https://ailabsaudit.com/hub/ai-visibility-audit/en) has formalized this with their AGS v2 multi-judge scoring system, testing brands across 10+ generative AI engines with automated hallucination detection — flagging when an AI-cited URL does not actually exist on your site. Roll these into a single visibility score so you can track improvement over time and benchmark across competitors.
 
 ### Step 4: Test Entity Resolution
 
@@ -87,7 +88,7 @@ Pages that bury the answer below three paragraphs of context-setting prose get s
 
 ### Step 6: Assess Earned Media Authority
 
-AI engines weight third-party sources more heavily than brand-owned content. [Adobe launched its LLM Optimizer](https://venturebeat.com/ai/how-can-you-best-position-your-brand-for-discovery-in-llm-search-adobes-new-llm-optimizer-seeks-to-provide-the-tools) specifically to help enterprises improve their AI visibility, but the tool itself acknowledges that earned media placements in trusted publications are the strongest signal for [AI visibility](https://machinerelations.ai/glossary/ai-visibility).
+AI engines weight third-party sources more heavily than brand-owned content. [Adobe's Brand Visibility platform](https://business.adobe.com/uk/products/brand-visibility.html) now benchmarks brands against up to five competitors across ten LLM families, but the platform itself confirms what practitioners already know: earned media placements in trusted publications are the strongest signal for [AI visibility](https://machinerelations.ai/glossary/ai-visibility).
 
 Audit your earned media footprint:
 - How many third-party publications mention your brand in the context of your category?
@@ -115,21 +116,25 @@ Common reasons a competitor outranks you in AI answers:
 | **Gemini** | Google index + knowledge graph | Cites selectively; favors structured data | Check entity resolution and structured content |
 | **Google AI Mode** | Search index + featured snippet signals | Inherits from search ranking + extractability | Check existing SERP presence plus content structure |
 
-## AI Visibility Audit Tools in Mid-2026
+## AI Visibility Audit Tools — July 2026
 
-When I first published this framework, running an AI visibility audit was largely manual — spreadsheets and logged-out browser sessions. By mid-2026, that has changed. More than 25 dedicated AI visibility tools have launched, and the category is maturing fast.
+When I first published this framework, running an AI visibility audit was largely manual — spreadsheets and logged-out browser sessions. The tool landscape has matured fast. More than 30 dedicated AI visibility tools are now live, and the category has crossed from early-adopter tooling into enterprise infrastructure.
 
-The tool market splits into three tiers:
+The tool market splits into four tiers:
 
-**Enterprise platforms** (Profound, AthenaHQ, SEOClarity ArcAI) — multi-engine tracking across 8+ AI models, prompt-volume data, AI crawler analytics, and board-ready reporting. These start at custom pricing and suit teams with a dedicated AI visibility owner.
+**Enterprise platforms** (Adobe Brand Visibility, Profound, AthenaHQ, Evertune, SEOClarity ArcAI) — multi-engine tracking across 8–10+ AI models, prompt-volume data, AI crawler analytics, competitive share-of-voice benchmarking, and board-ready reporting. [Adobe Brand Visibility](https://business.adobe.com/uk/products/brand-visibility.html) tracks ten LLM families and benchmarks against five competitors; [Evertune](https://www.ai-visibility-software.com/blog/ai-visibility-score-benchmark/) provides statistically significant benchmarking at scale starting around $3,000/month. These suit teams with a dedicated AI visibility owner.
 
-**Mid-market monitors** (Otterly AI, Peec AI, Semrush AI Visibility Toolkit, Ahrefs Brand Radar, SE Ranking) — solid citation tracking and competitor benchmarking at $49–$165/month. Good entry point for teams already embedded in an existing SEO platform.
+**Mid-market monitors** (Semrush AI Toolkit, Ahrefs Brand Radar, SE Ranking, Peec AI, [Gauge](https://birdeye.com/blog/best-ai-search-visibility-tools/), Birdeye Search AI) — solid citation tracking and competitor benchmarking at $49–$295/month. [Birdeye Search AI](https://birdeye.com/blog/best-ai-search-visibility-tools/) added full-cycle platform consolidation with autonomous agents for multi-location brands. Good entry point for teams embedded in an existing SEO stack.
+
+**Budget-friendly tools** (Temso, Otterly AI, [Astiva AI](https://astiva.ai/blog/best-ai-visibility-tools-for-in-house-teams), Trakkr, LLM Pulse) — accessible AI visibility monitoring from free tiers to $49/month. [Temso](https://www.ai-visibility-software.com/blog/ai-visibility-score-benchmark/) tracks share of voice, mentions, citation rates, and sentiment across 8 AI engines for $29/month with a prioritized action plan. [Astiva AI](https://astiva.ai/blog/best-ai-visibility-tools-for-in-house-teams) offers a free tier covering 10 platforms. These work for lean teams that need signal without enterprise pricing.
+
+**Automated audit services** ([AI Labs Audit](https://ailabsaudit.com/hub/ai-visibility-audit/en), [2X Marketing](https://2x.marketing/services/check-your-ai-search-visibility-with-ai-visibility-audit/)) — productized audit-as-a-service models. AI Labs Audit runs AGS v2 multi-judge scoring across 10+ generative AIs with hallucination detection and premium PDF reporting. 2X Marketing offers a 200-point diagnostic covering six core visibility dimensions with competitive benchmarking and technical implementation toolkits.
 
 **Free first-party sources** you should be using regardless — Bing Webmaster Tools now includes AI performance reporting (critical because ChatGPT and Copilot both run on the Bing index), and GA4 with a custom channel group for AI referrers tracks sessions and conversions from ChatGPT, Perplexity, and other engines.
 
 The practical setup for most teams: pair one paid monitor with Bing Webmaster Tools and GA4. That gives you citation tracking, competitive context, crawler access verification, and conversion measurement in one stack.
 
-Most tools still stop at dashboards. The gap between "we know we are invisible" and "we fixed it" is where the audit earns its value — which is why the framework above focuses on operational fixes, not just measurement.
+The gap between "we know we are invisible" and "we fixed it" is where the audit earns its value — which is why the framework above focuses on operational fixes, not just measurement.
 
 ## What to Do With Your Results
 
@@ -160,7 +165,7 @@ Monthly at minimum. AI engines recrawl and reindex sources continuously, and com
 Perplexity currently provides the most transparent citation behavior — every answer includes source links, making it the clearest audit surface. But buyers use multiple engines. Your audit should cover at least ChatGPT, Perplexity, and Google AI Mode to get an accurate picture of your AI visibility.
 
 **What tools can automate an AI visibility audit?**
-As of mid-2026, more than 25 dedicated AI visibility tools exist. Enterprise brands typically use Profound or AthenaHQ for deep multi-engine tracking. Mid-market teams start with Otterly AI, Peec AI, or their existing Semrush/Ahrefs stack's AI visibility add-on. Every team should also set up Bing Webmaster Tools (free AI performance reporting since ChatGPT runs on Bing's index) and GA4 with custom AI referrer channel groups. The right combination depends on budget and whether you need monitoring only or monitoring plus execution workflow.
+As of mid-2026, more than 30 dedicated AI visibility tools exist across four tiers. Enterprise brands typically use Adobe Brand Visibility, Profound, or AthenaHQ for multi-engine tracking across 8–10+ LLM families. Mid-market teams start with Semrush AI Toolkit, Ahrefs Brand Radar, or Birdeye Search AI. Budget-conscious teams can start with Temso ($29/month, 8 engines), Otterly AI, or Astiva AI's free tier covering 10 platforms. Every team should also set up Bing Webmaster Tools (free AI performance reporting since ChatGPT runs on Bing's index) and GA4 with custom AI referrer channel groups. The right combination depends on budget and whether you need monitoring only or monitoring plus execution workflow.
 
 **What is a good AI visibility score?**
 There is no universal benchmark yet, but emerging frameworks score brands across six dimensions — discoverability, citation presence, structured data, entity coverage, freshness, and authority — on a scale of 100. Most brands I work with score below 30 on their first audit. A score above 60 typically correlates with consistent citation presence across at least two major AI engines for core buyer queries.
