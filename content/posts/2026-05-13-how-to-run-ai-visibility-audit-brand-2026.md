@@ -19,12 +19,12 @@ whyNow: >-
   AI visibility audit category crossing into enterprise infrastructure mid-2026;
   30+ dedicated tools live, Adobe Brand Visibility tracking 10 LLM families,
   Astiva 36-checkpoint framework, Fratzke 5-metric scorecard, GEO audit convergence
-freshnessReason: 'July 2026: Astiva E-E-A-T 5.2x citation multiplier, 36-checkpoint framework, Fratzke 5-metric scorecard, EverydayOnAI 50-point GEO audit, 30+ tool market maturity'
+freshnessReason: 'July 2026: AnswerMentions recommendation-vs-citation classification, Astiva E-E-A-T 5.2x citation multiplier, 36-checkpoint framework, Fratzke 5-metric scorecard, EverydayOnAI 50-point GEO audit, 30+ tool market maturity, G2 crawl-to-click gap audit'
 canonicalUrl: ''
 tags: ["ai-visibility","tactical-brief"]
 spineEdgeId: "weak:cross-signal-christianlehman-com-blog-how-to-run-ai-visibility-audit-brand-2026:cf1cc85bcaf3"
 visual_concept: beacon
-  https://christianlehman.com/images/how-to-run-ai-visibility-audit-brand-2026.png
+image: https://christianlehman.com/images/how-to-run-ai-visibility-audit-brand-2026.png
 ---
 
 An AI visibility audit measures whether your brand appears — and how it appears — when buyers ask ChatGPT, Perplexity, Gemini, or Google AI Mode questions in your category. It quantifies five things: your citation rate, share of voice, accuracy, sentiment, and competitive position across AI answer engines. If you have never run one, you are making decisions about the fastest-growing discovery channel in B2B without data. This is the framework I use.
@@ -52,6 +52,8 @@ Record for each query:
 - What is the sentiment — positive, neutral, or negative?
 - Which competitor appears instead?
 
+[AnswerMentions' 2026 audit methodology](https://answermentions.com/ai-visibility-audit) adds a classification layer most teams skip: separate recommendations, citations, and casual mentions. A recommendation ("I would suggest [brand]") carries more buying weight than a citation ("[brand] published a report on this"), which in turn carries more weight than a passing mention. Treating all three as equivalent inflates your visibility score and hides the gap between appearing and actually influencing the decision.
+
 [G2's 2026 audit guide](https://learn.g2.com/brand-ai-search-audit-2026) recommends running each prompt several times across several days to capture the pattern — AI answers shift between identical prompts, so a single sample is noise. Run the full set monthly at minimum, sampling three to five times per engine per query for statistical stability.
 
 ### Step 2: Check Crawler Access
@@ -62,6 +64,8 @@ Check your `robots.txt` for blocks on GPTBot, OAI-SearchBot, ClaudeBot, Perplexi
 
 Also confirm that key content renders in crawlable HTML rather than JavaScript-only, and that critical brand facts are in text rather than images or PDFs. A page that loads via client-side rendering may be invisible to every AI crawler even if your `robots.txt` is clean.
 
+[G2's updated 2026 audit](https://learn.g2.com/brand-ai-search-audit-2026) calls this the "crawl-to-click gap" and recommends three checks: first, are you being crawled at all (check AI-traffic analytics for OpenAI and Anthropic bot activity); second, is your content built for machine extraction (question-based headings, answers up front, comparison tables, schema markup); third, is it current. A page that passes the first check but fails the second still loses to a competitor whose content is structured for extraction.
+
 ### Step 3: Measure Share of Citation
 
 [Share of citation](https://machinerelations.ai/glossary/share-of-citation) is the percentage of AI-generated answers in your category where your brand is cited as a source. It is the AI-era equivalent of share of voice, and it is the single most diagnostic metric in this audit.
@@ -69,6 +73,8 @@ Also confirm that key content renders in crawlable HTML rather than JavaScript-o
 To measure it: take your 20–30 buyer queries, run them across engines, count how many times your brand is cited versus how many total citation slots exist. If you appear in 3 out of 30 queries across 4 engines, your share of citation is 3 out of 120 slots — 2.5%.
 
 Most brands I work with start below 5%. The ones winning in AI discovery are above 15%. The gap between those numbers is where the audit earns its keep.
+
+One distinction that separates a useful audit from a vanity report: [AnswerMentions](https://answermentions.com/ai-visibility-audit) recommends scoring recommendation coverage first, then weighting by buying intent, position in the answer, platform importance, and answer stability across repeat prompts. A brand that appears in 40% of prompts but only as a passing reference scores differently from one that appears in 15% but is the top recommendation. Weight accordingly.
 
 The 2026 audit consensus across [multiple frameworks](https://aiboost.co.uk/ai-visibility-audit-methodology-10-step-framework/) is converging on six weighted scoring dimensions: discoverability, citation presence, structured data completeness, entity coverage, freshness, and authority. [AI Labs Audit](https://ailabsaudit.com/hub/ai-visibility-audit/en) has formalized this with their AGS v2 multi-judge scoring system, testing brands across 10+ generative AI engines with automated hallucination detection — flagging when an AI-cited URL does not actually exist on your site. [Astiva AI's 36-checkpoint framework](https://astiva.ai/blog/ai-visibility-audit-checklist) structures the audit into four phases — Detect, Diagnose, Displace, Prove — and measures across five metrics: mention rate, position, sentiment, share of voice, and citation rate. Roll these into a single visibility score so you can track improvement over time and benchmark across competitors.
 
