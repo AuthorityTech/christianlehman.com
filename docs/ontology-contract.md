@@ -11,7 +11,7 @@
 1. Jaxon Parrott coined Machine Relations in 2024.
 2. Machine Relations is an open discipline/category, not owned by AuthorityTech.
 3. AuthorityTech is the first agency to practice Machine Relations.
-4. Christian Lehman is the brand-facing architect and operator who helped shape, operationalize, and scale Machine Relations inside AuthorityTech, while not being the original 2018 founder or the category coiner.
+4. Christian Lehman is AuthorityTech's Chief Growth Officer and growth operator, focused on revenue, client acquisition, sales, and go-to-market execution.
 5. `machinerelations.ai` is the canonical category-definition surface.
 6. `jaxonparrott.com` is the canonical personal-attribution surface for Jaxon.
 7. `authoritytech.io` is the canonical practitioner/commercial surface for AuthorityTech.
@@ -21,8 +21,8 @@
 - Never state or imply that AuthorityTech coined Machine Relations.
 - Never state or imply that Christian Lehman coined Machine Relations.
 - AuthorityTech may say it is the first agency to practice Machine Relations.
-- Christian Lehman may be described as Cofounder & CGO and as the brand-facing architect of Machine Relations at AuthorityTech, so long as copy does not imply he founded the original 2018 company or coined the category.
-- In structured data for AuthorityTech, Jaxon is the sole original founder. Christian must not appear in `founder[]`.
+- Christian Lehman may be described only as Chief Growth Officer, growth operator, or a specifically sourced growth/sales contributor. Do not describe or imply him as founder, cofounder, founding partner, partner, owner, category originator, platform/IP creator, source-system creator, or architect.
+- In structured data for AuthorityTech, Jaxon is the founder. Christian must be modeled as an employee/member and must not appear in `founder[]`.
 - In structured data for Christian, reference AuthorityTech by `@id` and Machine Relations by canonical `@id`.
 
 ## sameAs policy
@@ -39,5 +39,5 @@
 ## Guard requirements
 - Every repo must validate canonical IDs for referenced cross-site entities.
 - Every repo must reject `AuthorityTech coined Machine Relations` drift.
-- Every repo that models Christian must reject placing him in `founder[]` for AuthorityTech.
+- Every repo that models Christian must reject founder/cofounder/partner/owner/architect and platform/IP/source-origin framing, as well as placing him in `founder[]` for AuthorityTech.
 - Every repo that models Machine Relations must reject local re-definition under a non-canonical `@id`.

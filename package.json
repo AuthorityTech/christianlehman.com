@@ -27,7 +27,7 @@
     "indexing:submit": "npm run indexing:wait && npm run indexnow:all && npm run indexing:google-sitemap"
   },
   "dependencies": {
-    "@editorialkit/schema": "file:packages/editorialkit-schema-1.2.0.tgz",
+    "@editorialkit/schema": "file:packages/editorialkit-schema-1.2.2.tgz",
     "gray-matter": "^4.0.3",
     "next": "^15.5.18",
     "react": "^19.0.0",

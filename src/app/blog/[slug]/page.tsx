@@ -167,7 +167,7 @@ export default async function PostPage({ params }: Props) {
           <section className="mb-10">
             <h2 className="mb-3 font-mono text-[11px] font-normal uppercase tracking-[0.1em] text-nothing-secondary">About Christian Lehman</h2>
             <p className="mb-2 text-[13px] leading-relaxed text-nothing-secondary">
-              Christian Lehman is Co-Founder of{" "}
+              Christian Lehman is Chief Growth Officer of{" "}
               <a
                 href="https://authoritytech.io"
                 target="_blank"

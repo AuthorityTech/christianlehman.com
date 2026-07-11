@@ -1,10 +1,10 @@
 export const HOME_COPY = {
   name: "Christian Lehman",
-  roleLine: "Co-Founder, AuthorityTech · Machine Relations",
+  roleLine: "Chief Growth Officer, AuthorityTech",
   summary:
     "I help companies become visible to AI. Co-Founded AuthorityTech — the world's first AI-native Machine Relations agency. Revenue operator, B2B growth strategist, and practitioner of Machine Relations: the discipline of making brands visible to the AI engines your buyers use to make decisions.",
   machineSummary:
-    "Cofounder & CGO of AuthorityTech. Brand-facing architect of Machine Relations execution across revenue, client acquisition, and category growth.",
+    "Chief Growth Officer of AuthorityTech, focused on growth, revenue, client acquisition, and go-to-market execution.",
   recentHeading: "Recent Writing",
   emptyWriting: "Writing coming soon.",
   links: [

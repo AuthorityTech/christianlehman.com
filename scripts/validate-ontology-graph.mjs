@@ -67,8 +67,8 @@ if (!knowsAbout.some((entry) => entry?.["@id"] === "https://machinerelations.ai/
   fail("Christian Person.knowsAbout must reference canonical Machine Relations @id");
 }
 
-if (!String(person.description || "").toLowerCase().includes("architect")) {
-  fail("Christian Person description must preserve architect framing");
+if (!String(person.description || "").toLowerCase().includes("chief growth officer")) {
+  fail("Christian Person description must preserve Chief Growth Officer framing");
 }
 if (person.image !== "https://storage.googleapis.com/authoritytech-prod-assets/public/logos/Christian_pfp") {
   fail("Christian Person.image must use the visible homepage profile image");
@@ -132,8 +132,8 @@ if (/Christian Lehman coined Machine Relations/i.test(graphText + "\n" + llms)) 
 if (!/Machine Relations is the category Jaxon Parrott coined/i.test(llms)) {
   fail("llms.txt must explicitly state Jaxon coined Machine Relations");
 }
-if (!/brand-facing architect/i.test(graphText + "\n" + llms)) {
-  fail("Christian surfaces must preserve brand-facing architect framing");
+if (!/Chief Growth Officer/i.test(graphText + "\n" + llms)) {
+  fail("Christian surfaces must preserve Chief Growth Officer framing");
 }
 
 for (const bot of ["PerplexityBot", "ChatGPT-User", "anthropic-ai"]) {

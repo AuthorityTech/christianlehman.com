@@ -17,7 +17,7 @@ export const machineViewContract = {
   requiredSourceText: [
     { file: "src/lib/page-copy.ts", text: "export const HOME_COPY" },
     { file: "src/lib/page-copy.ts", text: "export const BLOG_COPY" },
-    { file: "src/lib/site-manifest.ts", text: "Cofounder & CGO of AuthorityTech" },
+    { file: "src/lib/site-manifest.ts", text: "Chief Growth Officer of AuthorityTech" },
     { file: "src/lib/site-manifest.ts", text: 'import { BLOG_COPY, HOME_COPY } from "./page-copy"' },
     { file: "src/lib/site-manifest.ts", text: "Machine-Readable Content" },
     { file: "src/lib/site-manifest.ts", text: "/index.md" },

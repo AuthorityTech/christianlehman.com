@@ -21,7 +21,7 @@ featured_image_alt: >-
   Visibility
 ---
 
-*By [Christian Lehman](https://christianlehman.com), cofounder of AuthorityTech. I write tactical notes on AI visibility, earned media, and software evaluation.*
+*By [Christian Lehman](https://christianlehman.com), Chief Growth Officer of AuthorityTech. I write tactical notes on AI visibility, earned media, and software evaluation.*
 
 **Best BrightEdge alternative in 2026:** not another SEO dashboard, but a Machine Relations stack that combines citation tracking, earned media intelligence, and entity coverage across AI engines.
 

@@ -4,9 +4,9 @@ export const SEO_LIMITS = {
   descriptionMax: 160,
 };
 
-export const SITE_SEO_TITLE = "Christian Lehman | AuthorityTech Co-Founder";
+export const SITE_SEO_TITLE = "Christian Lehman | AuthorityTech Chief Growth Officer";
 export const SITE_SEO_DESCRIPTION =
-  "Christian Lehman is cofounder and CGO of AuthorityTech, writing field-tested Machine Relations playbooks for AI visibility, PR, and B2B growth.";
+  "Christian Lehman is Chief Growth Officer of AuthorityTech, writing field-tested playbooks for AI visibility, PR, and B2B growth.";
 
 export const BLOG_SEO_TITLE = "Writing on AI Visibility and Machine Relations";
 export const BLOG_SEO_DESCRIPTION =

@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Christian Lehman",
     title: SITE_SEO_TITLE,
     description: SITE_SEO_DESCRIPTION,
-    images: [{ url: OG_IMAGE, width: 1672, height: 941, alt: "Christian Lehman — Co-Founder of AuthorityTech" }],
+    images: [{ url: OG_IMAGE, width: 1672, height: 941, alt: "Christian Lehman — Chief Growth Officer of AuthorityTech" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -97,9 +97,9 @@ const schema = {
       name: "Christian Lehman",
       givenName: "Christian",
       familyName: "Lehman",
-      jobTitle: "Co-Founder & Chief Growth Officer",
+      jobTitle: "Chief Growth Officer",
       description:
-        "Christian Lehman is the cofounder and chief growth officer of AuthorityTech. He is the brand-facing architect and operator of Machine Relations execution across growth and client delivery.",
+        "Christian Lehman is Chief Growth Officer of AuthorityTech, leading growth, revenue, client acquisition, and go-to-market execution.",
       url: SITE_URL,
       image: PROFILE_IMAGE_URL,
       mainEntityOfPage: { "@type": "WebPage", "@id": SITE_URL },
@@ -114,9 +114,9 @@ const schema = {
       ],
       hasOccupation: {
         "@type": "Occupation",
-        name: "Co-Founder & Chief Growth Officer",
+        name: "Chief Growth Officer",
         description:
-          "Co-Founder and Chief Growth Officer of AuthorityTech, the first Machine Relations agency. Operates MR execution across growth and client delivery.",
+          "Chief Growth Officer of AuthorityTech, the first Machine Relations agency. Leads growth, revenue, client acquisition, and go-to-market execution.",
       },
       sameAs: [
         SITE_URL,
@@ -155,7 +155,7 @@ const schema = {
       "@id": SITE_URL + "/#website",
       url: SITE_URL,
       name: "Christian Lehman",
-      description: "Official site and writing of Christian Lehman, Co-Founder & Chief Growth Officer of AuthorityTech.",
+      description: "Official site and writing of Christian Lehman, Chief Growth Officer of AuthorityTech.",
       creator: { "@type": "Person", "@id": SITE_URL + "/#person" },
       about: { "@id": MACHINE_RELATIONS_TERM_ID },
       potentialAction: [
@@ -178,7 +178,7 @@ const schema = {
       "@id": SITE_URL + "/blog#blog",
       name: "Christian Lehman — The Machine Relations Growth Playbook",
       description:
-        "For CMOs and growth leaders: what is working in PR, AI search, and winning visibility in the AI era. By Christian Lehman, Co-Founder of AuthorityTech.",
+        "For CMOs and growth leaders: what is working in PR, AI search, and winning visibility in the AI era. By Christian Lehman, Chief Growth Officer of AuthorityTech.",
       url: SITE_URL + "/blog",
       author: { "@type": "Person", "@id": SITE_URL + "/#person" },
       publisher: { "@type": "Person", "@id": SITE_URL + "/#person" },
