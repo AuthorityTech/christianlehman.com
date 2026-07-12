@@ -1,6 +1,6 @@
 ---
 title: How to Run an AI Visibility Audit for Your Brand in 2026
-date: "2026-07-12"
+date: "2026-05-13"
 slug: how-to-run-ai-visibility-audit-brand-2026
 description: >-
   A 7-step AI visibility audit framework: measure your brand's citation rate,
