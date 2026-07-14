@@ -1,5 +1,5 @@
 ---
-title: "Your AI Visibility Reports Are Probabilistic. Here Is How to Read Them Without Making Bad Decisions."
+title: "AI Visibility Data Accuracy CMO Reporting 2026"
 date: "2026-07-13"
 slug: "ai-visibility-data-accuracy-cmo-reporting-2026"
 description: "AI visibility data is probabilistic, not deterministic. Only 2.3% of ChatGPT citations survive three identical runs. Here is how CMOs should read AI visibility reports without making expensive mistakes."
