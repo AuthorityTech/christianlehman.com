@@ -1,5 +1,5 @@
 ---
-title: "GA4 Just Added an AI Assistant Channel — Here Is How to Finally Track AI Traffic to Your Site"
+title: "How to Track AI Traffic in Google Analytics GA4 2026"
 date: "2026-07-20"
 slug: "ga4-ai-assistant-channel-track-ai-traffic-attribution-2026"
 description: "GA4 now has a native AI Assistant channel, but it undercounts your AI traffic by splitting one source across three channels. Here is how to fix the measurement, build a custom channel group that actually captures everything, and turn that data into a budget decision."
@@ -21,9 +21,9 @@ Google Analytics 4 now has a dedicated AI Assistant channel that tracks traffic 
 
 ## What GA4's AI Assistant Channel Actually Does
 
-On May 13, 2026, [Google added "AI Assistant" to GA4's default channel groups](https://support.google.com/analytics/answer/9164320). When GA4 recognizes a referrer from a known AI platform, it assigns the session medium `ai-assistant`, drops it into the AI Assistant channel, and stamps the campaign dimension `(ai-assistant)`. No configuration required — it is active in every GA4 property today.
+On May 13, 2026, [Google added "AI Assistant" to GA4's default channel groups](https://searchengineland.com/google-analytics-ai-assistant-477544). When GA4 recognizes a referrer from a known AI platform, it assigns the session medium `ai-assistant`, drops it into the AI Assistant channel, and stamps the campaign dimension `(ai-assistant)`. No configuration required — it is active in every GA4 property today.
 
-The initial recognized platforms were ChatGPT, Gemini, and Claude. But Google's list is not stable. By June 2026, the [live documentation](https://support.google.com/analytics/answer/9756891) had shifted to ChatGPT, Gemini, DeepSeek, Copilot, and Grok — with Claude quietly removed. Perplexity, which [drives some of the highest-intent AI referral traffic](https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/), has never been on the list and still lands in Referral.
+The initial recognized platforms were ChatGPT, Gemini, and Claude. But Google's list is not stable. By June 2026, [Search Engine Journal documented](https://www.searchenginejournal.com/ga4s-ai-assistant-channel-undercounts-your-ai-traffic-how-to-build-one-that-doesnt/580133/) the same undercounting problem this creates: recognized AI sources can still split across AI Assistant, Referral, and Unassigned. Perplexity, which [drives some of the highest-intent AI referral traffic](https://www.similarweb.com/blog/marketing/geo/gen-ai-stats/), is still a source you need to catch outside the native channel.
 
 One more distinction that matters for reporting: traffic from [Google AI Overviews and AI Mode](https://searchengineland.com/google-analytics-ai-assistant-477544) stays in Organic Search, not AI Assistant. If you are trying to measure the full impact of AI on your site traffic, the default channel is a starting point — not the answer.
 
@@ -109,7 +109,7 @@ The total setup is under an hour. The insight it unlocks — knowing exactly wha
 
 ### Does the GA4 AI Assistant channel track Perplexity traffic?
 
-No. As of July 2026, [Perplexity is not included](https://support.google.com/analytics/answer/9756891) in Google's recognized AI assistant list. Perplexity traffic lands in Referral by default. The only way to capture it in an AI-specific channel is to build a custom channel group with a source-based regex that includes `perplexity` in the pattern.
+No. As of July 2026, [Perplexity traffic still needs to be caught with custom source rules](https://www.searchenginejournal.com/ga4s-ai-assistant-channel-undercounts-your-ai-traffic-how-to-build-one-that-doesnt/580133/) instead of relying on the native AI Assistant channel alone. Perplexity traffic lands in Referral by default. The only way to capture it in an AI-specific channel is to build a custom channel group with a source-based regex that includes `perplexity` in the pattern.
 
 ### Can I see AI traffic data from before May 2026?
 
